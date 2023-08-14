@@ -1,0 +1,17 @@
+{
+  "memes": [
+    {
+      "title": "me.jpg",
+      "src": "me.jpg"
+    },
+    {
+      "title": "food.jpg",
+      "src": "food.jpg",
+      "hide": true
+    },
+    {
+      "title": "also-me.jpg",
+      "src": "also-me.jpg"
+    }
+  ]
+}

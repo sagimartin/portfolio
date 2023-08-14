@@ -1,12 +1,19 @@
 import { AppBar, Box, Typography } from "@mui/material";
 import { useState } from 'react';
+import AboutPopup from "./about/AboutPopup";
+import aboutData from "../data/about.json"
 
-import html from "../assets/icons/html.svg"
-import glyph from "../assets/icons/glyph.svg"
+import html from "/assets/icons/html.svg"
+import glyph from "/assets/icons/glyph.svg"
 
 
 export default function Navbar() {
     const [showGlyph, setShowGlyph] = useState(false)
+    const [showAboutPopup, setShowAboutPopup] = useState(false)
+    const closeAboutPopup = () => {
+        setShowAboutPopup(false);
+    };
+
     return (
         <AppBar className="navbar" elevation={{}} sx={{ width: "100%", display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", backgroundColor: "white", color: "black" }}>
             <Box className="intro" sx={{ display: "flex", flexDirection: "column" }}>
@@ -28,7 +35,8 @@ export default function Navbar() {
                 <Typography variant='h6' className="menuButton">{'<Home/>'}</Typography>
                 <Typography variant='h6' className="menuButton">{'<Skills/>'}</Typography>
                 <Typography variant='h6' className="menuButton">{'<Projects/>'}</Typography>
-                <Typography variant='h6' className="menuButton">{'<About/>'}</Typography>
+                <Typography variant='h6' className="menuButton" onClick={() => setShowAboutPopup(true)} >{'<About/>'}</Typography>
+                {showAboutPopup && <AboutPopup memes={aboutData.memes} closePopup={closeAboutPopup} />}
             </Box>
         </AppBar>
     )
