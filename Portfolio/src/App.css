@@ -38,11 +38,9 @@
   }
   .introSub{
     display: flex;
-    /* flex-direction: row; */
   }
   .rollingHTML{
     position: absolute;
-    /* top: 1rem; */
     right: 1rem;
   }
 }
