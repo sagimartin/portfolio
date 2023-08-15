@@ -6,16 +6,18 @@
   height: 100vh;
   background-color: rgba(0, 0, 0, 0);
   z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  padding: 10px;
 }
 
-.readme{
+.readme {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  max-width: 400px;
+  max-height: 500px;
+  overflow: auto;
+  z-index: 1001;
 }
 
 .readme-text {
@@ -30,6 +32,15 @@
   border: 2px solid black;
   box-shadow: 6px 6px #989898, 12px 12px #6c6666;
   font-family: var(--primary-font);
+  max-width: 300px;
+  max-height: 400px;
+  overflow: auto;
+}
+
+.popup-image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
 }
 
 .popup-header {
@@ -50,6 +61,15 @@
   padding-left: 3px;
 }
 
-.popup-image-container img {
-  width: 100%;
+.close-all {
+  padding: 0.5rem;
+  font-size: 1rem;
+  position: fixed;
+  top: 15rem;
+  right: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.popup.close-all:hover {
+  transform: translateY(-10px);
 }
