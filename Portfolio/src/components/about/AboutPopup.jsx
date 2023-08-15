@@ -7,7 +7,7 @@ import './AboutPopup.css';
 
 export default function AboutPopup({ memes, closePopup }) {
   const [activePopups, setActivePopups] = useState(memes.filter(meme => !meme.hide));
-  const initialPositions = activePopups.map(() => getRandomPosition());
+  const initialPositions = activePopups.map(() => getRandomPosition(300, 400));
   const [positions, setPositions] = useState(initialPositions);
   const [showReadme, setShowReadme] = useState(true);
 
@@ -31,16 +31,17 @@ export default function AboutPopup({ memes, closePopup }) {
     setShowReadme(false);
   };
 
-  function getRandomPosition() {
-    const x = Math.floor(Math.random() * window.innerWidth);
-    const y = Math.floor(Math.random() * window.innerHeight);
+  function getRandomPosition(popupWidth, popupHeight) {
+    const x = Math.floor(Math.random() * (window.innerWidth - popupWidth));
+    const y = Math.floor(Math.random() * (window.innerHeight - popupHeight));
     return { x, y };
   }
 
   return (
     <Box className="popup-overlay">
       {showReadme && (
-        <Draggable handle=".drag-handle-readme" bounds="parent" defaultPosition={{ x: '50%', y: '50%' }}>
+        <Draggable handle=".drag-handle-readme" bounds={{ top: 0, left: 0, right: window.innerWidth, bottom: window.innerHeight }}
+          defaultPosition={{ x: '50%', y: '50%' }}>
           <Box className="popup readme drag-handle-readme">
             <Box className="popup-header">
               <Typography>README.md</Typography>
