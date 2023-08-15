@@ -44,21 +44,27 @@
 }
 
 .popup-header {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto;
   justify-content: center;
   align-items: center;
   border-bottom: 2px solid black;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 .close-button {
   cursor: pointer;
   background: none;
   border: none;
-  font-size: 1.5rem;
+  font-size: 1rem;
   border-left: 2px solid black;
-  position: absolute;
-  right: 3px;
-  padding-left: 3px;
+  padding: 0.5rem;
+}
+
+.close-button:hover {
+  background-color: black;
+  color: #fff;
 }
 
 .close-all {
