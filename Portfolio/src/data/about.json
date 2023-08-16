@@ -5,13 +5,33 @@
       "src": "me.jpg"
     },
     {
-      "title": "food.jpg",
-      "src": "food.jpg",
-      "hide": true
+      "title": "best-game-ever.jpg",
+      "src": "best-game-ever.jpg"
     },
     {
       "title": "also-me.jpg",
       "src": "also-me.jpg"
+    },
+    {
+      "title": "my-son.jpg",
+      "src": "my-son.jpg"
+    },
+    {
+      "title": "my-wife.jpg",
+      "src": "my-wife.jpg"
+    },
+    {
+      "title": "scooter.jpg",
+      "src": "scooter.jpg"
+    },
+    {
+      "title": "also-my-wife.jpg",
+      "src": "also-my-wife.jpg",
+      "hide": true
+    },
+    {
+      "title": "super-mario.gif",
+      "src": "super-mario.gif"
     }
   ]
 }
