@@ -55,7 +55,7 @@ export default function AboutPopup({ memes, closePopup }) {
     <Box className="popup-overlay">
       {showReadme && (
         // README Popup
-        <Draggable handle=".drag-handle-readme" bounds={{ top: 0, left: 0, right: window.innerWidth, bottom: window.innerHeight }}
+        <Draggable handle=".drag-handle-readme"
           defaultPosition={{ x: '50%', y: '50%' }}>
           <Box className="popup readme drag-handle-readme">
             <Box className="popup-header">
@@ -68,7 +68,7 @@ export default function AboutPopup({ memes, closePopup }) {
       )}
       {activePopups.map((meme, index) => (
         // Meme Popups
-        <Draggable key={index} handle=".drag-handle" position={positions[index]} bounds={{ top: 0, left: 0, right: window.innerWidth, bottom: window.innerHeight }} onDrag={(_, newPosition) => handleDrag(index, newPosition)}>
+        <Draggable key={index} handle=".drag-handle" position={positions[index]} onDrag={(_, newPosition) => handleDrag(index, newPosition)}>
           <Box className="popup drag-handle">
             <Box className="popup-header">
               <Typography>{meme.title}</Typography>

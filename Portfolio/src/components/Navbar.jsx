@@ -15,7 +15,7 @@ export default function Navbar() {
     };
 
     return (
-        <AppBar className="navbar" elevation={{}} sx={{ width: "100%", display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", backgroundColor: "white", color: "black" }}>
+        <AppBar className="navbar" sx={{ width: "100%", display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", backgroundColor: "white", color: "black", border: "none", boxShadow: "none" }}>
             <Box className="intro" sx={{ display: "flex", flexDirection: "column" }}>
                 <Typography variant="h1" color={"#290BA2"} marginBottom={"1.5rem"} style={{
                     fontFamily: "var(--secondary-font)",
