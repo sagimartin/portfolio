@@ -1,0 +1,33 @@
+.menuButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: max-content;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: var(--blue-color);
+}
+
+.menuButtons > h6 {
+  cursor: pointer;
+  font-family: var(--secondary-font);
+  font-weight: 400;
+  letter-spacing: 3px;
+  transition: color 0.3s ease;
+}
+
+.menuButtons > h6:hover {
+  font-weight: 600;
+}
+
+.AppBar {
+  background-color: white;
+  box-shadow: none;
+}
+
+img {
+  max-width: 90vw;
+  height: auto;
+  margin: 0 auto;
+}
