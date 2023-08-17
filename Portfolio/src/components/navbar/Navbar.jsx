@@ -1,0 +1,27 @@
+import { AppBar, Box, Typography } from "@mui/material";
+import { useState } from 'react';
+import AboutPopup from "../about/AboutPopup";
+import aboutData from "../../data/about.json"
+import hello from "/assets/images/about/hello.svg"
+
+import './navbar.css';
+
+export default function Navbar() {
+    const [showAboutPopup, setShowAboutPopup] = useState(false)
+    const closeAboutPopup = () => {
+        setShowAboutPopup(false);
+    };
+
+    return (
+        <AppBar className="AppBar">
+            <img src={hello} alt="Hello" />
+            <Box className="menuButtons">
+                <Typography variant='h6'>{'<Home/>'}</Typography>
+                <Typography variant='h6'>{'<Skills/>'}</Typography>
+                <Typography variant='h6'>{'<Projects/>'}</Typography>
+                <Typography variant='h6' onClick={() => setShowAboutPopup(true)}>{'<About/>'}</Typography>
+                {showAboutPopup && <AboutPopup memes={aboutData.memes} closePopup={closeAboutPopup} />}
+            </Box>
+        </AppBar>
+    )
+}
