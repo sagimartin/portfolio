@@ -1,33 +1,28 @@
-.menuButtons {
+#AppBar {
+  background-color: white;
+  box-shadow: none;
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  width: max-content;
-  position: absolute;
-  right: 0;
-  top: 0;
-  color: var(--blue-color);
+  align-items: center;
 }
 
-.menuButtons > h6 {
-  cursor: pointer;
+.menuButtons {
+  color: var(--blue-color);
   font-family: var(--secondary-font);
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 3px;
+  display: flex;
+  padding-top: 2rem;
+  gap: 2rem;
+  margin: 0 auto;
+  cursor: pointer;
   transition: color 0.3s ease;
 }
 
-.menuButtons > h6:hover {
-  font-weight: 600;
-}
-
-.AppBar {
-  background-color: white;
-  box-shadow: none;
+h3:hover {
+  color: var(--tale-color);
 }
 
 img {
   max-width: 90vw;
   height: auto;
-  margin: 0 auto;
 }

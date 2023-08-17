@@ -17,6 +17,7 @@
   max-height: 500px;
   overflow: auto;
   z-index: 1001;
+  color: black;
 }
 
 .readme-text {
@@ -28,18 +29,21 @@
   cursor: pointer;
   background-color: #fff;
   margin: 2rem;
-  border: 2px solid black;
-  box-shadow: 6px 6px #989898, 12px 12px #6c6666;
+  border: 3px solid black;
+  box-shadow: 6px 6px black;
   font-family: var(--primary-font);
-  max-width: 300px;
-  max-height: 400px;
-  overflow: auto;
+  font-weight: 600;
+  max-width: 20rem;
+  height: min-content;
+  overflow: none;
+  background-color: var(--beige-color);
 }
 
 .popup-image-container img {
   max-width: 100%;
   max-height: 100%;
   width: 100%;
+  display: block;
 }
 
 .popup-header {
@@ -47,9 +51,11 @@
   grid-template-columns: 1fr auto;
   justify-content: center;
   align-items: center;
-  border-bottom: 2px solid black;
+  border-bottom: 3px solid black;
+  color: white;
   font-size: 1.5rem;
   text-align: center;
+  background-color: var(--blue-color);
 }
 
 .close-button {
@@ -57,12 +63,13 @@
   background: none;
   border: none;
   font-size: 1rem;
-  border-left: 2px solid black;
+  border-left: 3px solid black;
   padding: 0.5rem;
+  color: #fff;
 }
 
 .close-button:hover {
-  background-color: black;
+  background-color: var(--magenta-color);
   color: #fff;
 }
 
@@ -70,7 +77,7 @@
   padding: 0.5rem;
   font-size: 1rem;
   position: fixed;
-  top: 15rem;
+  top: 5rem;
   right: 1rem;
   transition: transform 0.3s ease;
 }
