@@ -6,7 +6,7 @@ import './App.css'
 function App() {
 
   return (
-    <Container style={{}}>
+    <Container style={{maxWidth: "1440px", minWidth: "320px"}}>
       <Navbar />
     </Container>
   )
