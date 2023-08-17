@@ -5,42 +5,10 @@
 }
 
 :root {
-  --primary-color: #290ba2;
-  --secondary-color: #1a24fb;
+  --blue-color: #065ffc;
+  --magenta-color: #fb3e93;
+  --green-color: #33cc66;
+  --yellow-color: #ffe236;
   --primary-font: "Montserrat Alternates", sans-serif;
   --secondary-font: "Roboto Mono", monospace;
-}
-
-/* MENU */
-.menuButtons > h6 {
-  font-family: var(--secondary-font);
-  font-weight: 400;
-  letter-spacing: 3px;
-}
-
-.menuButton:hover {
-  color: var(--primary-color);
-  font-weight: 600;
-}
-
-@media (max-width: 768px) {
-  .menuButtons {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-  }
-  .appBarContainer {
-    flex-direction: column;
-  }
-  .intro {
-    margin-top: 12rem;
-    padding: 1rem;
-  }
-  .introSub{
-    display: flex;
-  }
-  .rollingHTML{
-    position: absolute;
-    right: 1rem;
-  }
 }
