@@ -42,10 +42,10 @@ export default function AboutPopup({ memes, closePopup }) {
         // README Popup
         <Box className="popup readme">
           <Box className="popup-header drag-handle-readme">
-            <Typography>README.md</Typography>
+            <Typography style={{ fontFamily: 'var(--secondary-font)' }}>README.md</Typography>
             <Button className="close-button" onClick={handleCloseReadme}>X</Button>
           </Box>
-          <Typography className='readme-text'>Lorem ipsum, dolor sit amet consectetur adipisicing elit...</Typography>
+          <Typography style={{ fontFamily: 'var(--secondary-font)' }} className='readme-text'>Lorem ipsum, dolor sit amet consectetur adipisicing elit...</Typography>
         </Box>
       )}
       {activePopups.map((meme, index) => (
@@ -56,9 +56,12 @@ export default function AboutPopup({ memes, closePopup }) {
           style={{ position: 'absolute', top: positions[index].y, left: positions[index].x }}
         >
           <Box className="popup-header drag-handle">
-            <Typography>{meme.title}</Typography>
+            <Typography style={{ fontFamily: 'var(--secondary-font)' }}>
+              {meme.title}
+            </Typography>
             <Button className="close-button" onClick={() => handleClosePopup(index)}>X</Button>
           </Box>
+
           <Box className="popup-image-container">
             <img src={`/assets/images/about/${meme.src}`} alt={meme.title} title={meme.title} />
           </Box>

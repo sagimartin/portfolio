@@ -15,11 +15,11 @@ export default function Navbar() {
     return (
         <AppBar id="AppBar">
             <img src={hello} alt="Hello" />
-            <Box className="menuButtons">
-                <Typography variant='h3' >{'<Home/>'}</Typography>
-                <Typography variant='h3' >{'<Skills/>'}</Typography>
-                <Typography variant='h3' >{'<Projects/>'}</Typography>
-                <Typography variant='h3' onClick={() => setShowAboutPopup(true)}>{'<About/>'}</Typography>
+            <Box className="menuButtons" >
+                <Typography style={{ fontFamily: 'var(--secondary-font)' }} variant='h3' >{'<Home/>'}</Typography>
+                <Typography style={{ fontFamily: 'var(--secondary-font)' }} variant='h3' >{'<Skills/>'}</Typography>
+                <Typography style={{ fontFamily: 'var(--secondary-font)' }} variant='h3' >{'<Projects/>'}</Typography>
+                <Typography style={{ fontFamily: 'var(--secondary-font)' }} variant='h3' onClick={() => setShowAboutPopup(true)}>{'<About/>'}</Typography>
                 {showAboutPopup && <AboutPopup memes={aboutData.memes} closePopup={closeAboutPopup} />}
             </Box>
         </AppBar>
