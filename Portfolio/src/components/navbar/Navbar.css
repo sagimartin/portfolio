@@ -3,6 +3,8 @@
   box-shadow: none;
   display: flex;
   align-items: center;
+  position: sticky;
+  top: 0;
 }
 
 .menuButtons {
