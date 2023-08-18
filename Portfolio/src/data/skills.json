@@ -1,0 +1,26 @@
+{
+    "Languages": {
+        "skills": { "HTML5": "htmlIcon", "CSS": "css", "Javascript": "javascript", "SCSS": "scss" },
+        "color": "var(--blue-color)"
+    },
+    "FrontendLibraries": {
+        "skills": { "React.js": "react", "Bootstrap": "bootstrap", "Tailwind": "tailwind", "MUI": "mui" },
+        "color": "var(--magenta-color)"
+    },
+    "BackendLibraries": {
+        "skills": { "Node.js": "node", "Express.js": "express" },
+        "color": "var(--green-color)"
+    },
+    "DatabaseTools": {
+        "skills": { "Firebase": "firebase", "Firestore": "firestore" },
+        "color": "var(--yellow-color)"
+    },
+    "DevelopmentTools": {
+        "skills": { "VS code": "vscode", "GitHub": "github", "Vite.js": "vite" },
+        "color": "var(--tale-color)"
+    },
+    "DesignAndPrototyping": {
+        "skills": { "Figma": "figma", "Photoshop": "photoshop", "Canva": "canva" },
+        "color": "black"
+    }
+}
