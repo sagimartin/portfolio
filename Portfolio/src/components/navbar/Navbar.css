@@ -17,6 +17,9 @@
   margin: 0 auto;
   cursor: pointer;
   transition: color 0.3s ease;
+  position: fixed;
+  top: 5;
+  right: 5;
 }
 
 h3:hover {
