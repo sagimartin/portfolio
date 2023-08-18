@@ -53,6 +53,7 @@
   align-items: center;
   border-bottom: 3px solid black;
   color: white;
+  font-family: var(--primary-font);
   font-size: 1.5rem;
   text-align: center;
   background-color: var(--blue-color);
@@ -84,4 +85,6 @@
 
 .popup.close-all:hover {
   transform: translateY(-10px);
+  color: #fff;
+  background-color: var(--magenta-color);
 }

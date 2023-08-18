@@ -7,7 +7,6 @@
 
 .menuButtons {
   color: var(--blue-color);
-  font-family: var(--secondary-font);
   font-weight: 600;
   letter-spacing: 3px;
   display: flex;
