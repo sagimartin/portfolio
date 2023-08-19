@@ -1,0 +1,43 @@
+{
+  "projects": [
+    {
+      "name": "My Portfolio",
+      "description": "My personal portfolio website showcasing my skills and projects.",
+      "skills": {
+        "languages": ["HTML5", "CSS3", "JavaScript", "SCSS"],
+        "frontend-libraries": ["React.js", "MUI"],
+        "development": ["VS Code", "GitHub", "Vite.js"],
+        "design": ["Canva"]
+      },
+      "image": "/assets/portfolio/portfolio-image.jpg",
+      "link": "www.sagimartin.com",
+      "repository": "https://github.com/sagimartin/portfolio"
+    },
+    {
+      "name": "Sample Project 1",
+      "description": "A dummy project demonstrating various front-end technologies.",
+      "skills": {
+        "languages": ["HTML5", "CSS3", "JavaScript"],
+        "frontend-libraries": ["Bootstrap", "Tailwind", "MUI"],
+        "development": ["GitHub"],
+        "database": ["Firebase", "Firestore"]
+      },
+      "image": "/assets/portfolio/example1-image.jpg",
+      "link": "https://example.com/sample-project-1",
+      "repository": "https://github.com/sagimartin/example1"
+    },
+    {
+      "name": "Sample Project 2",
+      "description": "Another dummy project showcasing back-end integration.",
+      "skills": {
+        "languages": ["Node.js", "Express.js"],
+        "backend-libraries": ["MongoDB"],
+        "development": ["GitHub"],
+        "design": ["Photoshop", "Canva"]
+      },
+      "image": "/assets/portfolio/example2-image.jpg",
+      "link": "https://example.com/sample-project-2",
+      "repository": "https://github.com/sagimartin/example2"
+    }
+  ]
+}
