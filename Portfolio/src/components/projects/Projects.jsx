@@ -1,4 +1,6 @@
 import { Box, Typography } from "@mui/material";
+import projectsData from '../../data/projects.json';
+import folder from "../../../public/assets/icons/folder.svg"
 
 export default function Projects() {
 
@@ -56,9 +58,28 @@ export default function Projects() {
                     width: "100%",
                     padding: "2rem",
                     display: "flex",
-                    gap: "5rem"
+                    justifyContent: "space-evenly",
                 }}
             >
+                {projectsData.projects.map((project, index) => (
+                    <Box
+                        key={index}
+                        sx={{
+                            textAlign: "center",
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            gap: "1rem",
+                            marginTop: "2rem"
+                        }}
+                    >
+                        <img src={folder} alt="folder icon" style={{ width: "10rem", height: "auto" }} />
+                        <Typography variant="h4" fontFamily="var(--primary-font)" fontWeight="600">
+                            {project.name}
+                        </Typography>
+                        {/* <Typography>{project.description}</Typography> */}
+                    </Box>
+                ))}
             </Box>
         </Box>
     );
