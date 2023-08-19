@@ -18,7 +18,6 @@ export default function Skills() {
                 border: "3px solid black",
                 display: "flex",
                 flexDirection: "column",
-                cursor: "pointer",
             }}
         >
             <Box
@@ -29,6 +28,7 @@ export default function Skills() {
                     display: "flex",
                     justifyContent: "space-between",
                     alignItems: "center",
+                    cursor: "pointer"
                 }}
             >
                 <Typography
@@ -53,7 +53,8 @@ export default function Skills() {
                     width: "100%",
                     padding: "2rem",
                     display: "flex",
-                    gap: "5rem"
+                    gap: "5rem",
+                    cursor: "default",
                 }}
             >
                 {/* LEFT SIDE */}
@@ -64,8 +65,13 @@ export default function Skills() {
                         <div key={categoryIndex}>
                             <Typography
                                 variant="h3"
-                                fontFamily="var(--secondary-font)"
-                                fontWeight="600"
+                                sx={{
+                                    fontFamily: "var(--secondary-font)",
+                                    fontWeight: "600",
+                                    "&:hover": {
+                                        color: "black",
+                                    },
+                                }}
                             >
                                 {categoryName}
                             </Typography>
@@ -109,8 +115,13 @@ export default function Skills() {
                         <div key={categoryIndex}>
                             <Typography
                                 variant="h3"
-                                fontFamily="var(--secondary-font)"
-                                fontWeight="600"
+                                sx={{
+                                    fontFamily: "var(--secondary-font)",
+                                    fontWeight: "600",
+                                    "&:hover": {
+                                        color: "black",
+                                    },
+                                }}
                             >
                                 {categoryName}
                             </Typography>

@@ -74,7 +74,12 @@ export default function Projects() {
                         }}
                     >
                         <img src={folder} alt="folder icon" style={{ width: "10rem", height: "auto" }} />
-                        <Typography variant="h4" fontFamily="var(--primary-font)" fontWeight="600">
+                        <Typography variant="h4" sx={{
+                            fontFamily: "var(--primary-font)", fontWeight: "600",
+                            "&:hover": {
+                                color: "var(--blue-color)",
+                            },
+                        }}>
                             {project.name}
                         </Typography>
                         {/* <Typography>{project.description}</Typography> */}
