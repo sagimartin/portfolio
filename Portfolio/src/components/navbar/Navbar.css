@@ -27,6 +27,6 @@ h3:hover {
 }
 
 img {
-  max-width: 90vw;
-  height: auto;
+  width: 100%;
+  margin: 0 auto;
 }
