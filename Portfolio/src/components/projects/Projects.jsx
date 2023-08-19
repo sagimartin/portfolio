@@ -8,7 +8,7 @@ export default function Projects() {
         <Box
             sx={{
                 backgroundColor: "var(--beige-color)",
-                width: "100%",
+                width: "80%",
                 margin: "5rem auto",
                 border: "3px solid black",
                 display: "flex",
@@ -27,26 +27,26 @@ export default function Projects() {
                 }}
             >
                 <Typography
-                    variant="h3"
+                    variant="h4"
                     fontFamily="var(--secondary-font)"
                     fontWeight="600"
                     marginLeft="1rem"
                     sx={{
                         "&:hover": {
-                            color: "var(--beige-color)",
+                            color: "black",
                         },
                     }}
                 >
                     {"<Projects/>"}
                 </Typography>
                 <Typography
-                    variant="h3"
+                    variant="h4"
                     fontFamily="var(--secondary-font)"
                     fontWeight="600"
                     marginRight="1rem"
                     sx={{
                         "&:hover": {
-                            color: "var(--beige-color)",
+                            color: "black",
                         },
                     }}
                 >

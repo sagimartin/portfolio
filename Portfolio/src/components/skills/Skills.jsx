@@ -13,7 +13,7 @@ export default function Skills() {
         <Box
             sx={{
                 backgroundColor: "var(--beige-color)",
-                width: "100%",
+                width: "80%",
                 margin: "5rem auto",
                 border: "3px solid black",
                 display: "flex",
@@ -32,7 +32,7 @@ export default function Skills() {
                 }}
             >
                 <Typography
-                    variant="h3"
+                    variant="h4"
                     fontFamily="var(--secondary-font)"
                     fontWeight="600"
                     marginLeft="1rem"
@@ -40,7 +40,7 @@ export default function Skills() {
                     {"<Skills/>"}
                 </Typography>
                 <Typography
-                    variant="h3"
+                    variant="h4"
                     fontFamily="var(--secondary-font)"
                     fontWeight="600"
                     marginRight="1rem"
@@ -64,7 +64,7 @@ export default function Skills() {
                     {firstThreeCategories.map(([categoryName, categoryData], categoryIndex) => (
                         <div key={categoryIndex}>
                             <Typography
-                                variant="h3"
+                                variant="h4"
                                 sx={{
                                     fontFamily: "var(--secondary-font)",
                                     fontWeight: "600",
@@ -114,7 +114,7 @@ export default function Skills() {
                     {restCategories.map(([categoryName, categoryData], categoryIndex) => (
                         <div key={categoryIndex}>
                             <Typography
-                                variant="h3"
+                                variant="h4"
                                 sx={{
                                     fontFamily: "var(--secondary-font)",
                                     fontWeight: "600",
