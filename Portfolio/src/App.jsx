@@ -2,6 +2,7 @@ import { Container } from '@mui/material';
 import Navbar from './components/navbar/Navbar';
 import Skills from './components/skills/Skills';
 import Projects from './components/projects/Projects';
+import Contacts from './components/contacts/Contacts';
 
 import './App.css';
 
@@ -11,6 +12,7 @@ function App() {
       <Navbar />
       <Skills />
       <Projects />
+      <Contacts />
     </Container>
   );
 }

@@ -1,0 +1,24 @@
+{
+  "contacts": [
+    {
+      "name": "CV",
+      "icon": "/assets/icons/cv.svg",
+      "link": "www.sagimartin.com"
+    },
+    {
+      "name": "LinkedIn",
+      "icon": "/assets/icons/linkedin.svg",
+      "link": "https://www.linkedin.com/in/sagimartin/"
+    },
+    {
+      "name": "GitHub",
+      "icon": "/assets/icons/github.svg",
+      "link": "https://github.com/sagimartin"
+    },
+    {
+      "name": "Mail",
+      "icon": "/assets/icons/mail.svg",
+      "link": "mailto:contact@sagimartin.com?subject=Hi there!"
+    }
+  ]
+}
