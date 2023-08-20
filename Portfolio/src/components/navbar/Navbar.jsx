@@ -1,10 +1,9 @@
-import { AppBar, Box, Typography } from "@mui/material";
+import { AppBar, Box } from "@mui/material";
 import { useState } from 'react';
 import AboutPopup from "../about/AboutPopup";
 import aboutData from "../../data/about.json"
 import hello from "/assets/images/about/hello.svg"
-
-import './Navbar.css';
+import about from "../../../public/assets/icons/about.svg"
 
 export default function Navbar() {
     const [showAboutPopup, setShowAboutPopup] = useState(false)
@@ -13,13 +12,22 @@ export default function Navbar() {
     };
 
     return (
-        <AppBar id="AppBar">
-            <img src={hello} alt="Hello" />
-            <Box className="menuButtons" >
-                {/* <Typography style={{ fontFamily: 'var(--secondary-font)' }} variant='h3' >{'<Home/>'}</Typography> */}
-                {/* <Typography style={{ fontFamily: 'var(--secondary-font)' }} variant='h3' >{'<Skills/>'}</Typography> */}
-                {/* <Typography style={{ fontFamily: 'var(--secondary-font)' }} variant='h3' >{'<Projects/>'}</Typography> */}
-                <Typography style={{ fontFamily: 'var(--secondary-font)' }} variant='h3' onClick={() => setShowAboutPopup(true)}>{'<About/>'}</Typography>
+        <AppBar sx={{
+            backgroundColor: "white",
+            boxShadow: "none",
+            position: "sticky"
+        }}>
+            <img src={hello} alt="Hello" style={{
+                width: "100%",
+                margin: "0 auto"
+            }} />
+            <Box sx={{
+                cursor: "pointer",
+                position: "absolute",
+                top: "2rem",
+                right: "10rem", 
+            }} >
+                <img src={about} alt="About me" style={{width: "10rem"}} onClick={() => setShowAboutPopup(true)} />
                 {showAboutPopup && <AboutPopup memes={aboutData.memes} closePopup={closeAboutPopup} />}
             </Box>
         </AppBar>
