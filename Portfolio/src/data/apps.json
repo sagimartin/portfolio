@@ -1,0 +1,20 @@
+{
+    "apps": [
+      {
+        "name": "About.me",
+        "icon": "/assets/icons/about.svg"
+      },
+      {
+        "name": "Contact.me",
+        "icon": "/assets/icons/contacts.svg"
+      },
+      {
+        "name": "My-projects.exe",
+        "icon": "/assets/icons/projects.svg"
+      },
+      {
+        "name": "My-skills.exe",
+        "icon": "/assets/icons/skills.svg"
+      }
+    ]
+  }
