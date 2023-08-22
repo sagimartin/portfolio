@@ -7,8 +7,8 @@ import AboutPopup from "./about/AboutPopup"
 import appsData from "../data/apps.json"
 import aboutData from "../data/about.json"
 
-import hello from "../../public/assets/images/about/hello.svg"
-import about from "../../public/assets/icons/about.svg"
+import hello from "/assets/images/about/hello.svg"
+import about from "/assets/icons/about.svg"
 
 
 

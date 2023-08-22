@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import Clock from "./Clock";
-import sm from "../../../public/assets/icons/sm.svg"
+import sm from "/assets/icons/sm.svg"
 
 export default function Footer() {
     return (

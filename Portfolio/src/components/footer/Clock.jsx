@@ -1,6 +1,6 @@
 import { Typography } from '@mui/material';
 import { useState, useEffect } from 'react';
-import wifi from "../../../public/assets/icons/wifi.svg"
+import wifi from "/assets/icons/wifi.svg"
 
 export default function Clock() {
     const [time, setTime] = useState('');
