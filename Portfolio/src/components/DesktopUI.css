@@ -1,0 +1,55 @@
+.desktop-ui-container {
+    background-color: var(--tale-color);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hello-image {
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+}
+
+.icon-box {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+.icon {
+    width: 7rem;
+    height: auto;
+    cursor: pointer;
+}
+
+.icon-text:hover {
+        color: var(--blue-color);
+    }

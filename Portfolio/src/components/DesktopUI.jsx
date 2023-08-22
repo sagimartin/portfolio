@@ -1,72 +1,52 @@
-import { Box, Typography } from "@mui/material"
 import { useState } from 'react';
+import { Box, Typography } from "@mui/material";
+import Footer from "./footer/Footer";
 
-import Footer from "./footer/Footer"
-import AboutPopup from "./about/AboutPopup"
+import AboutPopup from "./about/AboutPopup";
+import aboutData from "../data/about.json";
 
-import appsData from "../data/apps.json"
-import aboutData from "../data/about.json"
+import hello from "/assets/images/about/hello.svg";
+import contactsIcon from "/assets/icons/contacts.svg";
+import projectsIcon from "/assets/icons/projects.svg";
+import skillsIcon from "/assets/icons/skills.svg";
+import aboutIcon from "/assets/icons/about.svg";
 
-import hello from "/assets/images/about/hello.svg"
-import about from "/assets/icons/about.svg"
-
-
+import "./DesktopUI.css";
 
 export default function DesktopUI() {
-    const leftSide = appsData.apps.slice(1, 4)
     const [showAboutPopup, setShowAboutPopup] = useState(false);
     const closeAboutPopup = () => {
         setShowAboutPopup(false);
     };
 
     return (
-        <Box style={{ backgroundColor: "var(--tale-color)", height: "100vh", display: "flex", flexDirection: "column", justifyContent: 'space-between', alignItems: 'center' }}>
-            <Box style={{ height: "100%", width: "100%", display: "flex", flexDirection: "column", justifyContent: 'space-between' }}>
-                <img src={hello} alt="hello svg" style={{
-                    margin: "0 auto",  maxWidth: "100%", 
-                    height: "auto",
-                }} />
-                <Box style={{ display: "flex", justifyContent: "space-between", padding: "2rem", }}>
-                    <Box style={{ display: "flex", flexDirection: 'column' }}>
-                        {leftSide.map((app, index) => (
-                            <Box
-                                key={index}
-                                sx={{
-                                    textAlign: "center",
-                                    display: "flex",
-                                    flexDirection: "column",
-                                    alignItems: "center",
-                                    gap: "1rem",
-                                    marginTop: "2rem"
-                                }}
-                            >
-                                <img src={app.icon} alt={`${app.name} icon`} style={{ width: "7rem", height: "auto" }} />
-                                <Typography variant="h5" sx={{
-                                    fontFamily: "var(--primary-font)", fontWeight: "600",
-                                    "&:hover": {
-                                        color: "var(--blue-color)",
-                                    },
-                                }}>
-                                    {app.name}
-                                </Typography>
-                            </Box>
-                        ))}
+        <Box className="desktop-ui-container">
+            <Box className="content-container">
+                <img src={hello} alt="hello svg" className="hello-image" />
+                <Box className="buttons-container">
+                    <Box className="column">
+                        <Box className="icon-box">
+                            <img src={contactsIcon} alt="contact icon" className="icon" />
+                            <Typography variant="h5" className="icon-text" fontFamily="var(--secondary-font)" fontWeight="600" >
+                                Contact.me
+                            </Typography>
+                        </Box>
+                        <Box className="icon-box">
+                            <img src={projectsIcon} alt="projects icon" className="icon" />
+                            <Typography variant="h5" className="icon-text" fontFamily="var(--secondary-font)" fontWeight="600" >
+                                My-Projects.exe
+                            </Typography>
+                        </Box>
+                        <Box className="icon-box">
+                            <img src={skillsIcon} alt="skills icon" className="icon" />
+                            <Typography variant="h5" className="icon-text" fontFamily="var(--secondary-font)" fontWeight="600" >
+                                My-skills.rar
+                            </Typography>
+                        </Box>
                     </Box>
-                    <Box sx={{
-                        textAlign: "center",
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                        gap: "1rem",
-                        marginTop: "2rem"
-                    }} onClick={() => setShowAboutPopup(true)}>
-                        <img src={about} alt="about icon" style={{ width: "7rem", height: "auto" }} />
-                        <Typography variant="h5" sx={{
-                            fontFamily: "var(--primary-font)", fontWeight: "600",
-                            "&:hover": {
-                                color: "var(--blue-color)",
-                            },
-                        }}>
+                    <Box className="column" onClick={() => setShowAboutPopup(true)}>
+                        <img src={aboutIcon} alt="about icon" className="icon" />
+                        <Typography variant="h5" className="icon-text" fontFamily="var(--secondary-font)" fontWeight="600" >
                             About.me
                         </Typography>
                         {showAboutPopup && <AboutPopup memes={aboutData.memes} closePopup={closeAboutPopup} />}
@@ -75,5 +55,5 @@ export default function DesktopUI() {
             </Box>
             <Footer />
         </Box>
-    )
+    );
 }
