@@ -30,10 +30,17 @@ export default function AboutPopup({ memes, closePopup }) {
   };
 
   const handleCloseAll = () => {
-    closePopup();
-    setActivePopups([]);
-    setPositions([]);
-    setShowReadme(false);
+    if (activePopups.length > 0) {
+      closePopup();
+      setActivePopups([]);
+      setPositions([]);
+      setShowReadme(false);
+    } else {
+      // If no active popups, reset to initial state
+      setActivePopups(memes.filter(meme => !meme.hide));
+      setPositions(activePopups.map(() => getRandomPosition()));
+      setShowReadme(true);
+    }
   };
 
   return (
@@ -67,7 +74,9 @@ export default function AboutPopup({ memes, closePopup }) {
           </Box>
         </Box>
       ))}
-      <Button className='popup close-all' onClick={handleCloseAll}>Close All ✕</Button>
+     {activePopups.length > 0 && showReadme && (
+  <Button className='popup close-all' onClick={handleCloseAll}>Close All ✕</Button>
+)}
     </Box>
   );
 }
