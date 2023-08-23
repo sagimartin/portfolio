@@ -1,6 +1,5 @@
 .desktop-ui-container {
     background-color: var(--tale-color);
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
