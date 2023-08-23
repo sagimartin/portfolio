@@ -1,54 +1,87 @@
 .desktop-ui-container {
-    background-color: var(--tale-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+  background-color: var(--tale-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .content-container {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .hello-image {
-    margin: 0 auto;
-    max-width: 100%;
-    height: auto;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .buttons-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 2rem;
+  display: flex;
+  padding: 2rem;
+  justify-content: space-between;
 }
 
-.column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-    margin-bottom: 1.5rem;
+.left-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.middle-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 2rem;
+}
+
+.right-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 
 .icon-box {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 1.5rem;
-    cursor: pointer;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
 }
 
 .icon {
-    width: 7rem;
-    height: auto;
-    cursor: pointer;
+  width: 7rem;
+  height: auto;
+  cursor: pointer;
+}
+
+.icon-link {
+  text-decoration: none;
+  color: black;
 }
 
 .icon-text:hover {
-        color: var(--blue-color);
-    }
+  color: var(--blue-color);
+}
+
+@media (max-width: 720px) {
+  .icon {
+    width: 5rem;
+    height: auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .icon {
+    width: 3rem;
+    height: auto;
+  }
+  .buttons-container {
+    padding: 0.5rem;
+  }
+}
