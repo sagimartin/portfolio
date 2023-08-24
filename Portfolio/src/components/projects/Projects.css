@@ -2,7 +2,7 @@
   background-color: var(--beige-color);
   margin: 0 auto;
   border: 3px solid black;
-  max-width: 90%;
+  min-height: 30%;
   display: flex;
   flex-direction: column;
   cursor: default;
@@ -35,8 +35,8 @@
 
 .projects-list {
   width: 100%;
-  padding: 2rem;
-  gap: 2rem;
+  padding: 5rem;
+  gap: 5rem;
   display: flex;
   justify-content: space-evenly;
 }

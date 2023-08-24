@@ -4,6 +4,7 @@ import Footer from "./footer/Footer";
 
 import AboutPopup from "./about/AboutPopup";
 import aboutData from "../data/about.json";
+import LayerPopup from './popup-layer/PopupLayer';
 import Projects from "./projects/Projects"
 import Skills from "./skills/Skills"
 
@@ -38,8 +39,11 @@ export default function DesktopUI() {
         <Box className="desktop-ui-container">
             <Box className="content-container">
                 <img src={hello} alt="hello svg" className="hello-image" />
-                {showProjects && <Projects onClose={handleProjectsClose} />}
-                {showSkills && <Skills />}
+                {showProjects && (
+                    <LayerPopup>
+                        <Projects onClose={handleProjectsClose} />
+                    </LayerPopup>
+                )}                {showSkills && <Skills />}
                 <Box className="buttons-container">
                     <Box className="left-row">
                         <Box className="icon-box">
