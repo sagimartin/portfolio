@@ -1,15 +1,13 @@
 .clock-container{
     color: white;
     border: 3px inset #fff;
-    gap: 1rem;
-    padding: .5rem;
+    padding: .25rem .5rem;
     display: flex;
     align-items: center;
 }
   
   @media (max-width: 420px) {
     .clock-container {
-      gap: .5rem;
       padding: 0.25rem;
     }
 
