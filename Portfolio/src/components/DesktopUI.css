@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .content-container {
@@ -12,7 +12,6 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .hello-image {
@@ -84,5 +83,12 @@
   }
   .buttons-container {
     padding: 0.5rem;
+  }
+}
+
+
+@media (max-width: 400px) {
+  .middle-row {
+    gap: 1rem;
   }
 }

@@ -1,0 +1,21 @@
+.footer-container {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #c0c0c0;
+  border-top: 3px solid darkgray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: default;
+}
+
+.start-icon {
+  width: 3rem;
+  margin-right: 1rem;
+}
+
+@media (max-width: 420px) {
+  .footer-container {
+    padding: 0.25rem;
+  }
+}

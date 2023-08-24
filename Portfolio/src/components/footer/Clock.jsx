@@ -2,6 +2,8 @@ import { Typography } from '@mui/material';
 import { useState, useEffect } from 'react';
 import wifi from "/assets/icons/wifi.svg"
 
+import "./Clock.css"
+
 export default function Clock() {
     const [time, setTime] = useState('');
 
@@ -37,9 +39,17 @@ export default function Clock() {
     }, []);
 
     return (
-        <div style={{ color: "white", border: " 3px inset #fff", gap: "1rem", padding: ".5rem", display: "flex", alignItems: "center"  }}>
-            <img src={wifi} alt="wifi logo" style={{width:"2rem"}}/>
-            <Typography variant='h6' style={{fontFamily: "var(--secondary-font)"}}>
+        <div className='clock-container'>
+            <img className='start-icon' src={wifi} alt="wifi logo" style={{width:"2rem"}}/>
+            <Typography variant='h6' fontFamily= "var(--secondary-font)" sx={{
+                            fontSize: {
+                                xs: '1rem',
+                                sm: '1.2rem',
+                                md: '1.5rem',
+                                lg: '1.5rem',
+                                xl: '1.8rem',
+                            },
+                        }}>
             {time}
             </Typography>
         </div>

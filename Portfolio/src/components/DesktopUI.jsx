@@ -41,8 +41,8 @@ export default function DesktopUI() {
 
     return (
         <Box className="desktop-ui-container">
+            <img src={hello} alt="hello svg" className="hello-image" />
             <Box className="content-container">
-                <img src={hello} alt="hello svg" className="hello-image" />
                 {showProjects && (
                     <LayerPopup>
                         <Projects onClose={handleProjectsClose} />
@@ -182,8 +182,8 @@ export default function DesktopUI() {
                         {showAboutPopup && <AboutPopup memes={aboutData.memes} closePopup={closeAboutPopup} />}
                     </Box>
                 </Box>
+                <Footer />
             </Box>
-            <Footer />
         </Box>
     );
 }
