@@ -35,6 +35,10 @@ export default function DesktopUI() {
         setShowProjects(false);
     };
 
+    const handleSkillsClose = () => {
+        setShowSkills(false);
+    };
+
     return (
         <Box className="desktop-ui-container">
             <Box className="content-container">
@@ -43,7 +47,12 @@ export default function DesktopUI() {
                     <LayerPopup>
                         <Projects onClose={handleProjectsClose} />
                     </LayerPopup>
-                )}                {showSkills && <Skills />}
+                )}
+                {showSkills && (
+                    <LayerPopup>
+                        <Skills onClose={handleSkillsClose} />
+                    </LayerPopup>
+                )}
                 <Box className="buttons-container">
                     <Box className="left-row">
                         <Box className="icon-box">

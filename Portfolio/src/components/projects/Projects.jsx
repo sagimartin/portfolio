@@ -29,10 +29,10 @@ export default function Projects({ onClose }) {
                 </Typography>
                 <Typography onClick={handleCloseProjects} variant="h4" fontFamily="var(--secondary-font)" fontWeight="600" className="projects-close-button" sx={{
                     fontSize: {
-                        xs: '1rem',
-                        sm: '1.2rem',
-                        md: '1.7rem',
-                        lg: '2rem',
+                        xs: '1.2rem',
+                        sm: '1.7rem',
+                        md: '2rem',
+                        lg: '2.2rem',
                         xl: '2.2rem',
                     },
                 }}>
@@ -63,3 +63,4 @@ export default function Projects({ onClose }) {
         </Box>
     );
 }
+

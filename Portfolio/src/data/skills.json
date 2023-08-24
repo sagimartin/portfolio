@@ -1,7 +1,7 @@
 {
     "*//languages": {
         "skills": { "HTML5": "htmlIcon", "CSS": "css", "Javascript": "javascript", "SCSS": "scss" },
-        "color": "var(--blue-color)"
+        "color": "var(--yellow-color)"
     },
     "*//frontend-libraries": {
         "skills": { "React.js": "react", "Bootstrap": "bootstrap", "Tailwind": "tailwind", "MUI": "mui" },

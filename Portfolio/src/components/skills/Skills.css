@@ -1,0 +1,49 @@
+.skills-container {
+  background-color: var(--beige-color);
+  margin: 0 auto;
+  border: 3px solid black;
+  display: flex;
+  flex-direction: column;
+  cursor: default;
+}
+
+.skills-header {
+  background-color: var(--green-color);
+  border-bottom: 3px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skills-title {
+  padding-left: 1rem;
+}
+
+.skills-close-button {
+  all: unset;
+  cursor: pointer;
+  background: none;
+  border-left: 3px solid black;
+  padding: 0.5rem;
+}
+
+.skills-close-button:hover {
+  background-color: var(--magenta-color);
+  color: #fff;
+}
+
+.skills-list {
+  width: 100%;
+  padding: 5rem;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  color: black;
+}
+
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
