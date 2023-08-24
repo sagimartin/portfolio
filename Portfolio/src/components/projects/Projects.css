@@ -1,0 +1,79 @@
+.projects-container {
+  background-color: var(--beige-color);
+  margin: 0 auto;
+  border: 3px solid black;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  cursor: default;
+}
+
+.projects-header {
+  background-color: var(--yellow-color);
+  border-bottom: 3px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.projects-title {
+  padding-left: 1rem;
+}
+
+.projects-close-button {
+    all: unset;
+  cursor: pointer;
+  background: none;
+  border-left: 3px solid black;
+  padding: 0.5rem;
+}
+
+.projects-close-button:hover {
+  background-color: var(--magenta-color);
+  color: #fff;
+}
+
+.projects-list {
+  width: 100%;
+  padding: 2rem;
+  gap: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.project-box {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.folder-icon {
+  width: 10rem;
+  height: auto;
+  cursor: pointer;
+}
+
+.project-name {
+  cursor: pointer;
+  &:hover {
+    color: var(--blue-color);
+  }
+}
+
+@media (max-width: 720px) {
+  .folder-icon {
+    width: 5rem;
+    height: auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .folder-icon {
+    width: 3rem;
+    height: auto;
+  }
+  .projects-list {
+    padding: 0.5rem;
+  }
+}

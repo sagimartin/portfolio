@@ -30,11 +30,15 @@ export default function DesktopUI() {
         setShowAboutPopup(false);
     };
 
+    const handleProjectsClose = () => {
+        setShowProjects(false);
+    };
+
     return (
         <Box className="desktop-ui-container">
             <Box className="content-container">
                 <img src={hello} alt="hello svg" className="hello-image" />
-                {showProjects && <Projects />}
+                {showProjects && <Projects onClose={handleProjectsClose} />}
                 {showSkills && <Skills />}
                 <Box className="buttons-container">
                     <Box className="left-row">

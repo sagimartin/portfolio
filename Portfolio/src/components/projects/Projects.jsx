@@ -1,88 +1,62 @@
+import { useState } from 'react';
 import { Box, Typography } from "@mui/material";
 import projectsData from '../../data/projects.json';
-import folder from "../../../public/assets/icons/folder.svg"
+import folder from "/assets/icons/folder.svg";
 
-export default function Projects() {
+import "./Projects.css";
+
+export default function Projects({ onClose }) {
+    const [showProjects, setShowProjects] = useState(true);
+
+    const handleCloseProjects = () => {
+        setShowProjects(false);
+        onClose();
+    };
 
     return (
-        <Box
-            sx={{
-                backgroundColor: "var(--beige-color)",
-                width: "80%",
-                margin: "5rem auto",
-                border: "3px solid black",
-                display: "flex",
-                flexDirection: "column",
-                cursor: "pointer",
-            }}
-        >
-            <Box
-                sx={{
-                    backgroundColor: "var(--tale-color)",
-                    borderBottom: "3px solid black",
-                    padding: "0.5rem",
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center"
-                }}
-            >
-                <Typography
-                    variant="h4"
-                    fontFamily="var(--secondary-font)"
-                    fontWeight="600"
-                    marginLeft="1rem"
-                    sx={{
-                        "&:hover": {
-                            color: "black",
-                        },
-                    }}
-                >
+        <Box className={`projects-container ${showProjects ? 'open' : 'closed'}`}>
+            <Box className="projects-header">
+                <Typography variant="h4" fontFamily="var(--secondary-font)" fontWeight="600" className="projects-title" sx={{
+                    fontSize: {
+                        xs: '1.2rem',
+                        sm: '1.7rem',
+                        md: '2rem',
+                        lg: '2.2rem',
+                        xl: '2.2rem',
+                    },
+                }}>
                     {"<Projects/>"}
                 </Typography>
-                <Typography
-                    variant="h4"
-                    fontFamily="var(--secondary-font)"
-                    fontWeight="600"
-                    marginRight="1rem"
-                    sx={{
-                        "&:hover": {
-                            color: "black",
-                        },
-                    }}
-                >
-                    _ ▢ X
+                <Typography onClick={handleCloseProjects} variant="h4" fontFamily="var(--secondary-font)" fontWeight="600" className="projects-close-button" sx={{
+                    fontSize: {
+                        xs: '1rem',
+                        sm: '1.2rem',
+                        md: '1.7rem',
+                        lg: '2rem',
+                        xl: '2.2rem',
+                    },
+                }}>
+                    X
                 </Typography>
             </Box>
-            <Box
-                sx={{
-                    width: "100%",
-                    padding: "2rem",
-                    display: "flex",
-                    justifyContent: "space-evenly",
-                }}
-            >
+            <Box className="projects-list">
                 {projectsData.projects.map((project, index) => (
                     <Box
                         key={index}
-                        sx={{
-                            textAlign: "center",
-                            display: "flex",
-                            flexDirection: "column",
-                            alignItems: "center",
-                            gap: "1rem",
-                            marginTop: "2rem"
-                        }}
+                        className="project-box"
                     >
-                        <img src={folder} alt="folder icon" style={{ width: "10rem", height: "auto" }} />
-                        <Typography variant="h4" sx={{
-                            fontFamily: "var(--primary-font)", fontWeight: "600",
-                            "&:hover": {
-                                color: "var(--blue-color)",
+                        <img src={folder} alt="folder icon" className="folder-icon" />
+                        <Typography variant="h4" fontFamily="var(--secondary-font)" fontWeight="600" className="project-name" sx={{
+                            fontSize: {
+                                xs: '1rem',
+                                sm: '1.2rem',
+                                md: '1.7rem',
+                                lg: '2rem',
+                                xl: '2.2rem',
                             },
                         }}>
                             {project.name}
                         </Typography>
-                        {/* <Typography>{project.description}</Typography> */}
                     </Box>
                 ))}
             </Box>

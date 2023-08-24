@@ -1,7 +1,7 @@
 {
   "projects": [
     {
-      "name": "My Portfolio",
+      "name": "Portfolio",
       "description": "My personal portfolio website showcasing my skills and projects.",
       "skills": {
         "languages": ["HTML5", "CSS3", "JavaScript", "SCSS"],
@@ -14,7 +14,7 @@
       "repository": "https://github.com/sagimartin/portfolio"
     },
     {
-      "name": "Sample Project 1",
+      "name": "Project 1",
       "description": "A dummy project demonstrating various front-end technologies.",
       "skills": {
         "languages": ["HTML5", "CSS3", "JavaScript"],
@@ -27,7 +27,7 @@
       "repository": "https://github.com/sagimartin/example1"
     },
     {
-      "name": "Sample Project 2",
+      "name": "Project 2",
       "description": "Another dummy project showcasing back-end integration.",
       "skills": {
         "languages": ["Node.js", "Express.js"],
