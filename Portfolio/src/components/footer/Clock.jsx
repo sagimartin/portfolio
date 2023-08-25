@@ -1,5 +1,6 @@
 import { Typography } from '@mui/material';
 import { useState, useEffect } from 'react';
+import Weather from './Weather';
 import wifi from "/assets/icons/wifi.svg"
 
 import "./Clock.css"
@@ -40,17 +41,18 @@ export default function Clock() {
 
     return (
         <div className='clock-container'>
-            <img className='start-icon' src={wifi} alt="wifi logo" style={{width:"2rem"}}/>
-            <Typography variant='h6' fontFamily= "var(--secondary-font)" sx={{
-                            fontSize: {
-                                xs: '1rem',
-                                sm: '1.2rem',
-                                md: '1.5rem',
-                                lg: '1.5rem',
-                                xl: '1.8rem',
-                            },
-                        }}>
-            {time}
+            <Weather />
+            <img className='start-icon' src={wifi} alt="wifi logo" style={{ width: "2rem" }} />
+            <Typography variant='h6' fontFamily="var(--secondary-font)" sx={{
+                fontSize: {
+                    xs: '1rem',
+                    sm: '1.2rem',
+                    md: '1.5rem',
+                    lg: '1.5rem',
+                    xl: '1.8rem',
+                },
+            }}>
+                {time}
             </Typography>
         </div>
     );
