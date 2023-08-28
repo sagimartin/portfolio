@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Grid, Typography, Box, CircularProgress } from '@mui/material';
+import { Typography, Box, CircularProgress } from '@mui/material';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import CloudIcon from '@mui/icons-material/Cloud';
 import GrainIcon from '@mui/icons-material/Grain';
@@ -88,23 +88,17 @@ const Weather = () => {
     }
 
     return (
-        <Box>
-            <Grid container spacing={4} style={{ display: "flex", alignItems: "center" }}>
-                <Grid item xs={6}>
-                    <Typography variant="h6" fontFamily="var(--secondary-font)" sx={{
-                        fontSize: {
-                            xs: '1rem',
-                            sm: '1.2rem',
-                            md: '1.5rem',
-                            lg: '1.5rem',
-                            xl: '1.8rem',
-                        },
-                    }}>{current.temp_c}°C</Typography>
-                </Grid>
-                <Grid item xs={6}>
-                    <Typography variant="h6" display="flex">{weatherIcon}</Typography>
-                </Grid>
-            </Grid>
+        <Box style={{ display: 'flex', alignItems: "center", gap: ".5rem" }}>
+            <Typography variant="h6" fontFamily="var(--secondary-font)" sx={{
+                fontSize: {
+                    xs: '1rem',
+                    sm: '1.2rem',
+                    md: '1.5rem',
+                    lg: '1.5rem',
+                    xl: '1.8rem',
+                },
+            }}>{current.temp_c}°C</Typography>
+            <Typography variant="h6" display="flex">{weatherIcon}</Typography>
         </Box>
     );
 };

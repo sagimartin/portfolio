@@ -1,14 +1,12 @@
 import { Box } from "@mui/material";
-import Clock from "./Clock";
+import Infobar from "./Infobar";
 import sm from "/assets/icons/sm.svg"
-
-import "./Footer.css"
 
 export default function Footer() {
     return (
-        <Box className="footer-container">
-            <Box><img className="start-icon" src={sm} /></Box>
-            <Clock />
+        <Box style={{ width: "100%", backgroundColor: "#c0c0c0", borderTop: "3px solid darkgray", padding: "0 .5rem", display: "flex", justifyContent: 'space-between', alignItems: 'center', cursor: "default" }}>
+            <Box><img className="start-icon" src={sm} style={{ width: "3rem", display: "flex", alignItems: "center" }} /></Box>
+            <Infobar />
         </Box>
     );
 }

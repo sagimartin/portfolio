@@ -9,10 +9,22 @@
   --magenta-color: #fb3e93;
   --green-color: #33cc66;
   --yellow-color: #ffe236;
-  --tale-color: #53C4CC;
-  --beige-color: #F8F4EC;
-  --orange-color: #FC6E11;
-  --neon-color: #DCE52C;
+  --tale-color: #53c4cc;
+  --beige-color: #f8f4ec;
+  --orange-color: #fc6e11;
+  --neon-color: #dce52c;
   --primary-font: "Montserrat Alternates", sans-serif;
   --secondary-font: "Roboto Mono", monospace;
+}
+
+@media (max-width: 420px) {
+  .footer-container {
+    padding: 0.25rem;
+  }
+  .start-icon {
+    width: 2rem;
+  }
+  .wifi-logo {
+    width: 1.5rem;
+  }
 }
