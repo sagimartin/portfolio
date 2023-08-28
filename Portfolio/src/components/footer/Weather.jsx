@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Grid, Typography, Box, CircularProgress } from '@mui/material';
-import WbSunnyIcon from '@mui/icons-material/WbSunny';
-import ThunderstormIcon from '@mui/icons-material/Thunderstorm';
+import AcUnitIcon from '@mui/icons-material/AcUnit';
+import CloudIcon from '@mui/icons-material/Cloud';
 import GrainIcon from '@mui/icons-material/Grain';
+import ThunderstormIcon from '@mui/icons-material/Thunderstorm';
+import WaterDropIcon from '@mui/icons-material/WaterDrop';
+import WbSunnyIcon from '@mui/icons-material/WbSunny';
 
 const API_KEY = '1f6c86b0057c460290a52904232508';
 
@@ -57,17 +60,28 @@ const Weather = () => {
 
     switch (current.condition.text) {
         case 'Sunny':
-        case 'Sun':
-            weatherIcon = <WbSunnyIcon />;
+        case 'Clear sky':
+            weatherIcon = <WbSunnyIcon style={{ color: "yellow" }} />;
+            break;
+        case 'Clouds':
+            weatherIcon = <CloudIcon style={{ color: "white" }} />;
             break;
         case 'Thunderstorm':
-        case 'Thunder':
-        case 'Storm':
-            weatherIcon = <ThunderstormIcon />;
+            weatherIcon = <ThunderstormIcon style={{ color: "black" }} />;
             break;
         case 'Rain':
-        case 'Rainy':
-            weatherIcon = <GrainIcon />;
+        case 'Drizzle':
+            weatherIcon = <WaterDropIcon style={{ color: "blue" }} />;
+            break;
+        case 'Mist':
+        case 'Haze':
+        case 'Fog':
+        case 'Smoke':
+            weatherIcon = <GrainIcon style={{ color: "white" }} />;
+            break;
+        case 'Snow':
+        case 'Sleet':
+            weatherIcon = <AcUnitIcon style={{ color: "white" }} />;
             break;
         default:
             weatherIcon = null;
@@ -75,7 +89,7 @@ const Weather = () => {
 
     return (
         <Box>
-            <Grid container spacing={2}>
+            <Grid container spacing={4} style={{ display: "flex", alignItems: "center" }}>
                 <Grid item xs={6}>
                     <Typography variant="h6" fontFamily="var(--secondary-font)" sx={{
                         fontSize: {
@@ -88,7 +102,7 @@ const Weather = () => {
                     }}>{current.temp_c}°C</Typography>
                 </Grid>
                 <Grid item xs={6}>
-                    <Typography variant="h6" color="black">{weatherIcon}</Typography>
+                    <Typography variant="h6" display="flex">{weatherIcon}</Typography>
                 </Grid>
             </Grid>
         </Box>
