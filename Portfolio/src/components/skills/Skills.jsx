@@ -55,7 +55,7 @@ export default function Skills({ onClose }) {
             </Box>
             <Box className="skills-list">
                 {Object.entries(categories).map(
-                    ([categoryName, categoryData], categoryIndex) => (<div key={categoryIndex}>
+                    ([categoryName, categoryData], categoryIndex) => (<Box key={categoryIndex}>
                         <Typography
                             variant="h4"
                             fontFamily="var(--secondary-font)"
@@ -65,7 +65,7 @@ export default function Skills({ onClose }) {
                                     color: "black",
                                 },
                                 fontSize: {
-                                    xs: '1.2rem',
+                                    xs: '1.5rem',
                                     sm: '1.7rem',
                                     md: '2rem',
                                     lg: '2.2rem',
@@ -85,22 +85,22 @@ export default function Skills({ onClose }) {
                                         sx={{
                                             backgroundColor: categoryData.color,
                                             border: "3px solid black",
-                                            padding: ".5rem",
+                                            padding: "1rem",
                                             fontFamily: "var(--secondary-font)",
                                             fontWeight: "600",
                                             fontSize: {
-                                                xs: '.5rem',
-                                                sm: '.6rem',
-                                                md: '.8rem',
-                                                lg: '1rem',
-                                                xl: '1.1rem',
+                                                xs: '1rem',
+                                                sm: '1.2rem',
+                                                md: '1.6rem',
+                                                lg: '1.8rem',
+                                                xl: '1.8rem',
                                             },
                                         }}
                                     />
                                 </ListItem>
                             ))}
                         </Box>
-                    </div>
+                    </Box>
                     ))}
             </Box>
         </Box>

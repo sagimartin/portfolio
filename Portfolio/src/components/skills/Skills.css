@@ -1,6 +1,7 @@
 .skills-container {
   background-color: var(--beige-color);
   margin: 0 auto;
+  max-width: 90vw;
   border: 3px solid black;
   display: flex;
   flex-direction: column;
@@ -34,7 +35,7 @@
 
 .skills-list {
   width: 100%;
-  padding: 5rem;
+  padding: 3rem;
   gap: 2rem;
   display: flex;
   flex-direction: column;
@@ -46,4 +47,3 @@
   flex-wrap: wrap;
   list-style: none;
 }
-

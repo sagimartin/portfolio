@@ -24,6 +24,7 @@
 }
 
 @media (max-width: 420px) {
+  /* Footer */
   .footer-container {
     padding: 0.25rem;
   }
@@ -50,6 +51,15 @@
   .folder-icon {
     width: 5rem;
     height: auto;
+  }
+  
+  /* Skills */
+  .skills-list {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+  .chip-list {
+    padding: 0.5rem;
   }
 }
 
