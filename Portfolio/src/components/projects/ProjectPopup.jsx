@@ -33,7 +33,7 @@ const ProjectPopup = ({ project, onClose }) => {
                         md: '4.5rem',
                         lg: '5rem',
                         xl: '5.5rem',
-                    },
+                    }, cursor: "pointer"
                 }} />
             </Box>
             <Divider sx={{ margin: "1rem 0", border: "3px solid black" }} />

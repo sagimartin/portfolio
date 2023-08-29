@@ -45,7 +45,7 @@ export default function Projects({ onClose }) {
                         md: '4rem',
                         lg: '4rem',
                         xl: '4rem',
-                    },
+                    }, cursor: "pointer"
                 }} />
             </Box>
             <Box className="projects-list">
