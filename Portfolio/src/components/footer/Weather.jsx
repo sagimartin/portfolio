@@ -56,35 +56,24 @@ const Weather = () => {
     }
 
     const { current } = weatherData;
+    const condition = current.condition.text.toLowerCase();
+
     let weatherIcon;
 
-    switch (current.condition.text) {
-        case 'Sunny':
-        case 'Clear sky':
-            weatherIcon = <WbSunnyIcon style={{ color: "yellow" }} />;
-            break;
-        case 'Clouds':
-            weatherIcon = <CloudIcon style={{ color: "white" }} />;
-            break;
-        case 'Thunderstorm':
-            weatherIcon = <ThunderstormIcon style={{ color: "black" }} />;
-            break;
-        case 'Rain':
-        case 'Drizzle':
-            weatherIcon = <WaterDropIcon style={{ color: "blue" }} />;
-            break;
-        case 'Mist':
-        case 'Haze':
-        case 'Fog':
-        case 'Smoke':
-            weatherIcon = <GrainIcon style={{ color: "white" }} />;
-            break;
-        case 'Snow':
-        case 'Sleet':
-            weatherIcon = <AcUnitIcon style={{ color: "white" }} />;
-            break;
-        default:
-            weatherIcon = null;
+    if (condition.includes('sunny') || condition.includes('clear sky')) {
+        weatherIcon = <WbSunnyIcon style={{ color: "yellow" }} />;
+    } else if (condition.includes('clouds')) {
+        weatherIcon = <CloudIcon style={{ color: "white" }} />;
+    } else if (condition.includes('thunderstorm')) {
+        weatherIcon = <ThunderstormIcon style={{ color: "black" }} />;
+    } else if (condition.includes('rain') || condition.includes('drizzle')) {
+        weatherIcon = <WaterDropIcon style={{ color: "blue" }} />;
+    } else if (condition.includes('mist') || condition.includes('haze') || condition.includes('fog') || condition.includes('smoke')) {
+        weatherIcon = <GrainIcon style={{ color: "white" }} />;
+    } else if (condition.includes('snow') || condition.includes('sleet')) {
+        weatherIcon = <AcUnitIcon style={{ color: "white" }} />;
+    } else {
+        weatherIcon = null;
     }
 
     return (
