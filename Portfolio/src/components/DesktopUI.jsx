@@ -26,7 +26,6 @@ export default function DesktopUI() {
 
     const theme = responsiveFontSizes(createTheme());
 
-
     const closeAboutPopup = () => {
         setShowAboutPopup(false);
     };
@@ -53,33 +52,77 @@ export default function DesktopUI() {
                         <Skills onClose={handleSkillsClose} />
                     </LayerPopup>
                 )}
-                <Box className="buttons-container">
-                    <Box className="left-row">
-                        <Box className="icon-box">
-                            <a href="mailto:contact@sagimartin.com?subject=Hi%20there!" target="_blank"
-                                rel="noopener noreferrer" className="icon-link">
-                                <img src={mailIcon} alt="mail icon" className="icon" />
-                                <Typography
-                                    variant="h5"
-                                    className="icon-text"
-                                    fontFamily="var(--secondary-font)"
-                                    fontWeight="600"
-                                    theme={theme} sx={{
-                                        fontSize: {
-                                            xs: '1rem',
-                                            sm: '1.2rem',
-                                            md: '1.7rem',
-                                            lg: '2rem',
-                                            xl: '2.2rem',
-                                        },
-                                    }}
-                                >
-                                    Mail.me
-                                </Typography>
-                            </a>
-                        </Box>
-                        <Box className="icon-box" onClick={() => setShowProjects(true)}>
-                            <img src={projectsIcon} alt="projects icon" className="icon" />
+                <Box className="icon-list">
+                    <Box className="mail icon-box"><a href="mailto:contact@sagimartin.com?subject=Hi%20there!" target="_blank"
+                        rel="noopener noreferrer" className="icon-link">
+                        <img src={mailIcon} alt="mail icon" className="icon" />
+                        <Typography
+                            variant="h5"
+                            className="icon-text"
+                            fontFamily="var(--secondary-font)"
+                            fontWeight="600"
+                            theme={theme} sx={{
+                                fontSize: {
+                                    xs: '1rem',
+                                    sm: '1.2rem',
+                                    md: '1.7rem',
+                                    lg: '2rem',
+                                    xl: '2.2rem',
+                                },
+                            }}
+                        >
+                            Mail.me
+                        </Typography>
+                    </a></Box>
+                    <Box className="projects icon-box" onClick={() => setShowProjects(true)}>
+                        <img src={projectsIcon} alt="projects icon" className="icon" />
+                        <Typography variant="h5" className="icon-text" fontFamily="var(--secondary-font)" fontWeight="600" theme={theme} sx={{
+                            fontSize: {
+                                xs: '1rem',
+                                sm: '1.2rem',
+                                md: '1.7rem',
+                                lg: '2rem',
+                                xl: '2.2rem',
+                            },
+                        }}
+                        >
+                            Projects
+                        </Typography></Box>
+                    <Box className="skills icon-box" onClick={() => setShowSkills(true)}>
+                        <img src={skillsIcon} alt="skills icon" className="icon" />
+                        <Typography variant="h5" className="icon-text" fontFamily="var(--secondary-font)" fontWeight="600" theme={theme} sx={{
+                            fontSize: {
+                                xs: '1rem',
+                                sm: '1.2rem',
+                                md: '1.7rem',
+                                lg: '2rem',
+                                xl: '2.2rem',
+                            },
+                        }}
+                        >
+                            Skills.rar
+                        </Typography></Box>
+                    <Box className="linkedin icon-box">
+                        <a href="https://www.linkedin.com/in/sagimartin/" target="_blank"
+                            rel="noopener noreferrer" className="icon-link">
+                            <img src={linkedinIcon} alt="linkedin icon" className="icon" />
+                            <Typography variant="h5" className="icon-text" fontFamily="var(--secondary-font)" fontWeight="600" theme={theme} sx={{
+                                fontSize: {
+                                    xs: '1rem',
+                                    sm: '1.2rem',
+                                    md: '1.7rem',
+                                    lg: '2rem',
+                                    xl: '2.2rem',
+                                }
+                            }}
+                            >
+                                LinkedIn
+                            </Typography>
+                        </a></Box>
+                    <Box className="github icon-box">
+                        <a href="https://github.com/sagimartin" target="_blank"
+                            rel="noopener noreferrer" className="icon-link">
+                            <img src={githubIcon} alt="github icon" className="icon" />
                             <Typography variant="h5" className="icon-text" fontFamily="var(--secondary-font)" fontWeight="600" theme={theme} sx={{
                                 fontSize: {
                                     xs: '1rem',
@@ -90,98 +133,40 @@ export default function DesktopUI() {
                                 },
                             }}
                             >
-                                Projects
+                                GitHub
                             </Typography>
-                        </Box>
-                        <Box className="icon-box" onClick={() => setShowSkills(true)}>
-                            <img src={skillsIcon} alt="skills icon" className="icon" />
-                            <Typography variant="h5" className="icon-text" fontFamily="var(--secondary-font)" fontWeight="600" theme={theme} sx={{
-                                fontSize: {
-                                    xs: '1rem',
-                                    sm: '1.2rem',
-                                    md: '1.7rem',
-                                    lg: '2rem',
-                                    xl: '2.2rem',
-                                },
-                            }}
-                            >
-                                Skills.rar
-                            </Typography>
-                        </Box>
-                    </Box>
-                    <Box className="middle-row">
-                        <Box className="icon-box">
-                            <a href="https://www.linkedin.com/in/sagimartin/" target="_blank"
-                                rel="noopener noreferrer" className="icon-link">
-                                <img src={linkedinIcon} alt="linkedin icon" className="icon" />
-                                <Typography variant="h5" className="icon-text" fontFamily="var(--secondary-font)" fontWeight="600" theme={theme} sx={{
-                                    fontSize: {
-                                        xs: '1rem',
-                                        sm: '1.2rem',
-                                        md: '1.7rem',
-                                        lg: '2rem',
-                                        xl: '2.2rem',
-                                    }
-                                }}
-
-                                >
-                                    LinkedIn
-                                </Typography>
-                            </a>
-                        </Box>
-                        <Box className="icon-box">
-                            <a href="https://github.com/sagimartin" target="_blank"
-                                rel="noopener noreferrer" className="icon-link">
-                                <img src={githubIcon} alt="github icon" className="icon" />
-                                <Typography variant="h5" className="icon-text" fontFamily="var(--secondary-font)" fontWeight="600" theme={theme} sx={{
-                                    fontSize: {
-                                        xs: '1rem',
-                                        sm: '1.2rem',
-                                        md: '1.7rem',
-                                        lg: '2rem',
-                                        xl: '2.2rem',
-                                    },
-                                }}
-                                >
-                                    GitHub
-                                </Typography>
-                            </a>
-                        </Box>
-                    </Box>
-                    <Box className="right-row">
-                        <Box className="icon-box" onClick={() => setShowAboutPopup(true)}>
-                            <img src={aboutIcon} alt="about icon" className="icon" />
-                            <Typography variant="h5" className="icon-text" fontFamily="var(--secondary-font)" fontWeight="600" theme={theme} sx={{
-                                fontSize: {
-                                    xs: '1rem',
-                                    sm: '1.2rem',
-                                    md: '1.7rem',
-                                    lg: '2rem',
-                                    xl: '2.2rem',
-                                },
-                            }}
-                            >
-                                About.me
-                            </Typography>
-                        </Box>
-                        <Box className="icon-box">
-                            <img src={cvIcon} alt="CV icon" className="icon" />
-                            <Typography variant="h5" className="icon-text" fontFamily="var(--secondary-font)" fontWeight="600" theme={theme} sx={{
-                                fontSize: {
-                                    xs: '1rem',
-                                    sm: '1.2rem',
-                                    md: '1.7rem',
-                                    lg: '2rem',
-                                    xl: '2.2rem',
-                                },
-                            }}
-                            >
-                                CV.pdf
-                            </Typography>
-                        </Box>
-                        {showAboutPopup && <AboutPopup memes={aboutData.memes} closePopup={closeAboutPopup} />}
+                        </a></Box>
+                    <Box className="cv icon-box">
+                        <img src={cvIcon} alt="CV icon" className="icon" />
+                        <Typography variant="h5" className="icon-text" fontFamily="var(--secondary-font)" fontWeight="600" theme={theme} sx={{
+                            fontSize: {
+                                xs: '1rem',
+                                sm: '1.2rem',
+                                md: '1.7rem',
+                                lg: '2rem',
+                                xl: '2.2rem',
+                            },
+                        }}
+                        >
+                            CV.pdf
+                        </Typography></Box>
+                    <Box className="aboutme icon-box" onClick={() => setShowAboutPopup(true)}>
+                        <img src={aboutIcon} alt="about icon" className="icon" />
+                        <Typography variant="h5" className="icon-text" fontFamily="var(--secondary-font)" fontWeight="600" theme={theme} sx={{
+                            fontSize: {
+                                xs: '1rem',
+                                sm: '1.2rem',
+                                md: '1.7rem',
+                                lg: '2rem',
+                                xl: '2.2rem',
+                            },
+                        }}
+                        >
+                            About.me
+                        </Typography>
                     </Box>
                 </Box>
+                {showAboutPopup && <AboutPopup memes={aboutData.memes} closePopup={closeAboutPopup} />}
                 <Footer />
             </Box>
         </Box>

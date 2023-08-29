@@ -10,8 +10,6 @@
 .content-container {
   height: 100%;
   width: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
 .hello-image {
@@ -20,35 +18,39 @@
   height: auto;
 }
 
-.buttons-container {
-  display: flex;
-  padding: 2rem;
-  justify-content: space-between;
+.icon-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  padding: 0.5rem;
 }
 
-.left-row {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.mail {
+  grid-area: 1 / 1 / 2 / 2;
 }
-
-.middle-row {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  gap: 2rem;
+.projects {
+  grid-area: 2 / 1 / 3 / 2;
 }
-
-.right-row {
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
+.skills {
+  grid-area: 3 / 1 / 4 / 2;
+}
+.linkedin {
+  grid-area: 3 / 2 / 4 / 3;
+}
+.github {
+  grid-area: 3 / 3 / 4 / 4;
+}
+.cv {
+  grid-area: 3 / 4 / 4 / 5;
+}
+.aboutme {
+  grid-area: 2 / 4 / 3 / 5;
 }
 
 .icon-box {
   text-align: center;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   margin-bottom: 1.5rem;
   cursor: pointer;
@@ -81,14 +83,10 @@
     width: 3rem;
     height: auto;
   }
-  .buttons-container {
-    padding: 0.5rem;
-  }
 }
 
-
-@media (max-width: 400px) {
-  .middle-row {
-    gap: 1rem;
+@media (min-width: 2560px) {
+  .icon-list {
+    grid-row-gap: 5rem;
   }
 }
