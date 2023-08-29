@@ -17,7 +17,7 @@
   --secondary-font: "Roboto Mono", monospace;
 }
 
-.modal{
+.modal {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,6 +44,10 @@
     width: 3rem;
     height: auto;
   }
+  /* Skills */
+  .skills-chip-list {
+    padding: 0.5rem;
+  }
 }
 
 @media (max-width: 720px) {
@@ -52,7 +56,7 @@
     width: 5rem;
     height: auto;
   }
-  
+
   /* Skills */
   .skills-list {
     padding: 1.5rem;
@@ -62,4 +66,3 @@
     padding: 0.5rem;
   }
 }
-

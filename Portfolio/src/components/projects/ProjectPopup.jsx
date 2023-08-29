@@ -52,16 +52,15 @@ const ProjectPopup = ({ project, onClose }) => {
                                     sx={{
                                         backgroundColor: categoryColors[category],
                                         border: "3px solid black",
-                                        padding: ".5rem",
                                         marginRight: ".5rem",
                                         fontFamily: "var(--secondary-font)",
                                         fontWeight: "600",
                                         fontSize: {
-                                            xs: '1rem',
-                                            sm: '1.2rem',
-                                            md: '1.6rem',
-                                            lg: '2rem',
-                                            xl: '2.2rem',
+                                            xs: '.8rem',
+                                            sm: '1rem',
+                                            md: '1rem',
+                                            lg: '1.2rem',
+                                            xl: '1.2rem',
                                         },
                                     }}
                                 />
