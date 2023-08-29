@@ -2,6 +2,7 @@
   background-color: var(--beige-color);
   margin: 0 auto;
   border: 3px solid black;
+  box-shadow: 6px 6px black;
   min-height: 30%;
   max-width: 90vw;
   display: flex;
@@ -36,10 +37,10 @@
 
 .projects-list {
   width: 100%;
-  padding: 5rem;
-  gap: 5rem;
+  padding: 3rem;
+  gap: 2rem;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .project-box {
@@ -59,22 +60,5 @@
   cursor: pointer;
   &:hover {
     color: var(--blue-color);
-  }
-}
-
-@media (max-width: 720px) {
-  .folder-icon {
-    width: 5rem;
-    height: auto;
-  }
-}
-
-@media (max-width: 420px) {
-  .folder-icon {
-    width: 3rem;
-    height: auto;
-  }
-  .projects-list {
-    padding: 0.5rem;
   }
 }

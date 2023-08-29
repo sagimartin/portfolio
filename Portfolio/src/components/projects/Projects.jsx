@@ -1,16 +1,27 @@
 import { useState } from 'react';
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Modal } from "@mui/material";
+import CloseIcon from '@mui/icons-material/Close';
+
 import projectsData from '../../data/projects.json';
 import folder from "/assets/icons/folder.svg";
 
 import "./Projects.css";
 
+import ProjectPopup from './ProjectPopup';
+
 export default function Projects({ onClose }) {
     const [showProjects, setShowProjects] = useState(true);
+    const [selectedProject, setSelectedProject] = useState(null);
+    const [showProjectPopup, setShowProjectPopup] = useState(false);
 
-    const handleCloseProjects = () => {
-        setShowProjects(false);
-        onClose();
+    const handleProjectClick = (project) => {
+        setSelectedProject(project);
+        setShowProjectPopup(true);
+    };
+
+    const handleProjectPopupClose = () => {
+        setShowProjectPopup(false);
+        setSelectedProject(null);
     };
 
     return (
@@ -27,23 +38,22 @@ export default function Projects({ onClose }) {
                 }}>
                     {"<Projects/>"}
                 </Typography>
-                <Typography onClick={handleCloseProjects} variant="h4" fontFamily="var(--secondary-font)" fontWeight="600" className="projects-close-button" sx={{
+                <CloseIcon className="project-popup-close-button" onClick={onClose} sx={{
                     fontSize: {
-                        xs: '1.2rem',
-                        sm: '1.7rem',
-                        md: '2rem',
-                        lg: '2.2rem',
-                        xl: '2.2rem',
+                        xs: '2rem',
+                        sm: '2.5rem',
+                        md: '4rem',
+                        lg: '4rem',
+                        xl: '4rem',
                     },
-                }}>
-                    X
-                </Typography>
+                }} />
             </Box>
             <Box className="projects-list">
                 {projectsData.projects.map((project, index) => (
                     <Box
                         key={index}
                         className="project-box"
+                        onClick={() => handleProjectClick(project)}
                     >
                         <img src={folder} alt="folder icon" className="folder-icon" />
                         <Typography variant="h4" fontFamily="var(--secondary-font)" fontWeight="600" className="project-name" sx={{
@@ -60,7 +70,16 @@ export default function Projects({ onClose }) {
                     </Box>
                 ))}
             </Box>
+            <Modal
+                className='modal'
+                open={showProjectPopup}
+                onClose={handleProjectPopupClose}
+                aria-labelledby="project-modal-title"
+                aria-describedby="project-modal-description"
+                BackdropComponent={null}
+            >
+                <ProjectPopup project={selectedProject} onClose={handleProjectPopupClose} />
+            </Modal>
         </Box>
     );
 }
-

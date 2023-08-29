@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Box, Typography, createTheme, responsiveFontSizes } from "@mui/material";
+import { Box, Typography, createTheme, responsiveFontSizes, Modal } from "@mui/material";
 import Footer from "./footer/Footer";
 
 import AboutPopup from "./about/AboutPopup";
@@ -20,7 +20,7 @@ import skillsIcon from "/assets/icons/skills.svg";
 import "./DesktopUI.css";
 
 export default function DesktopUI() {
-    const [showProjects, setShowProjects] = useState(false)
+    const [showProjectsModal, setShowProjectsModal] = useState(false);
     const [showSkills, setShowSkills] = useState(false)
     const [showAboutPopup, setShowAboutPopup] = useState(false);
 
@@ -30,8 +30,8 @@ export default function DesktopUI() {
         setShowAboutPopup(false);
     };
 
-    const handleProjectsClose = () => {
-        setShowProjects(false);
+    const handleProjectsModalOpen = () => {
+        setShowProjectsModal(true);
     };
 
     const handleSkillsClose = () => {
@@ -42,11 +42,16 @@ export default function DesktopUI() {
         <Box className="desktop-ui-container">
             <img src={hello} alt="hello svg" className="hello-image" />
             <Box className="content-container">
-                {showProjects && (
-                    <LayerPopup>
-                        <Projects onClose={handleProjectsClose} />
-                    </LayerPopup>
-                )}
+                <Modal
+                    className='modal'
+                    open={showProjectsModal}
+                    onClose={() => setShowProjectsModal(false)}
+                    aria-labelledby="projects-modal-title"
+                    aria-describedby="projects-modal-description"
+                    BackdropComponent={null}
+                >
+                    <Projects onClose={() => setShowProjectsModal(false)} />
+                </Modal>
                 {showSkills && (
                     <LayerPopup>
                         <Skills onClose={handleSkillsClose} />
@@ -74,7 +79,7 @@ export default function DesktopUI() {
                             Mail.me
                         </Typography>
                     </a></Box>
-                    <Box className="projects icon-box" onClick={() => setShowProjects(true)}>
+                    <Box className="projects icon-box" onClick={handleProjectsModalOpen}>
                         <img src={projectsIcon} alt="projects icon" className="icon" />
                         <Typography variant="h5" className="icon-text" fontFamily="var(--secondary-font)" fontWeight="600" theme={theme} sx={{
                             fontSize: {

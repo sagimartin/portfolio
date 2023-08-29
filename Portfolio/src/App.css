@@ -17,6 +17,12 @@
   --secondary-font: "Roboto Mono", monospace;
 }
 
+.modal{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (max-width: 420px) {
   .footer-container {
     padding: 0.25rem;
@@ -27,4 +33,23 @@
   .wifi-logo {
     width: 1.5rem;
   }
+
+  /* Projects */
+  .projects-list {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .folder-icon {
+    width: 3rem;
+    height: auto;
+  }
 }
+
+@media (max-width: 720px) {
+  /* Projects */
+  .folder-icon {
+    width: 5rem;
+    height: auto;
+  }
+}
+

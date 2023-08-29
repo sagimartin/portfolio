@@ -1,0 +1,35 @@
+.project-popup-container {
+  padding: 1.5rem;
+  border: 3px solid ;
+  max-width: 90vw;
+  max-height: 90vh;
+  margin: auto;
+}
+
+.project-popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-popup-image {
+  max-width: 90%;
+  margin: 1rem auto;
+}
+
+.project-popup-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.skills-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 1rem 0;
+}
+
+.projects-footer {
+  display: flex;
+  justify-content: space-between;
+}
