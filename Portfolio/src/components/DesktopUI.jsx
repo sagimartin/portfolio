@@ -4,7 +4,6 @@ import Footer from "./footer/Footer";
 
 import AboutPopup from "./about/AboutPopup";
 import aboutData from "../data/about.json";
-import LayerPopup from './popup-layer/PopupLayer';
 import Projects from "./projects/Projects"
 import Skills from "./skills/Skills"
 
@@ -21,7 +20,7 @@ import "./DesktopUI.css";
 
 export default function DesktopUI() {
     const [showProjectsModal, setShowProjectsModal] = useState(false);
-    const [showSkills, setShowSkills] = useState(false)
+    const [showSkillsModal, setShowSkillsModal] = useState(false); // Új állapot a Skills modalhoz
     const [showAboutPopup, setShowAboutPopup] = useState(false);
 
     const theme = responsiveFontSizes(createTheme());
@@ -34,8 +33,8 @@ export default function DesktopUI() {
         setShowProjectsModal(true);
     };
 
-    const handleSkillsClose = () => {
-        setShowSkills(false);
+    const handleSkillsModalOpen = () => {
+        setShowSkillsModal(true);
     };
 
     return (
@@ -52,11 +51,16 @@ export default function DesktopUI() {
                 >
                     <Projects onClose={() => setShowProjectsModal(false)} />
                 </Modal>
-                {showSkills && (
-                    <LayerPopup>
-                        <Skills onClose={handleSkillsClose} />
-                    </LayerPopup>
-                )}
+                <Modal
+                    className='modal'
+                    open={showSkillsModal}
+                    onClose={() => setShowSkillsModal(false)}
+                    aria-labelledby="skills-modal-title"
+                    aria-describedby="skills-modal-description"
+                    BackdropComponent={null}
+                >
+                    <Skills onClose={() => setShowSkillsModal(false)} />
+                </Modal>
                 <Box className="icon-list">
                     <Box className="mail icon-box"><a href="mailto:contact@sagimartin.com?subject=Hi%20there!" target="_blank"
                         rel="noopener noreferrer" className="icon-link">
@@ -93,7 +97,7 @@ export default function DesktopUI() {
                         >
                             Projects
                         </Typography></Box>
-                    <Box className="skills icon-box" onClick={() => setShowSkills(true)}>
+                    <Box className="skills icon-box" onClick={handleSkillsModalOpen}>
                         <img src={skillsIcon} alt="skills icon" className="icon" />
                         <Typography variant="h5" className="icon-text" fontFamily="var(--secondary-font)" fontWeight="600" theme={theme} sx={{
                             fontSize: {
@@ -103,10 +107,11 @@ export default function DesktopUI() {
                                 lg: '2rem',
                                 xl: '2.2rem',
                             },
-                        }}
-                        >
-                            Skills.rar
-                        </Typography></Box>
+                        }}>
+                            Skills
+                        </Typography>
+                    </Box>
+
                     <Box className="linkedin icon-box">
                         <a href="https://www.linkedin.com/in/sagimartin/" target="_blank"
                             rel="noopener noreferrer" className="icon-link">

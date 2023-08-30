@@ -1,17 +1,14 @@
 import { useState } from "react";
 import { Box, Typography, Chip } from "@mui/material";
 import { styled } from "@mui/material/styles";
+import CloseIcon from '@mui/icons-material/Close';
+
 import categories from "../../data/skills.json";
 
 import "./Skills.css"
 
 export default function Skills({ onClose }) {
     const [showSkills, setShowSkills] = useState(true)
-
-    const handleCloseSkills = () => {
-        setShowSkills(false);
-        onClose();
-    }
 
     const ListItem = styled('li')(({ theme }) => ({
         margin: theme.spacing(0.5),
@@ -27,31 +24,25 @@ export default function Skills({ onClose }) {
                     fontFamily="var(--secondary-font)"
                     fontWeight="600" sx={{
                         fontSize: {
-                            xs: '1.2rem',
-                            sm: '1.7rem',
-                            md: '2rem',
-                            lg: '2.2rem',
-                            xl: '2.2rem',
+                            xs: '2rem',
+                            sm: '2.5rem',
+                            md: '3rem',
+                            lg: '3rem',
+                            xl: '3.2rem',
                         },
                     }}
                 >
                     {"<Skills/>"}
                 </Typography>
-                <Typography onClick={handleCloseSkills} className="skills-close-button"
-                    variant="h4"
-                    fontFamily="var(--secondary-font)"
-                    fontWeight="600" sx={{
-                        fontSize: {
-                            xs: '1.2rem',
-                            sm: '1.7rem',
-                            md: '2rem',
-                            lg: '2.2rem',
-                            xl: '2.2rem',
-                        },
-                    }}
-                >
-                    X
-                </Typography>
+                <CloseIcon className="project-popup-close-button" onClick={onClose} sx={{
+                    fontSize: {
+                        xs: '2rem',
+                        sm: '2.5rem',
+                        md: '4rem',
+                        lg: '4rem',
+                        xl: '4rem',
+                    }, cursor: "pointer"
+                }} />
             </Box>
             <Box className="skills-list">
                 {Object.entries(categories).map(
@@ -85,7 +76,6 @@ export default function Skills({ onClose }) {
                                         sx={{
                                             backgroundColor: categoryData.color,
                                             border: "3px solid black",
-                                            padding: "1rem",
                                             fontFamily: "var(--secondary-font)",
                                             fontWeight: "600",
                                             fontSize: {
@@ -94,6 +84,9 @@ export default function Skills({ onClose }) {
                                                 md: '1.6rem',
                                                 lg: '1.8rem',
                                                 xl: '1.8rem',
+                                            },
+                                            '@media (min-width: 1040px)': {
+                                                padding: '1rem',
                                             },
                                         }}
                                     />
