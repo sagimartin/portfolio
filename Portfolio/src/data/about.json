@@ -21,7 +21,7 @@
       "src": "my-wife.jpg"
     },
     {
-      "title": "scooter.jpg",
+      "title": "my-scooter.jpg",
       "src": "scooter.jpg"
     },
     {
@@ -32,6 +32,10 @@
     {
       "title": "super-mario.gif",
       "src": "super-mario.gif"
+    },
+    {
+      "title": "astrology.png",
+      "src": "sagittarius.jpeg"
     }
   ]
 }
