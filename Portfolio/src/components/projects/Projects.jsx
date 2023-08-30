@@ -1,13 +1,12 @@
 import { useState } from 'react';
 import { Box, Typography, Modal } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
+import ProjectPopup from './ProjectPopup';
 
 import projectsData from '../../data/projects.json';
 import folder from "/assets/icons/folder.svg";
 
 import "./Projects.css";
-
-import ProjectPopup from './ProjectPopup';
 
 export default function Projects({ onClose }) {
     const [showProjects, setShowProjects] = useState(true);
@@ -29,11 +28,11 @@ export default function Projects({ onClose }) {
             <Box className="projects-header">
                 <Typography variant="h4" fontFamily="var(--secondary-font)" fontWeight="600" className="projects-title" sx={{
                     fontSize: {
-                        xs: '1.2rem',
-                        sm: '1.7rem',
-                        md: '2rem',
-                        lg: '2.2rem',
-                        xl: '2.2rem',
+                        xs: '2rem',
+                        sm: '2.5rem',
+                        md: '3rem',
+                        lg: '3rem',
+                        xl: '3.2rem',
                     },
                 }}>
                     {"<Projects/>"}
