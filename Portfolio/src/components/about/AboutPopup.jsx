@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import { Button } from '@mui/base';
 import { Box, Typography } from '@mui/material';
-import { useState } from 'react';
+import CloseIcon from '@mui/icons-material/Close';
+
 import './AboutPopup.css';
 
 const getRandomPosition = () => ({
@@ -15,7 +17,6 @@ export default function AboutPopup({ memes, closePopup }) {
 
   const handleCloseReadme = () => {
     setShowReadme(false);
-    if (activePopups.length === 0) closePopup();
   };
 
   const handleClosePopup = (index) => {
@@ -35,10 +36,11 @@ export default function AboutPopup({ memes, closePopup }) {
       setActivePopups([]);
       setPositions([]);
       setShowReadme(false);
-    } else {
-      // If no active popups, reset to initial state
-      setActivePopups(memes.filter(meme => !meme.hide));
-      setPositions(activePopups.map(() => getRandomPosition()));
+    } else if (!showReadme) {
+      // If no active popups and README is already closed, reset to initial state
+      const newActivePopups = memes.filter(meme => !meme.hide);
+      setActivePopups(newActivePopups);
+      setPositions(newActivePopups.map(() => getRandomPosition()));
       setShowReadme(true);
     }
   };
@@ -48,11 +50,35 @@ export default function AboutPopup({ memes, closePopup }) {
       {showReadme && (
         // README Popup
         <Box className="popup readme">
-          <Box className="popup-header drag-handle-readme">
-            <Typography style={{ fontFamily: 'var(--secondary-font)' }}>README.md</Typography>
-            <Button className="close-button" onClick={handleCloseReadme}>X</Button>
+          <Box className="popup-header">
+            <Typography style={{
+              fontFamily: 'var(--secondary-font)', fontSize: {
+                xs: '1.5rem',
+                sm: '1.7rem',
+                md: '1.7rem',
+                lg: '2.5rem',
+                xl: '3rem',
+              },
+            }}>README.md</Typography>
+            <CloseIcon className="project-popup-close-button" onClick={handleCloseReadme} sx={{
+              fontSize: {
+                xs: '1.5rem',
+                sm: '1.7rem',
+                md: '1.7rem',
+                lg: '2rem',
+                xl: '2rem',
+              }, cursor: "pointer"
+            }} />
           </Box>
-          <Typography style={{ fontFamily: 'var(--secondary-font)' }} className='readme-text'>Lorem ipsum, dolor sit amet consectetur adipisicing elit...</Typography>
+          <Typography style={{
+            fontFamily: 'var(--secondary-font)', fontSize: {
+              xs: '1.5rem',
+              sm: '1.7rem',
+              md: '1.7rem',
+              lg: '2.5rem',
+              xl: '3.5rem',
+            },
+          }} className='readme-text'>Lorem ipsum, dolor sit amet consectetur adipisicing elit...</Typography>
         </Box>
       )}
       {activePopups.map((meme, index) => (
@@ -62,11 +88,28 @@ export default function AboutPopup({ memes, closePopup }) {
           key={index}
           style={{ position: 'absolute', top: positions[index].y, left: positions[index].x }}
         >
-          <Box className="popup-header drag-handle">
-            <Typography style={{ fontFamily: 'var(--secondary-font)' }}>
+          <Box className="popup-header">
+            <Typography style={{
+              fontFamily: 'var(--secondary-font)', fontSize: {
+                xs: '1.5rem',
+                sm: '1.7rem',
+                md: '1.7rem',
+                lg: '2.5rem',
+                xl: '3rem',
+              },
+            }}>
               {meme.title}
             </Typography>
-            <Button className="close-button" onClick={() => handleClosePopup(index)}>X</Button>
+
+            <CloseIcon className="project-popup-close-button" onClick={() => handleClosePopup(index)} sx={{
+              fontSize: {
+                xs: '1.5rem',
+                sm: '1.7rem',
+                md: '1.7rem',
+                lg: '2rem',
+                xl: '2rem',
+              }, cursor: "pointer"
+            }} />
           </Box>
 
           <Box className="popup-image-container">
@@ -74,9 +117,9 @@ export default function AboutPopup({ memes, closePopup }) {
           </Box>
         </Box>
       ))}
-     {activePopups.length > 0 && showReadme && (
-  <Button className='popup close-all' onClick={handleCloseAll}>Close All ✕</Button>
-)}
+      {activePopups.length > 0 && (
+        <Button className='popup close-all' onClick={handleCloseAll}>Close All ✕</Button>
+      )}
     </Box>
   );
 }

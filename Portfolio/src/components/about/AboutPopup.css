@@ -26,13 +26,10 @@
 }
 
 .popup {
-  cursor: pointer;
   background-color: #fff;
   margin: 2rem;
   border: 3px solid black;
   box-shadow: 6px 6px black;
-  font-family: var(--primary-font);
-  font-weight: 600;
   max-width: 20rem;
   height: min-content;
   overflow: none;
@@ -47,14 +44,14 @@
 }
 
 .popup-header {
+  cursor: default;
   display: grid;
   grid-template-columns: 1fr auto;
   justify-content: center;
   align-items: center;
   border-bottom: 3px solid black;
   color: white;
-  font-family: var(--primary-font);
-  font-size: 1.5rem;
+  padding: .5rem;
   text-align: center;
   background-color: var(--blue-color);
 }
