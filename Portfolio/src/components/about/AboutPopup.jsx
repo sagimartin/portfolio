@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Button } from '@mui/base';
 import { Box, Typography } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
@@ -14,6 +14,19 @@ export default function AboutPopup({ memes, closePopup }) {
   const [activePopups, setActivePopups] = useState(memes.filter(meme => !meme.hide));
   const [positions, setPositions] = useState(activePopups.map(() => getRandomPosition()));
   const [showReadme, setShowReadme] = useState(true);
+  const cursorRef = useRef(null);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (cursorRef.current.style.visibility === 'visible') {
+        cursorRef.current.style.visibility = 'hidden';
+      } else {
+        cursorRef.current.style.visibility = 'visible';
+      }
+    }, 500);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const handleCloseReadme = () => {
     setShowReadme(false);
@@ -49,7 +62,7 @@ export default function AboutPopup({ memes, closePopup }) {
     <Box className="popup-overlay">
       {showReadme && (
         // README Popup
-        <Box className="popup readme">
+        <Box className="readme">
           <Box className="popup-header">
             <Typography style={{
               fontFamily: 'var(--secondary-font)', fontSize: {
@@ -78,7 +91,9 @@ export default function AboutPopup({ memes, closePopup }) {
               lg: '2.5rem',
               xl: '3.5rem',
             },
-          }} className='readme-text'>Lorem ipsum, dolor sit amet consectetur adipisicing elit...</Typography>
+          }} className='readme-text'>
+            I'm a '90s kid at heart. Bringing the nostalgia of late-night MSN chats and Super Mario adventures into my designs. <br /><br />  I have a son, a wife and  two cats. Together, we make life an exciting journey.<span ref={cursorRef} style={{ visibility: 'hidden' }}>|</span>
+          </Typography>
         </Box>
       )}
       {activePopups.map((meme, index) => (

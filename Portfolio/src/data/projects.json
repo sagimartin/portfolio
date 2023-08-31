@@ -6,7 +6,7 @@
       "skills": {
         "languages": ["HTML5", "CSS3", "JavaScript"],
         "frontend-libraries": ["React.js", "MUI"],
-        "development": ["VS Code", "GitHub", "Vite.js"],
+        "development": ["VS Code", "GitHub", "Vite.js", "Vercel"],
         "design": ["Canva"]
       },
       "image": "/assets/portfolio/portfolio.svg",

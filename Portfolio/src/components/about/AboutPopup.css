@@ -13,16 +13,18 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 400px;
-  max-height: 500px;
   overflow: auto;
   z-index: 1001;
+  background-color: var(--beige-color);
   color: black;
+  border: 3px solid black;
+  box-shadow: 6px 6px black;
 }
 
 .readme-text {
-  padding: 1rem;
+  padding: 2rem;
   text-align: justify;
+  cursor: default;
 }
 
 .popup {
