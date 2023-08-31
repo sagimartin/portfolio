@@ -20,7 +20,7 @@ import "./DesktopUI.css";
 
 export default function DesktopUI() {
     const [showProjectsModal, setShowProjectsModal] = useState(false);
-    const [showSkillsModal, setShowSkillsModal] = useState(false); // Új állapot a Skills modalhoz
+    const [showSkillsModal, setShowSkillsModal] = useState(false); 
     const [showAboutPopup, setShowAboutPopup] = useState(false);
 
     const theme = responsiveFontSizes(createTheme());

@@ -94,6 +94,14 @@
   }
 }
 
+@media (max-width: 1700px) {
+  /* DesktopUI */
+  .content-container {
+    position: sticky;
+    bottom: 0;
+  }
+}
+
 @media (min-width: 2560px) {
   .icon-list {
     grid-row-gap: 5rem;
