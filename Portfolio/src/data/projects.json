@@ -2,11 +2,11 @@
   "projects": [
     {
       "name": "Portfolio",
-      "description": "My personal portfolio website showcasing my skills and projects. It features a completely unique design tailored to reflect my personality and creativity.",
+      "description": "My portfolio website showcasing my skills and projects. It features a completely unique design tailored to reflect my personality and creativity.",
       "skills": {
         "languages": ["HTML5", "CSS3", "JavaScript"],
         "frontend-libraries": ["React.js", "MUI"],
-        "development": ["VS Code", "GitHub", "Vite.js", "Vercel"],
+        "development": ["Vite.js", "Vercel"],
         "design": ["Canva"]
       },
       "image": "/assets/portfolio/portfolio.svg",
