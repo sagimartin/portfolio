@@ -92,6 +92,10 @@
     position: sticky;
     bottom: 0;
   }
+}
+
+@media (min-width: 800px) {
+  /* SkillsPopup */
   .skills-chip-list {
     width: 80%;
     display: flex;
@@ -100,9 +104,16 @@
   }
 }
 
+@media (max-width: 800px) {
+  /* DesktopUI */
+  .content-container {
+    position: sticky;
+    bottom: 0;
+  }
+
 @media (min-width: 1024px) {
   /* ProjectPopup */
-  .project-popup-container{
+  .project-popup-container {
     max-width: 60%;
   }
   .skills-chip-list {
