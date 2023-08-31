@@ -23,16 +23,24 @@ const ProjectPopup = ({ project, onClose }) => {
     return (
         <Paper className="project-popup-container">
             <Box className="project-popup-header">
-                <Typography variant="h4" fontFamily="var(--secondary-font)" fontWeight="600">
+                <Typography variant="h4" fontFamily="var(--secondary-font)" fontWeight="600" sx={{
+                    fontSize: {
+                        xs: '1.5rem',
+                        sm: '2rem',
+                        md: '3rem',
+                        lg: '3rem',
+                        xl: '3.2rem',
+                    },
+                }}>
                     {project.name}
                 </Typography>
                 <CloseIcon className="project-popup-close-button" onClick={onClose} sx={{
                     fontSize: {
-                        xs: '3rem',
-                        sm: '3.5rem',
-                        md: '4.5rem',
-                        lg: '5rem',
-                        xl: '5.5rem',
+                        xs: '2rem',
+                        sm: '2.5rem',
+                        md: '4rem',
+                        lg: '4rem',
+                        xl: '4rem',
                     }, cursor: "pointer"
                 }} />
             </Box>

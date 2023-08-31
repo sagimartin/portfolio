@@ -69,10 +69,6 @@
     width: 5rem;
     height: auto;
   }
-  .content-container {
-    position: sticky;
-    bottom: 0;
-  }
 
   /* Projects */
   .folder-icon {
@@ -90,11 +86,30 @@
   }
 }
 
-@media (max-width: 1700px) {
+@media (max-width: 800px) {
   /* DesktopUI */
   .content-container {
     position: sticky;
     bottom: 0;
+  }
+  .skills-chip-list {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* ProjectPopup */
+  .project-popup-container{
+    max-width: 60%;
+  }
+  .skills-chip-list {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 }
 
