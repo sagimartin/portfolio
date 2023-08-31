@@ -7,8 +7,6 @@ import ThunderstormIcon from '@mui/icons-material/Thunderstorm';
 import WaterDropIcon from '@mui/icons-material/WaterDrop';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
 
-const API_KEY = '1f6c86b0057c460290a52904232508';
-
 const Weather = () => {
     const [userLocation, setUserLocation] = useState(null);
     const [weatherData, setWeatherData] = useState(null);
@@ -18,7 +16,7 @@ const Weather = () => {
             try {
                 if (userLocation) {
                     const response = await fetch(
-                        `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${userLocation.lat},${userLocation.lon}`
+                        `https://api.weatherapi.com/v1/current.json?key=${process.env.WEATHER_API_KEY}&q=${userLocation.lat},${userLocation.lon}`
                     );
                     const data = await response.json();
                     setWeatherData(data);
