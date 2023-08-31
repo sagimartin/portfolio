@@ -16,8 +16,8 @@ const Weather = () => {
             try {
                 if (userLocation) {
                     const response = await fetch(
-                        `https://api.weatherapi.com/v1/current.json?key=${process.env.WEATHER_API_KEY}&q=${userLocation.lat},${userLocation.lon}`
-                    );
+                        `https://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_WEATHER_API_KEY}&q=${userLocation.lat},${userLocation.lon}`
+                        );
                     const data = await response.json();
                     setWeatherData(data);
                 }
