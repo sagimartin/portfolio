@@ -47,6 +47,7 @@ const ProjectPopup = ({ project, onClose }) => {
                         <ListItem key={index}>
                             {skills.map((skill, skillIndex) => (
                                 <Chip
+                                    className="skills-chip"
                                     key={skillIndex}
                                     label={skill}
                                     sx={{
@@ -68,15 +69,15 @@ const ProjectPopup = ({ project, onClose }) => {
                         </ListItem>
                     ))}
                 </Box>
-                <Divider sx={{ margin: ".5rem 0", border: "1px solid black" }} />
-                <Box className="projects-footer">
-                    <Typography variant="body1" fontFamily="var(--secondary-font)" fontWeight="bold" >
-                        <a href={project.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "var(--blue-color)" }}>Go to page</a>
-                    </Typography>
-                    <Typography variant="body1" fontFamily="var(--secondary-font)" fontWeight="bold">
-                        <a href={project.repository} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "var(--magenta-color)" }}>GitHub repository</a>
-                    </Typography>
-                </Box>
+            </Box>
+            <Divider sx={{ margin: ".5rem 0", border: "1px solid black" }} />
+            <Box className="projects-footer">
+                <Typography variant="body1" fontFamily="var(--secondary-font)" fontWeight="bold" >
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "var(--blue-color)" }}>Go to page</a>
+                </Typography>
+                <Typography variant="body1" fontFamily="var(--secondary-font)" fontWeight="bold">
+                    <a href={project.repository} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "var(--magenta-color)" }}>GitHub repository</a>
+                </Typography>
             </Box>
         </Paper>
     );

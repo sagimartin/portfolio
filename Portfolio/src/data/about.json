@@ -1,16 +1,20 @@
 {
   "memes": [
     {
+      "title": "also-me.jpg",
+      "src": "also-me.jpg"
+    },
+    {
+      "title": "my-scooter.jpg",
+      "src": "scooter.jpg"
+    },
+    {
       "title": "me.jpg",
       "src": "me.jpg"
     },
     {
       "title": "best-game-ever.jpg",
       "src": "best-game-ever.jpg"
-    },
-    {
-      "title": "also-me.jpg",
-      "src": "also-me.jpg"
     },
     {
       "title": "mini-me.jpg",
@@ -21,21 +25,17 @@
       "src": "my-wife.jpg"
     },
     {
-      "title": "my-scooter.jpg",
-      "src": "scooter.jpg"
-    },
-    {
       "title": "also-my-wife.jpg",
       "src": "also-my-wife.jpg",
       "hide": true
     },
     {
-      "title": "super-mario.gif",
-      "src": "super-mario.gif"
-    },
-    {
       "title": "astrology.png",
       "src": "sagittarius.jpeg"
+    },
+    {
+      "title": "super-mario.gif",
+      "src": "super-mario.gif"
     }
   ]
 }

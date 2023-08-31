@@ -28,8 +28,8 @@ export default function Projects({ onClose }) {
             <Box className="projects-header">
                 <Typography variant="h4" fontFamily="var(--secondary-font)" fontWeight="600" className="projects-title" sx={{
                     fontSize: {
-                        xs: '2rem',
-                        sm: '2.5rem',
+                        xs: '1.5rem',
+                        sm: '2rem',
                         md: '3rem',
                         lg: '3rem',
                         xl: '3.2rem',

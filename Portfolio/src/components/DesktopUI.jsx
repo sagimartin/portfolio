@@ -176,8 +176,8 @@ export default function DesktopUI() {
                         </Typography>
                     </Box>
                 </Box>
-                {showAboutPopup && <AboutPopup memes={aboutData.memes} closePopup={closeAboutPopup} />}
                 <Footer />
+                {showAboutPopup && <AboutPopup memes={aboutData.memes} closePopup={closeAboutPopup} />}
             </Box>
         </Box>
     );

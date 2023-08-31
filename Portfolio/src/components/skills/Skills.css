@@ -2,6 +2,7 @@
   background-color: var(--beige-color);
   margin: 0 auto;
   max-width: 90vw;
+  max-height: 80vh;
   border: 3px solid black;
   box-shadow: 6px 6px black;
   display: flex;
@@ -38,17 +39,16 @@
 .skills-list {
   width: 100%;
   padding: 3rem;
+  margin-bottom: 1rem;
   gap: 2rem;
   display: flex;
   flex-direction: column;
   color: black;
+  overflow: scroll;
 }
 
 .chip-list {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-}
-
-.chip {
 }

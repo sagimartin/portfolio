@@ -70,23 +70,3 @@
 .icon-text:hover {
   color: var(--blue-color);
 }
-
-@media (max-width: 720px) {
-  .icon {
-    width: 5rem;
-    height: auto;
-  }
-}
-
-@media (max-width: 420px) {
-  .icon {
-    width: 3rem;
-    height: auto;
-  }
-}
-
-@media (min-width: 2560px) {
-  .icon-list {
-    grid-row-gap: 5rem;
-  }
-}

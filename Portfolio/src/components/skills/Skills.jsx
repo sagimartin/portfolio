@@ -24,8 +24,8 @@ export default function Skills({ onClose }) {
                     fontFamily="var(--secondary-font)"
                     fontWeight="600" sx={{
                         fontSize: {
-                            xs: '2rem',
-                            sm: '2.5rem',
+                            xs: '1.5rem',
+                            sm: '2rem',
                             md: '3rem',
                             lg: '3rem',
                             xl: '3.2rem',
@@ -56,8 +56,8 @@ export default function Skills({ onClose }) {
                                     color: "black",
                                 },
                                 fontSize: {
-                                    xs: '1.5rem',
-                                    sm: '1.7rem',
+                                    xs: '1.2rem',
+                                    sm: '1.5rem',
                                     md: '2rem',
                                     lg: '2.2rem',
                                     xl: '2.2rem',

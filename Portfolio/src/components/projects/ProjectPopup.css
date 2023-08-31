@@ -1,8 +1,10 @@
 .project-popup-container {
+  display: flex;
+  flex-direction: column;
   padding: 1.5rem;
   border: 3px solid;
   max-width: 90vw;
-  max-height: 90vh;
+  max-height: 80vh;
   margin: auto;
 }
 
@@ -20,13 +22,18 @@
 .project-popup-content {
   display: flex;
   flex-direction: column;
+  overflow: scroll;
 }
 
 .skills-chip-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   list-style: none;
-  margin: 1rem auto;
+  margin: 0 auto;
+}
+
+.skills-chip{
+  margin: .2rem;
 }
 
 .projects-footer {

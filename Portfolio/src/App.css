@@ -24,6 +24,11 @@
 }
 
 @media (max-width: 420px) {
+  /* DesktopUI */
+  .icon {
+    width: 3rem;
+    height: auto;
+  }
   /* Footer */
   .footer-container {
     padding: 0.25rem;
@@ -44,13 +49,35 @@
     width: 3rem;
     height: auto;
   }
+
   /* Skills */
   .skills-chip-list {
     padding: 0.5rem;
   }
+  .skills-list {
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+  .chip-list {
+    padding: 0.5rem;
+  }
+  /* About */
+  .close-all {
+    visibility: hidden;
+  }
 }
 
 @media (max-width: 720px) {
+  /* DesktopUI */
+  .icon {
+    width: 5rem;
+    height: auto;
+  }
+  .content-container {
+    position: sticky;
+    bottom: 0;
+  }
+
   /* Projects */
   .folder-icon {
     width: 5rem;
@@ -64,5 +91,11 @@
   }
   .chip-list {
     padding: 0.5rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .icon-list {
+    grid-row-gap: 5rem;
   }
 }

@@ -133,7 +133,7 @@ export default function AboutPopup({ memes, closePopup }) {
         </Box>
       ))}
       {activePopups.length > 0 && (
-        <Button className='popup close-all' onClick={handleCloseAll}>Close All ✕</Button>
+        <Button className='popup close-all' id='close-all' onClick={handleCloseAll}>Close All ✕</Button>
       )}
     </Box>
   );
