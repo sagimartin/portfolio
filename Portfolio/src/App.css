@@ -61,10 +61,6 @@
   .chip-list {
     padding: 0.5rem;
   }
-  /* About */
-  .close-all {
-    visibility: hidden;
-  }
 }
 
 @media (max-width: 720px) {
