@@ -50,6 +50,15 @@ const ProjectPopup = ({ project, onClose }) => {
                     {project.description}
                 </Typography>
                 <img src={project.image} alt={project.name} className="project-popup-image" />
+                <Typography variant="h6" fontFamily="var(--secondary-font)" fontWeight="bold" style={{
+                    fontSize: {
+                        xs: '1rem',
+                        sm: '1.5rem',
+                        md: '2rem',
+                        lg: '3rem',
+                        xl: '3.2rem',
+                    }, margin: "0 auto"
+                }}> /// Stack /// </Typography>
                 <Box className="skills-chip-list" component="ul">
                     {Object.entries(project.skills).map(([category, skills], index) => (
                         <ListItem key={index}>
