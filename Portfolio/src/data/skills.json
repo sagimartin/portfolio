@@ -1,8 +1,8 @@
 {
   "*//languages": {
     "skills": {
-      "HTML5": "htmlIcon",
       "CSS": "css",
+      "HTML5": "htmlIcon",
       "Javascript": "javascript",
       "SCSS": "scss"
     },
@@ -10,15 +10,15 @@
   },
   "*//frontend-libraries": {
     "skills": {
-      "React.js": "react",
       "Bootstrap": "bootstrap",
-      "Tailwind": "tailwind",
-      "MUI": "mui"
+      "MUI": "mui",
+      "React.js": "react",
+      "Tailwind": "tailwind"
     },
     "color": "var(--magenta-color)"
   },
   "*//backend-libraries": {
-    "skills": { "Node.js": "node", "Express.js": "express" },
+    "skills": { "Express.js": "express", "Node.js": "node" },
     "color": "var(--green-color)"
   },
   "*//database": {
@@ -27,15 +27,20 @@
   },
   "*//development": {
     "skills": {
-      "VS code": "vscode",
       "GitHub": "github",
       "Vite.js": "vite",
-      "Vercel": "vercel"
+      "Vercel": "vercel",
+      "VS code": "vscode"
     },
     "color": "var(--tale-color)"
   },
   "*//design": {
-    "skills": { "Figma": "figma", "Photoshop": "photoshop", "Canva": "canva" },
+    "skills": {
+      "Canva": "canva",
+      "Figma": "figma",
+      "Photoshop": "photoshop",
+      "Procreate": "procreate"
+    },
     "color": "var(--neon-color)"
   }
 }
