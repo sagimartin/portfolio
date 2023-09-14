@@ -62,7 +62,7 @@ export default function DesktopUI() {
                     <Skills onClose={() => setShowSkillsModal(false)} />
                 </Modal>
                 <Box className="icon-list">
-                    <Box className="mail icon-box"><a href="mailto:contact@sagimartin.com?subject=Hi%20there!" target="_blank"
+                    <Box className="mail icon-box"><a href="mailto:hello@sagimartin.com?subject=Hi%20there!" target="_blank"
                         rel="noopener noreferrer" className="icon-link">
                         <img src={mailIcon} alt="mail icon" className="icon" />
                         <Typography
