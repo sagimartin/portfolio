@@ -146,20 +146,23 @@ export default function DesktopUI() {
                                 GitHub
                             </Typography>
                         </a></Box>
-                    <Box className="cv icon-box">
-                        <img src={cvIcon} alt="CV icon" className="icon" />
-                        <Typography variant="h5" className="icon-text" fontFamily="var(--secondary-font)" fontWeight="600" theme={theme} sx={{
-                            fontSize: {
-                                xs: '1rem',
-                                sm: '1.2rem',
-                                md: '1.7rem',
-                                lg: '2rem',
-                                xl: '2.2rem',
-                            },
-                        }}
-                        >
-                            CV.pdf
-                        </Typography></Box>
+                        <Box className="cv icon-box">
+                        <a href="https://drive.google.com/file/d/1OwqnyrRkqY0UUMYh-DG_amTvR6Bc5XFY/view?usp=sharing" target="_blank"
+                            rel="noopener noreferrer" className="icon-link">
+                            <img src={cvIcon} alt="CV icon" className="icon" />
+                            <Typography variant="h5" className="icon-text" fontFamily="var(--secondary-font)" fontWeight="600" theme={theme} sx={{
+                                fontSize: {
+                                    xs: '1rem',
+                                    sm: '1.2rem',
+                                    md: '1.7rem',
+                                    lg: '2rem',
+                                    xl: '2.2rem',
+                                },
+                            }}
+                            >
+                                CV.pdf
+                            </Typography> 
+                            </a></Box>
                     <Box className="aboutme icon-box" onClick={() => setShowAboutPopup(true)}>
                         <img src={aboutIcon} alt="about icon" className="icon" />
                         <Typography variant="h5" className="icon-text" fontFamily="var(--secondary-font)" fontWeight="600" theme={theme} sx={{
