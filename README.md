@@ -14,9 +14,9 @@ A personal portfolio website introducing myself and showcasing my projects. The 
 
 - CSS3
 - Javascript
-- Vite.js
-- React.js
 - Material UI
+- React.js
+- Vite.js
 
 ## Deployed with
 
@@ -68,6 +68,6 @@ Your feedback, suggestions, and contributions are warmly welcomed! If you encoun
 ## Next Steps: 
 I'm enthusiastic about the future evolution of this portfolio. I plan to continually expand my project showcase, refine my skills, and embrace emerging design and technology trends.
 
-© Martin Sagi | [GitHub Repository](https://github.com/sagimartin)
+© Martin Sagi | [sagimartin.com](https://www.sagimartin.com/) | [LinkedIn](https://www.linkedin.com/in/sagimartin/) | [GitHub](https://github.com/sagimartin)
 
    
