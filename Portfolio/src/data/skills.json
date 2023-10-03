@@ -4,7 +4,7 @@
       "CSS": "css",
       "HTML5": "htmlIcon",
       "Javascript": "javascript",
-      "SCSS": "scss"
+      "SASS": "sass"
     },
     "color": "var(--yellow-color)"
   },
@@ -12,7 +12,7 @@
     "skills": {
       "Bootstrap": "bootstrap",
       "MUI": "mui",
-      "React.js": "react",
+      "React": "react",
       "Tailwind": "tailwind"
     },
     "color": "var(--magenta-color)"
