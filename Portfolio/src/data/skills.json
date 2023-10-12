@@ -1,40 +1,53 @@
 {
   "*//languages": {
     "skills": {
-      "CSS": "css",
       "HTML5": "htmlIcon",
-      "Javascript": "javascript",
-      "SASS": "sass"
+      "Javascript": "javascript"
     },
     "color": "var(--yellow-color)"
   },
-  "*//frontend-libraries": {
+  "*//front-end-frameworks": {
     "skills": {
-      "Bootstrap": "bootstrap",
-      "MUI": "mui",
       "React": "react",
+      "Vite.js": "vite",
+      "Next.js": "nextjs",
+      "MUI": "mui",
+      "Bootstrap": "bootstrap",
       "Tailwind": "tailwind"
     },
     "color": "var(--magenta-color)"
   },
-  "*//backend-libraries": {
-    "skills": { "Express.js": "express", "Node.js": "node" },
+  "*//styles": {
+    "skills": {
+      "CSS": "css",
+      "SASS": "sass",
+      "Tailwind": "tailwind"
+    },
+    "color": "var(--blue-color)"
+  },
+  "*//back-end-frameworks": {
+    "skills": {
+      "Express.js": "express",
+      "Node.js": "node"
+    },
     "color": "var(--green-color)"
   },
-  "*//database": {
-    "skills": { "Firebase": "firebase", "Firestore": "firestore" },
+  "*//databases": {
+    "skills": {
+      "Firebase": "firebase",
+      "Firestore": "firestore"
+    },
     "color": "var(--orange-color)"
   },
-  "*//development": {
+  "*//development-tools": {
     "skills": {
       "GitHub": "github",
-      "Vite.js": "vite",
       "Vercel": "vercel",
       "VS code": "vscode"
     },
     "color": "var(--tale-color)"
   },
-  "*//design": {
+  "*//design-tools": {
     "skills": {
       "Canva": "canva",
       "Figma": "figma",

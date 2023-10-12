@@ -88,6 +88,9 @@ export default function Skills({ onClose }) {
                                             '@media (min-width: 1040px)': {
                                                 padding: '1rem',
                                             },
+                                            '@media (min-width: 1340px)': {
+                                                padding: '1.2rem',
+                                            },
                                         }}
                                     />
                                 </ListItem>

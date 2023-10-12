@@ -13,11 +13,12 @@ const ProjectPopup = ({ project, onClose }) => {
 
     const categoryColors = {
         "languages": "var(--yellow-color)",
-        "frontend-libraries": "var(--magenta-color)",
-        "backend-libraries": "var(--green-color)",
-        "development": "var(--tale-color)",
-        "design": "var(--neon-color)",
-        "database": "var(--orange-color)",
+        "front-end-frameworks": "var(--magenta-color)",
+        "styles": "var(--blue-color)",
+        "back-end-frameworks": "var(--green-color)",
+        "development-tools": "var(--tale-color)",
+        "design-tools": "var(--neon-color)",
+        "databases": "var(--orange-color)",
     };
 
     return (
@@ -46,7 +47,7 @@ const ProjectPopup = ({ project, onClose }) => {
             </Box>
             <Divider sx={{ margin: "1rem 0", border: "3px solid black" }} />
             <Box className="project-popup-content">
-                <Typography variant="body1" fontFamily="var(--secondary-font)" textAlign="justify">
+                <Typography variant="body1" fontFamily="var(--secondary-font)" textAlign="justify" style={{ maxWidth: "95%", margin: '0 auto', }}>
                     {project.description}
                 </Typography>
                 <img src={project.image} alt={project.name} className="project-popup-image" />

@@ -15,7 +15,7 @@
 }
 
 .project-popup-image {
-  max-width: 90%;
+  max-width: 95%;
   margin: 1rem auto;
 }
 
@@ -32,8 +32,8 @@
   margin: 0 auto;
 }
 
-.skills-chip{
-  margin: .2rem;
+.skills-chip {
+  margin: 0.2rem;
 }
 
 .projects-footer {

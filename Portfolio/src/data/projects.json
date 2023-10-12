@@ -1,44 +1,60 @@
 {
   "projects": [
     {
+      "name": "NASA APOD",
+      "description": "NASA Astronomy Picture of the Day. This is one of my favorite projects from my Codecool training, reimagined in React, and deployed on Firebase. Let's explore the universe together.",
+      "skills": {
+        "languages": ["JavaScript"],
+        "front-end-frameworks": ["MUI", "React"],
+        "styles": ["SASS"],
+        "databases": ["Firebase"],
+        "design-tools": ["Figma"]
+      },
+      "image": "/assets/portfolio/nasa-apod.png",
+      "link": "https://nasa-apod-sagimartin.web.app",
+      "repository": "https://github.com/sagimartin/NASA-APOD.git"
+    },
+    {
       "name": "Portfolio",
       "description": "My portfolio website showcasing my skills and projects. It features a completely unique design tailored to reflect my personality and creativity.",
       "skills": {
-        "languages": ["CSS3", "JavaScript"],
-        "frontend-libraries": ["React", "MUI"],
-        "development": ["Vite.js", "Vercel"],
-        "design": ["Canva"]
+        "languages": ["JavaScript"],
+        "front-end-frameworks": ["MUI", "React", "Vite.js"],
+        "styles": ["CSS3"],
+        "development-tools": ["Vercel"],
+        "design-tools": ["Canva"]
       },
       "image": "/assets/portfolio/portfolio.svg",
       "link": "https://sagimartin.com",
       "repository": "https://github.com/sagimartin/portfolio"
     },
     {
-      "name": "Tattoo Slot Machine",
-      "description": "An interactive slot machine project aimed at generating revenue for Budapest based Mots Doux tattoo salon while showcasing a variety of frontend technologies and design skills. Guests can spin on-site and receive this extra tattoo as a gift. But you can also try it now! Spin the reels, discover unique tattoo designs, and taste the victory!",
+      "name": "Quiz App",
+      "description": "A sample quiz application that challenges your knowledge about various funny topics. Test your skills and aim for a perfect 100% score with interactive quizzes.",
       "skills": {
-        "languages": ["JavaScript", "SASS"],
-        "frontend-libraries": ["React"],
-        "development": ["Vite.js", "Vercel"],
-        "design": ["Figma", "Photoshop", "Procreate"]
+        "languages": ["JavaScript"],
+        "front-end-frameworks": ["Next.js", "React", "Vite.js"],
+        "styles": ["CSS3"],
+        "development-tools": ["Vercel"],
+        "design-tools": ["Figma"]
+      },
+      "image": "/assets/portfolio/quiz-app.png",
+      "link": "https://sagimartin-quiz-app.vercel.app",
+      "repository": "https://github.com/sagimartin/quiz-app.git"
+    },
+    {
+      "name": "Slot Machine",
+      "description": "An interactive Tattoo slot machine project aimed at generating revenue for Budapest based Mots Doux tattoo salon while showcasing a variety of frontend technologies and design skills. Guests can spin on-site and receive this extra tattoo as a gift. But you can also try it now! Spin the reels, discover unique tattoo designs, and taste the victory!",
+      "skills": {
+        "languages": ["JavaScript"],
+        "front-end-frameworks": ["MUI", "React", "Vite.js"],
+        "styles": ["SASS"],
+        "development-tools": ["Vercel"],
+        "design-tools": ["Figma", "Photoshop", "Procreate"]
       },
       "image": "/assets/portfolio/slotmachine.png",
       "link": "https://motsdouxtattoo.com",
       "repository": "https://github.com/sagimartin/motsdoux-tattoo"
-    },
-
-    {
-      "name": "NASA APOD",
-      "description": "NASA Astronomy Picture of the Day. This is one of my favorite projects from my Codecool training, reimagined in React, and deployed on Firebase. Let's explore the universe together.",
-      "skills": {
-        "languages": ["JavaScript", "SASS"],
-        "frontend-libraries": ["React"],
-        "database": ["Firebase"],
-        "design": ["Figma"]
-      },
-      "image": "/assets/portfolio/nasa-apod.png",
-      "link": "https://nasa-apod-sagimartin.web.app",
-      "repository": "https://github.com/sagimartin/NASA-APOD.git"
     }
   ]
 }
