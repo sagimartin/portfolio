@@ -31,11 +31,6 @@
   padding: 0.5rem;
 }
 
-.skills-close-button:hover {
-  background-color: var(--magenta-color);
-  color: #fff;
-}
-
 .skills-list {
   width: 100%;
   padding: 3rem;
