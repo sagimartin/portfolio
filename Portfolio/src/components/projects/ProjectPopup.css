@@ -6,6 +6,7 @@
   max-width: 90vw;
   max-height: 80vh;
   margin: auto;
+  cursor: default;
 }
 
 .project-popup-header {
