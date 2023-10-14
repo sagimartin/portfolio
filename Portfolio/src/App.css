@@ -115,7 +115,7 @@
 @media (min-width: 1024px) {
   /* ProjectPopup */
   .project-popup-container {
-    max-width: 60%;
+    max-width: 50%;
   }
   .skills-chip-list {
     width: 80%;

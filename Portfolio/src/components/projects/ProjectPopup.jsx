@@ -47,44 +47,41 @@ const ProjectPopup = ({ project, onClose }) => {
             </Box>
             <Divider sx={{ margin: "1rem 0", border: "3px solid black" }} />
             <Box className="project-popup-content">
-                <Typography variant="body1" fontFamily="var(--secondary-font)" textAlign="justify" style={{ maxWidth: "95%", margin: '0 auto', }}>
+                <Typography variant="body1" fontFamily="var(--secondary-font)" textAlign="justify" sx={{
+                    maxWidth: "95%", margin: '0 auto', fontSize: {
+                        xs: '.8rem',
+                        sm: '1rem',
+                        md: '1.5rem',
+                        lg: '1.5rem',
+                        xl: '2rem',
+                    },
+                }}>
                     {project.description}
                 </Typography>
                 <img src={project.image} alt={project.name} className="project-popup-image" />
-                <Typography variant="h6" fontFamily="var(--secondary-font)" fontWeight="bold" style={{
-                    fontSize: {
-                        xs: '1rem',
-                        sm: '1.5rem',
-                        md: '2rem',
-                        lg: '3rem',
-                        xl: '3.2rem',
-                    }, margin: "0 auto"
-                }}> /// Stack /// </Typography>
                 <Box className="skills-chip-list" component="ul">
                     {Object.entries(project.skills).map(([category, skills], index) => (
-                        <ListItem key={index}>
-                            {skills.map((skill, skillIndex) => (
-                                <Chip
-                                    className="skills-chip"
-                                    key={skillIndex}
-                                    label={skill}
-                                    sx={{
-                                        backgroundColor: categoryColors[category],
-                                        border: "3px solid black",
-                                        marginRight: ".5rem",
-                                        fontFamily: "var(--secondary-font)",
-                                        fontWeight: "600",
-                                        fontSize: {
-                                            xs: '.8rem',
-                                            sm: '1rem',
-                                            md: '1rem',
-                                            lg: '1.2rem',
-                                            xl: '1.2rem',
-                                        },
-                                    }}
-                                />
-                            ))}
-                        </ListItem>
+                        skills.map((skill, skillIndex) => (
+                            <Chip
+                                className="skills-chip"
+                                key={skillIndex}
+                                label={skill}
+                                sx={{
+                                    backgroundColor: categoryColors[category],
+                                    border: "3px solid black",
+                                    margin: ".2rem",
+                                    fontFamily: "var(--secondary-font)",
+                                    fontWeight: "600",
+                                    fontSize: {
+                                        xs: '.8rem',
+                                        sm: '1rem',
+                                        md: '1rem',
+                                        lg: '1.2rem',
+                                        xl: '1.2rem',
+                                    },
+                                }}
+                            />
+                        ))
                     ))}
                 </Box>
             </Box>
