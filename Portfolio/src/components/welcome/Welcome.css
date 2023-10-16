@@ -1,0 +1,22 @@
+.welcome {
+  margin-top: 2rem;
+}
+
+.welcome-header {
+  background-color: var(--orange-color);
+}
+
+.welcome-message {
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.intro-message {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
