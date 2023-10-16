@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Box, Typography, createTheme, responsiveFontSizes, Modal } from "@mui/material";
 import Footer from "./footer/Footer";
 
@@ -17,11 +17,25 @@ import projectsIcon from "/assets/icons/projects.svg";
 import skillsIcon from "/assets/icons/skills.svg";
 
 import "./DesktopUI.css";
+import Welcome from './welcome/Welcome';
 
 export default function DesktopUI() {
     const [showProjectsModal, setShowProjectsModal] = useState(false);
-    const [showSkillsModal, setShowSkillsModal] = useState(false); 
+    const [showSkillsModal, setShowSkillsModal] = useState(false);
     const [showAboutPopup, setShowAboutPopup] = useState(false);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 1000);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 1024);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     const theme = responsiveFontSizes(createTheme());
 
@@ -39,8 +53,11 @@ export default function DesktopUI() {
 
     return (
         <Box className="desktop-ui-container">
-            <img src={hello} alt="hello svg" className="hello-image" />
-            <Box className="content-container">
+            {isMobile ? (
+                <Welcome/>
+            ) : (
+                <img src={hello} alt="hello svg" className="hello-image" />
+            )}            <Box className="content-container">
                 <Modal
                     className='modal'
                     open={showProjectsModal}
@@ -146,7 +163,7 @@ export default function DesktopUI() {
                                 GitHub
                             </Typography>
                         </a></Box>
-                        <Box className="cv icon-box">
+                    <Box className="cv icon-box">
                         <a href="https://drive.google.com/file/d/1OwqnyrRkqY0UUMYh-DG_amTvR6Bc5XFY/view?usp=sharing" target="_blank"
                             rel="noopener noreferrer" className="icon-link">
                             <img src={cvIcon} alt="CV icon" className="icon" />
@@ -161,8 +178,8 @@ export default function DesktopUI() {
                             }}
                             >
                                 CV.pdf
-                            </Typography> 
-                            </a></Box>
+                            </Typography>
+                        </a></Box>
                     <Box className="aboutme icon-box" onClick={() => setShowAboutPopup(true)}>
                         <img src={aboutIcon} alt="about icon" className="icon" />
                         <Typography variant="h5" className="icon-text" fontFamily="var(--secondary-font)" fontWeight="600" theme={theme} sx={{
