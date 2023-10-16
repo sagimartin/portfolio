@@ -49,7 +49,7 @@ const ProjectPopup = ({ project, onClose }) => {
             <Box className="project-popup-content">
                 <Typography variant="body1" fontFamily="var(--secondary-font)" textAlign="justify" sx={{
                     maxWidth: "95%", margin: '0 auto', fontSize: {
-                        xs: '.8rem',
+                        xs: '1rem',
                         sm: '1rem',
                         md: '1.5rem',
                         lg: '1.5rem',
