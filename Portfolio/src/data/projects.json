@@ -33,7 +33,7 @@
       "description": "A sample quiz application that challenges your knowledge about various funny topics. Test your skills and aim for a perfect 100% score with interactive quizzes.",
       "skills": {
         "languages": ["JavaScript"],
-        "front-end-frameworks": ["Next.js", "React", "Vite.js"],
+        "front-end-frameworks": ["Next.js", "React"],
         "styles": ["CSS3"],
         "development-tools": ["Vercel"],
         "design-tools": ["Figma"]
