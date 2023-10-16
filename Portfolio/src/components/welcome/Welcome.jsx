@@ -1,11 +1,21 @@
+import { useState } from 'react';
 import { Box, Typography } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 import "./Welcome.css";
 
 export default function Welcome() {
+    const [isVibrating, setIsVibrating] = useState(false);
 
+    const handleVibrate = () => {
+        setIsVibrating(true);
+
+        setTimeout(() => {
+            setIsVibrating(false);
+        }, 300);
+    };
+    
     return (
-        <Box className="welcome projects-container">
+        <Box className={`welcome projects-container ${isVibrating ? "vibrating" : ""}`}>
             <Box className="welcome-header projects-header">
                 <Typography variant="h4" fontFamily="var(--secondary-font)" fontWeight="600" className="projects-title" sx={{
                     fontSize: {
@@ -16,7 +26,7 @@ export default function Welcome() {
                 }}>
                     {"Alert_message"}
                 </Typography>
-                <CloseIcon sx={{
+                <CloseIcon onClick={handleVibrate} sx={{
                     fontSize: {
                         xs: '2rem',
                         sm: '2.5rem',
