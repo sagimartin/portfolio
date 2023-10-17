@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Box, Typography } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
+import squeakyToySound from "/assets/sounds/squeaky-toy.mp3"
 import "./Welcome.css";
 
 export default function Welcome() {
@@ -13,7 +14,12 @@ export default function Welcome() {
             setIsVibrating(false);
         }, 300);
     };
-    
+
+    const playSqueakyToySound = () => {
+        const audio = new Audio(squeakyToySound)
+        audio.play()
+    }
+
     return (
         <Box className={`welcome projects-container ${isVibrating ? "vibrating" : ""}`}>
             <Box className="welcome-header projects-header">
@@ -26,7 +32,10 @@ export default function Welcome() {
                 }}>
                     {"Alert_message"}
                 </Typography>
-                <CloseIcon onClick={handleVibrate} sx={{
+                <CloseIcon onClick={() => {
+                    handleVibrate();
+                    playSqueakyToySound();
+                }} sx={{
                     fontSize: {
                         xs: '2rem',
                         sm: '2.5rem',
