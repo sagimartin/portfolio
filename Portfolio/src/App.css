@@ -17,6 +17,10 @@
   --secondary-font: "Roboto Mono", monospace;
 }
 
+body{
+  background-color: #53c4cc;
+}
+
 .modal {
   display: flex;
   align-items: center;
