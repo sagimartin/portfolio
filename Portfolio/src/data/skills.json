@@ -2,7 +2,8 @@
   "*//languages": {
     "skills": {
       "HTML5": "htmlIcon",
-      "Javascript": "javascript"
+      "Javascript": "javascript",
+      "Typescript": "typescript" 
     },
     "color": "var(--yellow-color)"
   },
@@ -13,7 +14,8 @@
       "Next.js": "nextjs",
       "MUI": "mui",
       "Bootstrap": "bootstrap",
-      "Tailwind": "tailwind"
+      "Tailwind": "tailwind",
+      "Svelte": "svelte"
     },
     "color": "var(--magenta-color)"
   },

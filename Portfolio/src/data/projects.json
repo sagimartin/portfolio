@@ -55,6 +55,19 @@
       "image": "/assets/portfolio/slotmachine.png",
       "link": "https://motsdouxtattoo.com",
       "repository": "https://github.com/sagimartin/motsdoux-tattoo"
+    },
+    {
+      "name": "Weather App",
+      "description": "A minimalist Weather App utilizing the OpenWeather API for streamlined and accurate weather information. Dynamically fetches weather data based on your location, providing real-time updates. Try it now and stay informed with ease!",
+      "skills": {
+        "languages": ["Typescript"],
+        "front-end-frameworks": ["Svelte", "Vite.js"],
+        "styles": ["CSS"],
+        "development-tools": ["Vercel"]
+      },
+      "image": "/assets/portfolio/weather-app.png",
+      "link": "https://weather-app.sagimartin.vercel.app",
+      "repository": "https://github.com/sagimartin/Weather-App.git"
     }
   ]
 }
