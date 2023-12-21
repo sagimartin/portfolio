@@ -7,18 +7,17 @@ import ThunderstormIcon from '@mui/icons-material/Thunderstorm';
 import WaterDropIcon from '@mui/icons-material/WaterDrop';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
 
-const WEATHER_API_TEST_KEY = '1f6c86b0057c460290a52904232508';
-
 const Weather = () => {
     const [userLocation, setUserLocation] = useState(null);
     const [weatherData, setWeatherData] = useState(null);
 
     useEffect(() => {
         const fetchWeatherData = async () => {
+            const APIKey = import.meta.env.VITE_WEATHER_API_KEY;
             try {
                 if (userLocation) {
                     const response = await fetch(
-                        `https://api.weatherapi.com/v1/current.json?key=${WEATHER_API_TEST_KEY}&q=${userLocation.lat},${userLocation.lon}`
+                        `https://api.openweathermap.org/data/2.5/weather?lat=${userLocation.lat}&lon=${userLocation.lon}&appid=${APIKey}`
                     );
                     const data = await response.json();
                     setWeatherData(data);
@@ -55,8 +54,9 @@ const Weather = () => {
         );
     }
 
-    const { current } = weatherData;
-    const condition = current.condition.text.toLowerCase();
+    const { weather, main } = weatherData;
+    const condition = weather[0].description.toLowerCase();
+    const temperatureInCelsius = Math.round(main.temp - 273.15);
 
     let weatherIcon;
 
@@ -86,8 +86,8 @@ const Weather = () => {
                     lg: '1.5rem',
                     xl: '1.8rem',
                 },
-            }}>{current.temp_c}°C</Typography>
-            <Typography variant="h6" display="flex">{weatherIcon}</Typography>
+            }}>{temperatureInCelsius}°C</Typography>
+            {weatherIcon}
         </Box>
     );
 };
