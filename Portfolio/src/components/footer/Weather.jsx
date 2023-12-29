@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Typography, Box, CircularProgress } from '@mui/material';
+import { Typography, Box, CircularProgress, Popover } from '@mui/material';
+import WeatherPopup from './WeatherPopUp';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import CloudIcon from '@mui/icons-material/Cloud';
 import GrainIcon from '@mui/icons-material/Grain';
@@ -10,6 +11,15 @@ import WbSunnyIcon from '@mui/icons-material/WbSunny';
 const Weather = () => {
     const [userLocation, setUserLocation] = useState(null);
     const [weatherData, setWeatherData] = useState(null);
+    const [anchorEl, setAnchorEl] = useState(null);
+
+    const handleBoxClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
 
     useEffect(() => {
         const fetchWeatherData = async () => {
@@ -77,18 +87,41 @@ const Weather = () => {
     }
 
     return (
-        <Box style={{ display: 'flex', alignItems: "center", gap: ".5rem" }}>
-            <Typography variant="h6" fontFamily="var(--secondary-font)" sx={{
-                fontSize: {
-                    xs: '1rem',
-                    sm: '1.2rem',
-                    md: '1.5rem',
-                    lg: '1.5rem',
-                    xl: '1.8rem',
-                },
-            }}>{temperatureInCelsius}°C</Typography>
-            {weatherIcon}
-        </Box>
+        <>
+            <Box onClick={handleBoxClick} style={{ display: 'flex', alignItems: "center", gap: ".5rem", cursor: "pointer" }}>
+                <Typography variant="h6" fontFamily="var(--secondary-font)" sx={{
+                    fontSize: {
+                        xs: '1rem',
+                        sm: '1.2rem',
+                        md: '1.5rem',
+                        lg: '1.5rem',
+                        xl: '1.8rem',
+                    },
+                }}>{temperatureInCelsius}°C</Typography>
+                {weatherIcon}
+            </Box>
+            <Popover
+                open={Boolean(anchorEl)}
+                anchorEl={anchorEl}
+                onClose={handleClose}
+                anchorOrigin={{
+                    vertical: 'top',
+                    horizontal: 'left',
+                }}
+                transformOrigin={{
+                    vertical: 'bottom',
+                    horizontal: 'center',
+                }}
+                PaperProps={{
+                    style: {
+                        borderRadius: 0,
+                        boxShadow: "none"
+                    },
+                }}
+            >
+                <WeatherPopup onClose={handleClose} weatherData={weatherData} />
+            </Popover>
+        </>
     );
 };
 
