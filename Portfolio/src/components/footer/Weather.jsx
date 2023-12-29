@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Typography, Box, CircularProgress, Popover } from '@mui/material';
-import WeatherPopup from './WeatherPopUp';
+import WeatherPopup from './WeatherPopup';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import CloudIcon from '@mui/icons-material/Cloud';
 import GrainIcon from '@mui/icons-material/Grain';
