@@ -7,9 +7,9 @@ import WbTwilightIcon from '@mui/icons-material/WbTwilight';
 import ThermostatAutoIcon from '@mui/icons-material/ThermostatAuto';
 
 
-const WeatherPopup = ({ onClose, weatherData }) => {
+const WeatherPopup = ({ onClose, weatherData, temperatureInCelsius, weatherIcon }) => {
 
-    const { name, main, wind, sys, dt } = weatherData;
+    const { name, main, wind, sys, dt, weather, description } = weatherData;
 
 
     const formatCityName = (name) => {
@@ -44,7 +44,7 @@ const WeatherPopup = ({ onClose, weatherData }) => {
                     border: "3px solid darkgray",
                     borderRadius: "0",
                     maxWidth: "80dvw",
-                    backgroundColor: "#F8F4EC",
+                    backgroundColor: "#E3E3E3",
                     padding: ".5rem",
                     cursor: "default"
                 }}
@@ -52,9 +52,16 @@ const WeatherPopup = ({ onClose, weatherData }) => {
                 <Box sx={{
                     minWidth: "max-content", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"
                 }}>
-                    <Box style={{ color: "white", border: "3px inset #fff", margin: ".7rem", padding: ".25rem .5rem", minWidth: "12rem" }}>
+                    <Box style={{ border: "3px inset #fff", margin: ".7rem", padding: ".25rem .5rem", minWidth: "12rem" }}>
                         <Typography fontFamily="var(--secondary-font)" fontSize="1rem" fontWeight="bold" color="var(--blue-color)" textAlign="center">
                             {formatCityName(weatherData.name)}
+                        </Typography>
+                        <Box style={{ display: "flex", justifyContent: "center", fontSize: "30rem" }}>{weatherIcon}</Box>
+                        <Typography fontFamily="var(--secondary-font)" fontSize="1.2rem" fontWeight="bold" color="black" textAlign="center">
+                            {temperatureInCelsius}°C
+                        </Typography>
+                        <Typography fontFamily="var(--secondary-font)" fontSize=".8rem" fontWeight="bold" color="var(--magenta-color)" textAlign="center">
+                            {weatherData.weather[0].description}
                         </Typography>
                     </Box>
                     <List >

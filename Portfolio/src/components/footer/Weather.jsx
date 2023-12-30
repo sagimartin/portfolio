@@ -119,7 +119,7 @@ const Weather = () => {
                     },
                 }}
             >
-                <WeatherPopup onClose={handleClose} weatherData={weatherData} />
+                <WeatherPopup onClose={handleClose} weatherData={weatherData} temperatureInCelsius={temperatureInCelsius} weatherIcon={weatherIcon} />
             </Popover>
         </>
     );
