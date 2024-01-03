@@ -5,6 +5,7 @@ import OpacityIcon from '@mui/icons-material/Opacity';
 import SolarPowerIcon from '@mui/icons-material/SolarPower';
 import WbTwilightIcon from '@mui/icons-material/WbTwilight';
 import ThermostatAutoIcon from '@mui/icons-material/ThermostatAuto';
+import ImportExportIcon from '@mui/icons-material/ImportExport';
 
 
 const WeatherPopup = ({ onClose, weatherData, temperatureInCelsius, weatherIcon }) => {
@@ -56,13 +57,25 @@ const WeatherPopup = ({ onClose, weatherData, temperatureInCelsius, weatherIcon 
                         <Typography fontFamily="var(--secondary-font)" fontSize="1rem" fontWeight="bold" color="var(--blue-color)" textAlign="center">
                             {formatCityName(weatherData.name)}
                         </Typography>
-                        <Box style={{ display: "flex", justifyContent: "center", fontSize: "30rem" }}>{weatherIcon}</Box>
-                        <Typography fontFamily="var(--secondary-font)" fontSize="1.2rem" fontWeight="bold" color="black" textAlign="center">
-                            {temperatureInCelsius}°C
-                        </Typography>
-                        <Typography fontFamily="var(--secondary-font)" fontSize=".8rem" fontWeight="bold" color="var(--magenta-color)" textAlign="center">
+                        <Box style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: ".5rem" }}>
+                            <Box style={{ display: "flex", justifyContent: "center", fontSize: "30rem" }}>{weatherIcon}</Box>
+                            <Typography fontFamily="var(--secondary-font)" fontSize="1.2rem" fontWeight="bold" color="black" textAlign="center">
+                                {temperatureInCelsius}°C
+                            </Typography>
+                        </Box>
+                        <Typography fontFamily="var(--secondary-font)" fontWeight="bold" color="var(--magenta-color)" textAlign="center">
                             {weatherData.weather[0].description}
                         </Typography>
+
+                        <Box style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: ".5rem", color: "darkslategrey" }}>
+                            <Typography variant="h7" fontFamily="var(--secondary-font)" fontWeight="600" >
+                                {` max ${Math.round(weatherData.main.temp_max - 273.15)}°C`}
+                            </Typography>
+                            <ImportExportIcon />
+                            <Typography fontFamily="var(--secondary-font)" fontWeight="600">
+                                {` min ${Math.round(weatherData.main.temp_min - 273.15)}°C`}
+                            </Typography>
+                        </Box>
                     </Box>
                     <List >
                         <ListItem style={listItemStyle} >
