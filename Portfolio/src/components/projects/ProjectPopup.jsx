@@ -2,6 +2,7 @@ import { Box, Typography, Chip, Paper } from "@mui/material";
 import Divider from '@mui/material/Divider';
 import { styled } from "@mui/material/styles";
 import CloseIcon from '@mui/icons-material/Close';
+import ProjectDescription from "./ProjectDescription";
 
 import "./ProjectPopup.css"
 
@@ -16,9 +17,14 @@ const ProjectPopup = ({ project, onClose }) => {
         "front-end-frameworks": "var(--magenta-color)",
         "styles": "var(--blue-color)",
         "back-end-frameworks": "var(--green-color)",
+        "databases": "var(--orange-color)",
         "development-tools": "var(--tale-color)",
         "design-tools": "var(--neon-color)",
-        "databases": "var(--orange-color)",
+        "e-commerce-platforms": "var(--purple-color)",
+        "themes": "var(--pink-color)",
+        "payment-systems": "var(--black-color)",
+        "integration-tools": "var(--strong-blue-color)",
+        "features": "var(--lime-color)"
     };
 
     return (
@@ -56,31 +62,34 @@ const ProjectPopup = ({ project, onClose }) => {
                         xl: '2rem',
                     },
                 }}>
-                    {project.description}
+                <ProjectDescription description={project.description} /> 
                 </Typography>
                 <img src={project.image} alt={project.name} className="project-popup-image" />
                 <Box className="skills-chip-list" component="ul">
                     {Object.entries(project.skills).map(([category, skills], index) => (
                         skills.map((skill, skillIndex) => (
-                            <Chip
-                                className="skills-chip"
-                                key={skillIndex}
-                                label={skill}
-                                sx={{
-                                    backgroundColor: categoryColors[category],
-                                    border: "3px solid black",
-                                    margin: ".2rem",
-                                    fontFamily: "var(--secondary-font)",
-                                    fontWeight: "600",
-                                    fontSize: {
-                                        xs: '.8rem',
-                                        sm: '1rem',
-                                        md: '1rem',
-                                        lg: '1.2rem',
-                                        xl: '1.2rem',
-                                    },
-                                }}
-                            />
+                            <ListItem key={skillIndex}>
+                                <Chip
+                                    className="skills-chip"
+                                    key={skillIndex}
+                                    label={skill}
+                                    sx={{
+                                        backgroundColor: categoryColors[category] || 'var(--default-color)',
+                                        border: "3px solid black",
+                                        margin: ".2rem",
+                                        fontFamily: "var(--secondary-font)",
+                                        fontWeight: "600",
+                                        color: categoryColors[category] === 'var(--black-color)'|| categoryColors[category] === 'var(--purple-color)' || categoryColors[category] === 'var(--strong-blue-color)' || categoryColors[category] === 'var(--blue-color)' ? 'white' : 'black',
+                                        fontSize: {
+                                            xs: '.8rem',
+                                            sm: '1rem',
+                                            md: '1rem',
+                                            lg: '1.2rem',
+                                            xl: '1.2rem',
+                                        },
+                                    }}
+                                />
+                            </ListItem>
                         ))
                     ))}
                 </Box>
