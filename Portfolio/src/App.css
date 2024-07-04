@@ -5,19 +5,24 @@
 }
 
 :root {
-  --blue-color: #065ffc;
-  --magenta-color: #fb3e93;
-  --green-color: #33cc66;
-  --yellow-color: #ffe236;
-  --tale-color: #53c4cc;
   --beige-color: #f8f4ec;
-  --orange-color: #fc6e11;
+  --black-color: #2d2741;
+  --blue-color: #065ffc;
+  --green-color: #33cc66;
+  --lime-color: #cee12f;
+  --magenta-color: #fb3e93;
   --neon-color: #dce52c;
+  --orange-color: #fc6e11;
+  --pink-color: #e843e5;
+  --purple-color: #6143df;
+  --strong-blue-color: #1a69de;
+  --tale-color: #53c4cc;
+  --yellow-color: #ffe236;
   --primary-font: "Montserrat Alternates", sans-serif;
   --secondary-font: "Roboto Mono", monospace;
 }
 
-body{
+body {
   background-color: #53c4cc;
 }
 

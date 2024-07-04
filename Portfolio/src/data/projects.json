@@ -2,7 +2,7 @@
   "projects": [
     {
       "name": "NASA APOD",
-      "description": "NASA Astronomy Picture of the Day. This is one of my favorite projects from my Codecool training, reimagined in React, and deployed on Firebase. Let's explore the universe together.",
+      "description": "NASA Astronomy Picture of the Day. This is one of my favorite projects from my Codecool training, reimagined in React, and deployed on Firebase. \n\nLet's explore the 🪐 universe together.",
       "skills": {
         "languages": ["JavaScript"],
         "front-end-frameworks": ["MUI", "React"],
@@ -30,7 +30,7 @@
     },
     {
       "name": "Quiz App",
-      "description": "A sample quiz application that challenges your knowledge about various funny topics. Test your skills and aim for a perfect 100% score with interactive quizzes.",
+      "description": "A sample quiz application that challenges your knowledge about various funny topics. \n\nTest your skills and aim for a perfect 100% score with interactive quizzes.",
       "skills": {
         "languages": ["JavaScript"],
         "front-end-frameworks": ["Next.js", "React"],
@@ -43,22 +43,21 @@
       "repository": "https://github.com/sagimartin/quiz-app.git"
     },
     {
-      "name": "Slot Machine",
-      "description": "An interactive Tattoo slot machine project aimed at generating revenue for Budapest based Mots Doux tattoo salon while showcasing a variety of frontend technologies and design skills. Guests can spin on-site and receive this extra tattoo as a gift. But you can also try it now! Spin the reels, discover unique tattoo designs, and taste the victory!",
+      "name": "SmellGo.hu",
+      "description": "SmellGo is an online shop offering custom car air fresheners built on Shopify. \n\nThe website allows users to create personalized air fresheners using their own photos and premium quality perfumes. The project features unique solutions such as handling and editing photo uploads. \n\nYou might recognize it from the show 🦈'Shark Tank Hungary'.",      
       "skills": {
-        "languages": ["JavaScript"],
-        "front-end-frameworks": ["MUI", "React", "Vite.js"],
-        "styles": ["SASS"],
-        "development-tools": ["Vercel"],
-        "design-tools": ["Figma", "Photoshop", "Procreate"]
+        "e-commerce-platforms": ["Shopify"],
+        "themes": ["Debutify theme"],
+        "payment-systems": ["Stripe", "ApplePay", "GooglePay"], 
+        "features": ["Custom CSS", "Custom Scripts"],
+        "integration-tools": ["Digiloop Pickup & Delivery", "UploadKit"]
       },
-      "image": "/assets/portfolio/slotmachine.png",
-      "link": "https://motsdouxtattoo.com",
-      "repository": "https://github.com/sagimartin/motsdoux-tattoo"
+      "image": "/assets/portfolio/smellgo.png",
+      "link": "https://smellgo.hu"
     },
     {
       "name": "Weather App",
-      "description": "A minimalist Weather App utilizing the OpenWeather API for streamlined and accurate weather information. Dynamically fetches weather data based on your location, providing real-time updates. Try it now and stay informed with ease!",
+      "description": "A minimalist 🌞 Weather App utilizing the OpenWeather API for streamlined and accurate weather information. \n\nDynamically fetches weather data based on your location, providing real-time updates. \n\nTry it now and stay informed with ease!",
       "skills": {
         "languages": ["Typescript"],
         "front-end-frameworks": ["Svelte", "Vite.js"],

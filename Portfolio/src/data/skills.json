@@ -57,5 +57,13 @@
       "Procreate": "procreate"
     },
     "color": "var(--neon-color)"
+  },
+  "*//e-commerce-platforms": {
+    "skills": {
+      "Shopify": "shopify",
+      "Wordpress": "wordpress",
+      "Wix": "wix"
+    },
+    "color": "var(--purple-color)"
   }
 }
