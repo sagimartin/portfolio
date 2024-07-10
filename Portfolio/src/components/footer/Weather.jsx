@@ -7,8 +7,10 @@ import GrainIcon from '@mui/icons-material/Grain';
 import ThunderstormIcon from '@mui/icons-material/Thunderstorm';
 import WaterDropIcon from '@mui/icons-material/WaterDrop';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
+import { useTranslation } from 'react-i18next';
 
 const Weather = () => {
+    const { t } = useTranslation();
     const [userLocation, setUserLocation] = useState(null);
     const [weatherData, setWeatherData] = useState(null);
     const [anchorEl, setAnchorEl] = useState(null);
@@ -56,6 +58,11 @@ const Weather = () => {
         );
     }, []);
 
+    const translateWeatherCondition = (condition, t) => {
+        const conditionKey = condition.toLowerCase().replace(/ /g, "_");
+        return t(conditionKey);
+    };
+
     if (!userLocation || !weatherData) {
         return (
             <Box style={{ textAlign: 'center' }}>
@@ -85,6 +92,8 @@ const Weather = () => {
     } else {
         weatherIcon = null;
     }
+
+    const translatedCondition = translateWeatherCondition(condition, t);
 
     return (
         <>
@@ -119,7 +128,7 @@ const Weather = () => {
                     },
                 }}
             >
-                <WeatherPopup onClose={handleClose} weatherData={weatherData} temperatureInCelsius={temperatureInCelsius} weatherIcon={weatherIcon} />
+                <WeatherPopup onClose={handleClose} weatherData={weatherData} temperatureInCelsius={temperatureInCelsius} weatherIcon={weatherIcon} translatedCondition={translatedCondition} />
             </Popover>
         </>
     );
