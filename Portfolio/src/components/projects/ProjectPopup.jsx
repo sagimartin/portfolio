@@ -3,10 +3,12 @@ import Divider from '@mui/material/Divider';
 import { styled } from "@mui/material/styles";
 import CloseIcon from '@mui/icons-material/Close';
 import ProjectDescription from "./ProjectDescription";
+import { useTranslation } from 'react-i18next';
 
 import "./ProjectPopup.css"
 
 const ProjectPopup = ({ project, onClose }) => {
+    const { t } = useTranslation();
 
     const ListItem = styled('li')(({ theme }) => ({
         margin: theme.spacing(0.5),
@@ -62,7 +64,7 @@ const ProjectPopup = ({ project, onClose }) => {
                         xl: '2rem',
                     },
                 }}>
-                <ProjectDescription description={project.description} /> 
+                    <ProjectDescription description={t(project.description)} />
                 </Typography>
                 <img src={project.image} alt={project.name} className="project-popup-image" />
                 <Box className="skills-chip-list" component="ul">
@@ -79,7 +81,7 @@ const ProjectPopup = ({ project, onClose }) => {
                                         margin: ".2rem",
                                         fontFamily: "var(--secondary-font)",
                                         fontWeight: "600",
-                                        color: categoryColors[category] === 'var(--black-color)'|| categoryColors[category] === 'var(--purple-color)' || categoryColors[category] === 'var(--strong-blue-color)' || categoryColors[category] === 'var(--blue-color)' ? 'white' : 'black',
+                                        color: categoryColors[category] === 'var(--black-color)' || categoryColors[category] === 'var(--purple-color)' || categoryColors[category] === 'var(--strong-blue-color)' || categoryColors[category] === 'var(--blue-color)' ? 'white' : 'black',
                                         fontSize: {
                                             xs: '.8rem',
                                             sm: '1rem',
@@ -96,12 +98,14 @@ const ProjectPopup = ({ project, onClose }) => {
             </Box>
             <Divider sx={{ margin: ".5rem 0", border: "1px solid black" }} />
             <Box className="projects-footer">
-                <Typography variant="body1" fontFamily="var(--secondary-font)" fontWeight="bold" >
-                    <a href={project.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "var(--blue-color)" }}>Go to page</a>
-                </Typography>
                 <Typography variant="body1" fontFamily="var(--secondary-font)" fontWeight="bold">
-                    <a href={project.repository} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "var(--magenta-color)" }}>GitHub repository</a>
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "var(--blue-color)" }}>{t('go_to_page')}</a>
                 </Typography>
+                {project.repository && (
+                    <Typography variant="body1" fontFamily="var(--secondary-font)" fontWeight="bold">
+                        <a href={project.repository} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "var(--magenta-color)" }}>{t('github_repository')}</a>
+                    </Typography>
+                )}
             </Box>
         </Paper>
     );

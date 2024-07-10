@@ -2,23 +2,23 @@ import { useState } from "react";
 import { Box, Typography, Chip } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import CloseIcon from '@mui/icons-material/Close';
+import { useTranslation } from 'react-i18next';
 
 import categories from "../../data/skills.json";
 
 import "./Skills.css"
 
 export default function Skills({ onClose }) {
-    const [showSkills, setShowSkills] = useState(true)
+    const { t } = useTranslation();
+    const [showSkills, setShowSkills] = useState(true);
 
     const ListItem = styled('li')(({ theme }) => ({
         margin: theme.spacing(0.5),
     }));
 
     return (
-        <Box
-            className={`skills-container ${showSkills ? 'open' : 'closed'}`}>
-            <Box
-                className="skills-header">
+        <Box className={`skills-container ${showSkills ? 'open' : 'closed'}`}>
+            <Box className="skills-header">
                 <Typography className="skills-title"
                     variant="h4"
                     fontFamily="var(--secondary-font)"
@@ -32,7 +32,7 @@ export default function Skills({ onClose }) {
                         },
                     }}
                 >
-                    {"<Skills/>"}
+                    {t("skills_title")}
                 </Typography>
                 <CloseIcon className="project-popup-close-button" onClick={onClose} sx={{
                     fontSize: {
@@ -46,7 +46,7 @@ export default function Skills({ onClose }) {
             </Box>
             <Box className="skills-list">
                 {Object.entries(categories).map(
-                    ([categoryName, categoryData], categoryIndex) => (<Box key={categoryIndex}>
+                    ([categoryKey, categoryData], categoryIndex) => (<Box key={categoryIndex}>
                         <Typography
                             variant="h4"
                             fontFamily="var(--secondary-font)"
@@ -64,11 +64,9 @@ export default function Skills({ onClose }) {
                                 }
                             }}
                         >
-                            {categoryName}
+                            {t(categoryKey)}
                         </Typography>
-                        <Box className="chip-list"
-                            component="ul"
-                        >
+                        <Box className="chip-list" component="ul">
                             {Object.entries(categoryData.skills).map(([label], skillIndex) => (
                                 <ListItem key={skillIndex}>
                                     <Chip className="chip"

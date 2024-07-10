@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Box, Typography, Modal } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 import ProjectPopup from './ProjectPopup';
+import { useTranslation } from 'react-i18next';
 
 import projectsData from '../../data/projects.json';
 import folder from "/assets/icons/folder.svg";
@@ -9,6 +10,7 @@ import folder from "/assets/icons/folder.svg";
 import "./Projects.css";
 
 export default function Projects({ onClose }) {
+    const { t } = useTranslation();
     const [showProjects, setShowProjects] = useState(true);
     const [selectedProject, setSelectedProject] = useState(null);
     const [showProjectPopup, setShowProjectPopup] = useState(false);
@@ -35,7 +37,7 @@ export default function Projects({ onClose }) {
                         xl: '3.2rem',
                     },
                 }}>
-                    {"<Projects/>"}
+                    {t("projects_title")}
                 </Typography>
                 <CloseIcon className="project-popup-close-button" onClick={onClose} sx={{
                     fontSize: {
