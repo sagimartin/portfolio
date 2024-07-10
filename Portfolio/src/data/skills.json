@@ -1,5 +1,5 @@
 {
-  "*//languages": {
+  "languages": {
     "skills": {
       "HTML5": "htmlIcon",
       "Javascript": "javascript",
@@ -7,7 +7,7 @@
     },
     "color": "var(--yellow-color)"
   },
-  "*//front-end-frameworks": {
+  "front-end-frameworks": {
     "skills": {
       "React": "react",
       "Vite.js": "vite",
@@ -19,7 +19,7 @@
     },
     "color": "var(--magenta-color)"
   },
-  "*//styles": {
+  "styles": {
     "skills": {
       "CSS": "css",
       "SASS": "sass",
@@ -27,21 +27,21 @@
     },
     "color": "var(--blue-color)"
   },
-  "*//back-end-frameworks": {
+  "back-end-frameworks": {
     "skills": {
       "Express.js": "express",
       "Node.js": "node"
     },
     "color": "var(--green-color)"
   },
-  "*//databases": {
+  "databases": {
     "skills": {
       "Firebase": "firebase",
       "Firestore": "firestore"
     },
     "color": "var(--orange-color)"
   },
-  "*//development-tools": {
+  "development-tools": {
     "skills": {
       "GitHub": "github",
       "Vercel": "vercel",
@@ -49,7 +49,7 @@
     },
     "color": "var(--tale-color)"
   },
-  "*//design-tools": {
+  "design-tools": {
     "skills": {
       "Canva": "canva",
       "Figma": "figma",
@@ -58,7 +58,7 @@
     },
     "color": "var(--neon-color)"
   },
-  "*//e-commerce-platforms": {
+  "e-commerce-platforms": {
     "skills": {
       "Shopify": "shopify",
       "Wordpress": "wordpress",

@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Button } from '@mui/base';
 import { Box, Typography } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
+import { useTranslation } from 'react-i18next';
 
 import './AboutPopup.css';
 
@@ -11,6 +12,7 @@ const getRandomPosition = () => ({
 });
 
 export default function AboutPopup({ memes, closePopup }) {
+  const { t } = useTranslation();
   const [activePopups, setActivePopups] = useState(memes.filter(meme => !meme.hide));
   const [positions, setPositions] = useState(activePopups.map(() => getRandomPosition()));
   const [showReadme, setShowReadme] = useState(true);
@@ -72,7 +74,7 @@ export default function AboutPopup({ memes, closePopup }) {
                 lg: '2.5rem',
                 xl: '3rem',
               },
-            }}>README.md</Typography>
+            }}>{t("readme_title")}</Typography>
             <CloseIcon className="project-popup-close-button" onClick={handleCloseReadme} sx={{
               fontSize: {
                 xs: '1.5rem',
@@ -92,7 +94,7 @@ export default function AboutPopup({ memes, closePopup }) {
               xl: '3.5rem',
             },
           }} className='readme-text'>
-            I'm a '90s kid at heart. Bringing the nostalgia of late-night MSN chats and Super Mario adventures into my designs. <br /><br />  I have a son, a wife and  two cats. Together, we make life an exciting journey.<span ref={cursorRef} style={{ visibility: 'hidden' }}>|</span>
+            {t("readme_text")}<span ref={cursorRef} style={{ visibility: 'hidden' }}>|</span>
           </Typography>
         </Box>
       )}
@@ -113,7 +115,7 @@ export default function AboutPopup({ memes, closePopup }) {
                 xl: '3rem',
               },
             }}>
-              {meme.title}
+              {t(meme.title)}
             </Typography>
 
             <CloseIcon className="project-popup-close-button" onClick={() => handleClosePopup(index)} sx={{
@@ -128,12 +130,12 @@ export default function AboutPopup({ memes, closePopup }) {
           </Box>
 
           <Box className="popup-image-container">
-            <img src={`/assets/images/about/${meme.src}`} alt={meme.title} title={meme.title} />
+            <img src={`/assets/images/about/${meme.src}`} alt={t(meme.title)} title={t(meme.title)} />
           </Box>
         </Box>
       ))}
       {window.innerWidth > 800 && activePopups.length > 0 && (
-        <Button className='popup close-all' id='close-all' onClick={handleCloseAll}>Close All ✕</Button>
+        <Button className='popup close-all' id='close-all' onClick={handleCloseAll}>{t('close_all')}</Button>
       )}
     </Box>
   );

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Box, Typography, createTheme, responsiveFontSizes, Modal } from "@mui/material";
 import Footer from "./footer/Footer";
 
@@ -19,6 +20,7 @@ import "./DesktopUI.css";
 import Welcome from './welcome/Welcome';
 
 export default function DesktopUI() {
+    const { t } = useTranslation();
     const [showProjectsModal, setShowProjectsModal] = useState(false);
     const [showSkillsModal, setShowSkillsModal] = useState(false);
     const [showAboutPopup, setShowAboutPopup] = useState(false);
@@ -39,7 +41,7 @@ export default function DesktopUI() {
 
     return (
         <Box className="desktop-ui-container">
-                <Welcome />
+            <Welcome />
             <Box className="content-container">
                 <Modal
                     className="modal"
@@ -81,7 +83,7 @@ export default function DesktopUI() {
                                     },
                                 }}
                             >
-                                Mail.me
+                                {t('mail')}
                             </Typography>
                         </a>
                     </Box>
@@ -103,7 +105,7 @@ export default function DesktopUI() {
                                 },
                             }}
                         >
-                            Projects
+                            {t('projects')}
                         </Typography>
                     </Box>
                     <Box className="skills icon-box" onClick={handleSkillsModalOpen}>
@@ -124,7 +126,7 @@ export default function DesktopUI() {
                                 },
                             }}
                         >
-                            Skills
+                            {t('skills')}
                         </Typography>
                     </Box>
                     <Box className="linkedin icon-box">
@@ -192,7 +194,7 @@ export default function DesktopUI() {
                                     },
                                 }}
                             >
-                                CV.pdf
+                            {t('cv')}
                             </Typography>
                         </a>
                     </Box>
@@ -214,7 +216,7 @@ export default function DesktopUI() {
                                 },
                             }}
                         >
-                            About.me
+                            {t('about')}
                         </Typography>
                     </Box>
                 </Box>

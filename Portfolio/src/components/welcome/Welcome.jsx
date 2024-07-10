@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Box, Typography } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
-import squeakyToySound from "/assets/sounds/squeaky-toy.mp3"
+import squeakyToySound from "/assets/sounds/squeaky-toy.mp3";
 import "./Welcome.css";
 
 export default function Welcome() {
+    const { t } = useTranslation();
     const [isVibrating, setIsVibrating] = useState(false);
 
     const handleVibrate = () => {
@@ -16,9 +18,9 @@ export default function Welcome() {
     };
 
     const playSqueakyToySound = () => {
-        const audio = new Audio(squeakyToySound)
-        audio.play()
-    }
+        const audio = new Audio(squeakyToySound);
+        audio.play();
+    };
 
     return (
         <Box className={`welcome projects-container ${isVibrating ? "vibrating" : ""}`}>
@@ -30,7 +32,7 @@ export default function Welcome() {
                         md: '3rem',
                     },
                 }}>
-                    {"Alert_message"}
+                    {t("alert_message")}
                 </Typography>
                 <CloseIcon onClick={() => {
                     handleVibrate();
@@ -50,7 +52,7 @@ export default function Welcome() {
                         sm: '3rem',
                         md: '4rem',
                     }, color: "var(--blue-color)"
-                }}>Hello</Typography>
+                }}>{t("hello")}</Typography>
                 <Box className="intro-message">
                     <Typography variant="h1" fontFamily="var(--secondary-font)" fontWeight="600" sx={{
                         fontSize: {
@@ -58,14 +60,14 @@ export default function Welcome() {
                             sm: '3rem',
                             md: '4rem',
                         },
-                    }}>I'm</Typography>
+                    }}>{t("im")}</Typography>
                     <Typography variant="h1" fontFamily="var(--secondary-font)" fontWeight="600" sx={{
                         fontSize: {
                             xs: '2rem',
                             sm: '3rem',
                             md: '4rem',
                         }, backgroundColor: "yellow", padding: ".2rem .4rem", marginLeft: ".5rem"
-                    }}>Martin</Typography>
+                    }}>{t("name")}</Typography>
                     <Typography variant="h1" fontFamily="var(--secondary-font)" fontWeight="600" sx={{
                         fontSize: {
                             xs: '2rem',
@@ -80,8 +82,8 @@ export default function Welcome() {
                         sm: '1.5rem',
                         md: '2rem',
                     },
-                }}>* a frontend developer based in Budapest.</Typography>
+                }}>{t("description")}</Typography>
             </Box>
         </Box>
-    )
+    );
 }

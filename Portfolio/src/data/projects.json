@@ -1,8 +1,8 @@
 {
   "projects": [
     {
-      "name": "NASA APOD",
-      "description": "NASA Astronomy Picture of the Day. This is one of my favorite projects from my Codecool training, reimagined in React, and deployed on Firebase. \n\nLet's explore the 🪐 universe together.",
+      "name": "NASA_APOD",
+      "description": "NASA_APOD",
       "skills": {
         "languages": ["JavaScript"],
         "front-end-frameworks": ["MUI", "React"],
@@ -16,7 +16,7 @@
     },
     {
       "name": "Portfolio",
-      "description": "My portfolio website showcasing my skills and projects. It features a completely unique design tailored to reflect my personality and creativity.",
+      "description": "Portfolio",
       "skills": {
         "languages": ["JavaScript"],
         "front-end-frameworks": ["MUI", "React", "Vite.js"],
@@ -29,8 +29,8 @@
       "repository": "https://github.com/sagimartin/portfolio"
     },
     {
-      "name": "Quiz App",
-      "description": "A sample quiz application that challenges your knowledge about various funny topics. \n\nTest your skills and aim for a perfect 100% score with interactive quizzes.",
+      "name": "Quiz_App",
+      "description": "Quiz_App",
       "skills": {
         "languages": ["JavaScript"],
         "front-end-frameworks": ["Next.js", "React"],
@@ -44,7 +44,7 @@
     },
     {
       "name": "SmellGo.hu",
-      "description": "SmellGo is an online shop offering custom car air fresheners built on Shopify. \n\nThe website allows users to create personalized air fresheners using their own photos and premium quality perfumes. The project features unique solutions such as handling and editing photo uploads. \n\nYou might recognize it from the show 🦈'Shark Tank Hungary'.",      
+      "description": "SmellGo_hu",
       "skills": {
         "e-commerce-platforms": ["Shopify"],
         "themes": ["Debutify theme"],
@@ -56,8 +56,8 @@
       "link": "https://smellgo.hu"
     },
     {
-      "name": "Weather App",
-      "description": "A minimalist 🌞 Weather App utilizing the OpenWeather API for streamlined and accurate weather information. \n\nDynamically fetches weather data based on your location, providing real-time updates. \n\nTry it now and stay informed with ease!",
+      "name": "Weather_App",
+      "description": "Weather_App",
       "skills": {
         "languages": ["Typescript"],
         "front-end-frameworks": ["Svelte", "Vite.js"],
