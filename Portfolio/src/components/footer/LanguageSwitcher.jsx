@@ -26,9 +26,9 @@ export default function LanguageSwitcher() {
     const tooltipTitle = currentLanguage === 'en' ? 'ENG' : 'HUN';
 
     return (
-        <Box>
+        <Box style={{padding: 'none'}}>
             <Tooltip title={tooltipTitle} arrow>
-                <IconButton onClick={handleClick}>
+                <IconButton onClick={handleClick} style={{padding: 0}}>
                     <img src={flag} alt={tooltipTitle} style={{ width: '2rem', height: 'auto' }} />
                 </IconButton>
             </Tooltip>

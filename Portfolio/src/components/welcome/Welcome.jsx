@@ -49,7 +49,7 @@ export default function Welcome() {
                 <Typography variant="h1" fontFamily="var(--secondary-font)" fontWeight="600" sx={{
                     fontSize: {
                         xs: '2rem',
-                        sm: '3rem',
+                        sm: '2.5rem',
                         md: '4rem',
                     }, color: "var(--blue-color)"
                 }}>{t("hello")}</Typography>
@@ -57,21 +57,21 @@ export default function Welcome() {
                     <Typography variant="h1" fontFamily="var(--secondary-font)" fontWeight="600" sx={{
                         fontSize: {
                             xs: '2rem',
-                            sm: '3rem',
+                            sm: '2.5rem',
                             md: '4rem',
                         },
                     }}>{t("im")}</Typography>
                     <Typography variant="h1" fontFamily="var(--secondary-font)" fontWeight="600" sx={{
                         fontSize: {
                             xs: '2rem',
-                            sm: '3rem',
+                            sm: '2.5rem',
                             md: '4rem',
                         }, backgroundColor: "yellow", padding: ".2rem .4rem", marginLeft: ".5rem"
                     }}>{t("name")}</Typography>
                     <Typography variant="h1" fontFamily="var(--secondary-font)" fontWeight="600" sx={{
                         fontSize: {
                             xs: '2rem',
-                            sm: '3rem',
+                            sm: '2.5rem',
                             md: '4rem',
                         },
                     }}>*</Typography>
