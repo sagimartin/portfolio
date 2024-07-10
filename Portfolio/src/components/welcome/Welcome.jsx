@@ -6,7 +6,7 @@ import squeakyToySound from "/assets/sounds/squeaky-toy.mp3";
 import "./Welcome.css";
 
 export default function Welcome() {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const [isVibrating, setIsVibrating] = useState(false);
 
     const handleVibrate = () => {
@@ -49,32 +49,60 @@ export default function Welcome() {
                 <Typography variant="h1" fontFamily="var(--secondary-font)" fontWeight="600" sx={{
                     fontSize: {
                         xs: '2rem',
-                        sm: '2rem',
+                        sm: '2.5rem',
                         md: '4rem',
                     }, color: "var(--blue-color)"
                 }}>{t("hello")}</Typography>
                 <Box className="intro-message">
-                    <Typography variant="h1" fontFamily="var(--secondary-font)" fontWeight="600" sx={{
-                        fontSize: {
-                            xs: '2rem',
-                            sm: '2rem',
-                            md: '4rem',
-                        },
-                    }}>{t("im")}</Typography>
-                    <Typography variant="h1" fontFamily="var(--secondary-font)" fontWeight="600" sx={{
-                        fontSize: {
-                            xs: '2rem',
-                            sm: '2rem',
-                            md: '4rem',
-                        }, backgroundColor: "yellow", padding: ".2rem .4rem", marginLeft: ".5rem"
-                    }}>{t("name")}</Typography>
-                    <Typography variant="h1" fontFamily="var(--secondary-font)" fontWeight="600" sx={{
-                        fontSize: {
-                            xs: '2rem',
-                            sm: '2rem',
-                            md: '4rem',
-                        },
-                    }}>*</Typography>
+                    {i18n.language === 'hu' ? (
+                        <>
+                            <Typography variant="h1" fontFamily="var(--secondary-font)" fontWeight="600" sx={{
+                                fontSize: {
+                                    xs: '2rem',
+                                    sm: '2.5rem',
+                                    md: '4rem',
+                                }, backgroundColor: "yellow", padding: ".2rem .4rem"
+                            }}>{t("name")}</Typography>
+                            <Typography variant="h1" fontFamily="var(--secondary-font)" fontWeight="600" sx={{
+                                fontSize: {
+                                    xs: '2rem',
+                                    sm: '2.5rem',
+                                    md: '4rem',
+                                }, marginLeft: ".5rem"
+                            }}>*</Typography>
+                            <Typography variant="h1" fontFamily="var(--secondary-font)" fontWeight="600" sx={{
+                                fontSize: {
+                                    xs: '2rem',
+                                    sm: '2.5rem',
+                                    md: '4rem',
+                                }, marginLeft: ".5rem"
+                            }}>{t("vagyok.")}</Typography>
+                        </>
+                    ) : (
+                        <>
+                            <Typography variant="h1" fontFamily="var(--secondary-font)" fontWeight="600" sx={{
+                                fontSize: {
+                                    xs: '2rem',
+                                    sm: '2.5rem',
+                                    md: '4rem',
+                                },
+                            }}>{t("im")}</Typography>
+                            <Typography variant="h1" fontFamily="var(--secondary-font)" fontWeight="600" sx={{
+                                fontSize: {
+                                    xs: '2rem',
+                                    sm: '2.5rem',
+                                    md: '4rem',
+                                }, backgroundColor: "yellow", padding: ".2rem .4rem", marginLeft: ".5rem"
+                            }}>{t("name")}</Typography>
+                            <Typography variant="h1" fontFamily="var(--secondary-font)" fontWeight="600" sx={{
+                                fontSize: {
+                                    xs: '2rem',
+                                    sm: '2.5rem',
+                                    md: '4rem',
+                                }, marginLeft: ".5rem"
+                            }}>*</Typography>
+                        </>
+                    )}
                 </Box>
                 <Typography variant="h3" fontFamily="var(--secondary-font)" fontWeight="600" sx={{
                     fontSize: {
