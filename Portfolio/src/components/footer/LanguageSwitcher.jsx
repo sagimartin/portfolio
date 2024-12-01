@@ -43,11 +43,11 @@ export default function LanguageSwitcher() {
                 }}
             >
                 <MenuItem onClick={() => changeLanguage('en')}>
-                    <img src={ukFlag} alt="English" style={{ width: '2rem', height: 'auto', marginRight: '0.5rem' }} />
+                    <img src={ukFlag} alt="English" style={{ width: '2rem', height: 'auto' }} />
                     English
                 </MenuItem>
                 <MenuItem onClick={() => changeLanguage('hu')}>
-                    <img src={hungaryFlag} alt="Hungarian" style={{ width: '2rem', height: 'auto', marginRight: '0.5rem' }} />
+                    <img src={hungaryFlag} alt="Hungarian" style={{ width: '2rem', height: 'auto' }} />
                     Magyar
                 </MenuItem>
             </Menu>
