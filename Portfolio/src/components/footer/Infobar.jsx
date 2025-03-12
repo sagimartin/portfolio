@@ -24,7 +24,7 @@ export default function Infobar() {
             <img className="wifi-logo" src={wifi} alt="wifi logo" style={{ maxWidth: "2rem" }} />
             <Clock />
             {/* <BatteryStatus/> */}
-            <LanguageSwitcher />
+            {/* <LanguageSwitcher /> */}
         </Box>
     )
 }
