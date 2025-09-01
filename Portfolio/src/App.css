@@ -126,6 +126,10 @@ body {
   .project-popup-container {
     max-width: 50%;
   }
+
+  .project-popup-divider {
+    margin-bottom: 2rem !important;
+  }
   .skills-chip-list {
     width: 80%;
     display: flex;

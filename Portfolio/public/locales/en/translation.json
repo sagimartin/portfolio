@@ -46,8 +46,8 @@
   "projects_title": "<Projects/>",
   "NASA_APOD": "NASA Astronomy Picture of the Day. \n\nThis is one of my favorite projects from my Codecool training, reimagined in React, and deployed on Firebase. \n\nLet's explore the 🪐 universe together.",
   "Portfolio": "My portfolio website showcasing my skills and projects. It features a completely unique design tailored to reflect my personality and creativity.",
-  "Quiz_App": "A sample quiz application that challenges your knowledge about various funny topics. \n\nTest your skills and aim for a perfect 100% score with interactive quizzes.",
   "SmellGo_hu": "SmellGo is an online shop offering custom car air fresheners built on Shopify. \n\nThe website allows users to create personalized air fresheners using their own photos and premium quality perfumes. The project features unique solutions such as handling and editing photo uploads. \n\nYou might recognize it from the show 🦈'Shark Tank Hungary'.",
+  "Viverte_com": "Viverte offers a personalized jewelry 💍 design experience through their Shopify-based platform.  \n\nUsers can collaborate with expert designers to create bespoke pieces, using high-quality materials tailored to their preferences.  \n\nThe project integrates a sleek, user-friendly design interface, allowing customers to preview and adjust their designs before finalizing.",
   "Weather_App": "A minimalist 🌞 Weather App utilizing the OpenWeather API for streamlined and accurate weather information. \n\nDynamically fetches weather data based on your location, providing real-time updates. \n\nTry it now and stay informed with ease!",
   "go_to_page": "Go to page",
   "github_repository": "GitHub repository"

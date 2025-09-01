@@ -29,20 +29,6 @@
       "repository": "https://github.com/sagimartin/portfolio"
     },
     {
-      "name": "Quiz_App",
-      "description": "Quiz_App",
-      "skills": {
-        "languages": ["JavaScript"],
-        "front-end-frameworks": ["Next.js", "React"],
-        "styles": ["CSS3"],
-        "development-tools": ["Vercel"],
-        "design-tools": ["Figma"]
-      },
-      "image": "/assets/portfolio/quiz-app.png",
-      "link": "https://sagimartin-quiz-app.vercel.app",
-      "repository": "https://github.com/sagimartin/quiz-app.git"
-    },
-    {
       "name": "SmellGo.hu",
       "description": "SmellGo_hu",
       "skills": {
@@ -54,6 +40,19 @@
       },
       "image": "/assets/portfolio/smellgo.png",
       "link": "https://smellgo.hu"
+    },
+    {
+      "name": "Viverte.com",
+      "description": "Viverte_com",
+      "skills": {
+        "e-commerce-platforms": ["Shopify"],
+        "themes": ["Impulse theme"],
+        "payment-systems": ["Számlázz.hu", "SimplePay"], 
+        "features": ["Custom CSS", "Custom Scripts"],
+        "integration-tools": []
+      },
+      "image": "/assets/portfolio/viverte.webp",
+      "link": "https://viverte.com"
     },
     {
       "name": "Weather_App",

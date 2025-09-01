@@ -53,7 +53,7 @@ const ProjectPopup = ({ project, onClose }) => {
                     }, cursor: "pointer"
                 }} />
             </Box>
-            <Divider sx={{ margin: "1rem 0", border: "3px solid black" }} />
+            <Divider className="project-popup-divider" sx={{ margin: "1rem 0", border: "3px solid black" }} />
             <Box className="project-popup-content">
                 <Typography variant="body1" fontFamily="var(--secondary-font)" textAlign="justify" sx={{
                     maxWidth: "95%", margin: '0 auto', fontSize: {
