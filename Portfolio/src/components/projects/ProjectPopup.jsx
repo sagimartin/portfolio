@@ -55,6 +55,7 @@ const ProjectPopup = ({ project, onClose }) => {
             </Box>
             <Divider className="project-popup-divider" sx={{ margin: "1rem 0", border: "3px solid black" }} />
             <Box className="project-popup-content">
+                <img src={project.image} alt={project.name} className="project-popup-image" />
                 <Typography variant="body1" fontFamily="var(--secondary-font)" textAlign="justify" sx={{
                     maxWidth: "95%", margin: '0 auto', fontSize: {
                         xs: '1rem',
@@ -66,7 +67,6 @@ const ProjectPopup = ({ project, onClose }) => {
                 }}>
                     <ProjectDescription description={t(project.description)} />
                 </Typography>
-                <img src={project.image} alt={project.name} className="project-popup-image" />
                 <Box className="skills-chip-list" component="ul">
                     {Object.entries(project.skills).map(([category, skills], index) => (
                         skills.map((skill, skillIndex) => (

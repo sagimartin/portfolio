@@ -101,6 +101,13 @@ body {
   }
 }
 
+@media (min-width: 720px) {
+  /* Skills */
+  .skills-chip-list {
+    margin: 1rem auto;
+  }
+}
+
 @media (max-width: 800px) {
   /* DesktopUI */
   .content-container {
@@ -130,7 +137,7 @@ body {
 @media (min-width: 1024px) {
   /* ProjectPopup */
   .project-popup-container {
-    max-width: 50%;
+    max-width: 600px;
   }
 
   .project-popup-divider {
@@ -147,5 +154,10 @@ body {
 @media (min-width: 2560px) {
   .icon-list {
     grid-row-gap: 5rem;
+  }
+
+  /* ProjectPopup */
+  .project-popup-container {
+    max-width: 800px;
   }
 }
