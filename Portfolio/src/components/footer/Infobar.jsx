@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import Weather from "./Weather";
 import Clock from "./Clock";
 import wifi from "/assets/icons/wifi.svg"
-import LanguageSwitcher from "./LanguageSwitcher";
+// import LanguageSwitcher from "./LanguageSwitcher";
 // import BatteryStatus from "./BatteryStatus";
 
 
