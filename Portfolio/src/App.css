@@ -85,6 +85,12 @@ body {
     height: auto;
   }
 
+  /* ProjectPopup */
+  .project-popup-image {
+    max-width: 60%;
+    margin: 1rem auto;
+  }
+
   /* Skills */
   .skills-list {
     padding: 1.5rem;
