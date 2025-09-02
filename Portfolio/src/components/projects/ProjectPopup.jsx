@@ -1,9 +1,9 @@
 import { Box, Typography, Chip, Paper } from "@mui/material";
-import Divider from '@mui/material/Divider';
 import { styled } from "@mui/material/styles";
+import { useTranslation } from 'react-i18next';
+import Divider from '@mui/material/Divider';
 import CloseIcon from '@mui/icons-material/Close';
 import ProjectDescription from "./ProjectDescription";
-import { useTranslation } from 'react-i18next';
 
 import "./ProjectPopup.css"
 
@@ -29,8 +29,11 @@ const ProjectPopup = ({ project, onClose }) => {
         "features": "var(--lime-color)"
     };
 
+    const isShopify = Array.isArray(project?.skills?.["e-commerce-platforms"]) && project.skills["e-commerce-platforms"].includes("Shopify");
+
     return (
-        <Paper className="project-popup-container">
+        <Paper className={`project-popup-container ${isShopify ? 'shopify' : ''}`}>
+            {/* Header */}
             <Box className="project-popup-header">
                 <Typography variant="h4" fontFamily="var(--secondary-font)" fontWeight="600" sx={{
                     fontSize: {
@@ -54,8 +57,11 @@ const ProjectPopup = ({ project, onClose }) => {
                 }} />
             </Box>
             <Divider className="project-popup-divider" sx={{ margin: "1rem 0", border: "3px solid black" }} />
+            {/* Content */}
             <Box className="project-popup-content">
+                {/* Project image */}
                 <img src={project.image} alt={project.name} className="project-popup-image" />
+                {/* Project description */}
                 <Typography variant="body1" fontFamily="var(--secondary-font)" textAlign="justify" sx={{
                     maxWidth: "95%", margin: '0 auto', fontSize: {
                         xs: '1rem',
@@ -67,6 +73,7 @@ const ProjectPopup = ({ project, onClose }) => {
                 }}>
                     <ProjectDescription description={t(project.description)} />
                 </Typography>
+                {/* Skills chip list */}
                 <Box className="skills-chip-list" component="ul">
                     {Object.entries(project.skills).map(([category, skills], index) => (
                         skills.map((skill, skillIndex) => (
@@ -97,6 +104,7 @@ const ProjectPopup = ({ project, onClose }) => {
                 </Box>
             </Box>
             <Divider sx={{ margin: ".5rem 0", border: "1px solid black" }} />
+            {/* Footer */}
             <Box className="projects-footer">
                 <Typography variant="body1" fontFamily="var(--secondary-font)" fontWeight="bold">
                     <a href={project.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "var(--blue-color)" }}>{t('go_to_page')}</a>

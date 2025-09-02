@@ -19,6 +19,10 @@
   padding: 0.5rem;
 }
 
+.projects-header.shopify {
+  background-color: var(--purple-color);
+}
+
 .projects-title {
   padding-left: 1rem;
 }
@@ -29,6 +33,17 @@
   background: none;
   border-left: 3px solid black;
   padding: 0.5rem;
+}
+
+.project-popup-close-button,
+.projects-back-button {
+  cursor: pointer;
+}
+
+.project-popup-close-button:hover,
+.projects-back-button:hover {
+  cursor: pointer;
+  color: whitesmoke;
 }
 
 .projects-list {
