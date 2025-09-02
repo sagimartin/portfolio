@@ -35,7 +35,6 @@ export default function Projects({ onClose }) {
     const nonShopifyProjects = useMemo(() => projectsData.projects.filter(p => !isShopifyProject(p)), []);
     const visibleProjects = view === 'shopify' ? shopifyProjects : nonShopifyProjects;
     const headerTitle = view === 'shopify' ? '<Shopify/>' : t("projects_title");
-    const nonShopifyProjects = projectsData.projects.filter(p => !isShopifyProject(p));
 
     return (
         <Box className={`projects-container`}>
