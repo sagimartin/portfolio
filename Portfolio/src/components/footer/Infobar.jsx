@@ -17,7 +17,9 @@ export default function Infobar() {
             display: 'flex',
             alignItems: "center",
             gap: ".5rem",
-            maxWidth: "60vw",
+            whiteSpace: 'nowrap',
+            width: 'max-content',
+            marginLeft: 'auto',
             overflow: "hidden"
         }}>
             <Weather />
