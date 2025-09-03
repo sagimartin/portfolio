@@ -14,12 +14,11 @@ export default function Infobar() {
             border: "3px inset #fff",
             margin: ".5rem",
             padding: ".25rem .5rem",
-            display: 'flex',
+            display: 'inline-flex',
             alignItems: "center",
             gap: ".5rem",
             whiteSpace: 'nowrap',
-            width: 'max-content',
-            marginLeft: 'auto',
+            flex: '0 0 auto',
             overflow: "hidden"
         }}>
             <Weather />
