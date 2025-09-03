@@ -7,7 +7,7 @@ export default function Footer() {
     <Box
       className="footer-container"
       sx={{
-        width: "100%",
+        width: "100vw",
         backgroundColor: "#c0c0c0",
         borderTop: "3px solid darkgray",
         padding: "0 .5rem",
