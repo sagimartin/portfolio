@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Typography, Box, CircularProgress, Popover } from '@mui/material';
+import { bodyFontSizes } from "../../styles/typography";
+import { useTranslation } from 'react-i18next';
 import WeatherPopup from './WeatherPopup';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import CloudIcon from '@mui/icons-material/Cloud';
@@ -7,7 +9,6 @@ import GrainIcon from '@mui/icons-material/Grain';
 import ThunderstormIcon from '@mui/icons-material/Thunderstorm';
 import WaterDropIcon from '@mui/icons-material/WaterDrop';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
-import { useTranslation } from 'react-i18next';
 
 const Weather = () => {
     const { t } = useTranslation();
@@ -98,15 +99,9 @@ const Weather = () => {
     return (
         <>
             <Box onClick={handleBoxClick} style={{ display: 'flex', alignItems: "center", gap: ".5rem", cursor: "pointer" }}>
-                <Typography variant="h6" fontFamily="var(--secondary-font)" sx={{
-                    fontSize: {
-                        xs: '1rem',
-                        sm: '1.2rem',
-                        md: '1.5rem',
-                        lg: '1.5rem',
-                        xl: '1.8rem',
-                    },
-                }}>{temperatureInCelsius}°C</Typography>
+                <Typography variant="h6" fontFamily="var(--secondary-font)" sx={{ fontSize: bodyFontSizes }}>
+                    {temperatureInCelsius}°C
+                </Typography>
                 {weatherIcon}
             </Box>
             <Popover

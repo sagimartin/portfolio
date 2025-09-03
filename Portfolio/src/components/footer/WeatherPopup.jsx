@@ -1,5 +1,6 @@
 import { Box, Paper, Typography, List, ListItem } from "@mui/material";
 import { useTranslation } from 'react-i18next';
+import { weatherCityFontSizes, weatherTemperatureFontSizes, weatherLastUpdateFontSizes, weatherListItemFontSizes, weatherIconHugeFontSizes } from "../../styles/typography";
 
 import AirIcon from '@mui/icons-material/Air';
 import OpacityIcon from '@mui/icons-material/Opacity';
@@ -34,7 +35,6 @@ const WeatherPopup = ({ onClose, weatherData, temperatureInCelsius, weatherIcon 
         width: "100%",
         gap: "1rem",
         fontFamily: "var(--secondary-font)",
-        fontSize: "1rem",
         fontWeight: "600",
     };
 
@@ -54,12 +54,12 @@ const WeatherPopup = ({ onClose, weatherData, temperatureInCelsius, weatherIcon 
                     minWidth: "max-content", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"
                 }}>
                     <Box style={{ border: "3px inset #fff", margin: ".7rem", padding: ".25rem .5rem", minWidth: "12rem" }}>
-                        <Typography fontFamily="var(--secondary-font)" fontSize="1rem" fontWeight="bold" color="var(--blue-color)" textAlign="center">
+                        <Typography fontFamily="var(--secondary-font)" sx={{ fontSize: weatherCityFontSizes }} fontWeight="bold" color="var(--blue-color)" textAlign="center">
                             {formatCityName(weatherData.name)}
                         </Typography>
                         <Box style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: ".5rem" }}>
-                            <Box style={{ display: "flex", justifyContent: "center", fontSize: "30rem" }}>{weatherIcon}</Box>
-                            <Typography fontFamily="var(--secondary-font)" fontSize="1.2rem" fontWeight="bold" color="black" textAlign="center">
+                            <Box style={{ display: "flex", justifyContent: "center" }} sx={{ fontSize: weatherIconHugeFontSizes }}>{weatherIcon}</Box>
+                            <Typography fontFamily="var(--secondary-font)" sx={{ fontSize: weatherTemperatureFontSizes }} fontWeight="bold" color="black" textAlign="center">
                                 {temperatureInCelsius}°C
                             </Typography>
                         </Box>
@@ -78,28 +78,28 @@ const WeatherPopup = ({ onClose, weatherData, temperatureInCelsius, weatherIcon 
                         </Box>
                     </Box>
                     <List >
-                        <ListItem style={listItemStyle} >
+                        <ListItem style={listItemStyle} sx={{ fontSize: weatherListItemFontSizes }}>
                             <ThermostatAutoIcon style={{ color: 'red' }} />
                             {`${t('feels_like')}: ${Math.round(weatherData.main.feels_like - 273.15)}°C`}
                         </ListItem>
-                        <ListItem style={listItemStyle} >
+                        <ListItem style={listItemStyle} sx={{ fontSize: weatherListItemFontSizes }}>
                             <OpacityIcon style={{ color: 'aqua' }} />
                             {`${t('humidity')}: ${weatherData.main.humidity}%`}
                         </ListItem>
-                        <ListItem style={listItemStyle} >
+                        <ListItem style={listItemStyle} sx={{ fontSize: weatherListItemFontSizes }}>
                             <AirIcon style={{ color: 'blue' }} />
                             {`${t('wind')}: ${convertMetersPerSecondToKilometersPerHour(weatherData.wind.speed)} km/h`}
                         </ListItem>
-                        <ListItem style={listItemStyle} >
+                        <ListItem style={listItemStyle} sx={{ fontSize: weatherListItemFontSizes }}>
                             <SolarPowerIcon style={{ color: 'khaki' }} />
                             {`${t('sunrise')}: ${formatTime(weatherData.sys.sunrise)}`}
                         </ListItem>
-                        <ListItem style={listItemStyle} >
+                        <ListItem style={listItemStyle} sx={{ fontSize: weatherListItemFontSizes }}>
                             <WbTwilightIcon style={{ color: 'orange' }} />
                             {`${t('sunset')}: ${formatTime(weatherData.sys.sunset)}`}
                         </ListItem>
                     </List>
-                    <Typography fontFamily="var(--secondary-font)" fontSize=".8rem" fontWeight="600" color="var(--tale-color)">
+                    <Typography fontFamily="var(--secondary-font)" sx={{ fontSize: weatherLastUpdateFontSizes }} fontWeight="600" color="var(--tale-color)">
                         {`${t('last_update')}: ${dt ? formatTime(dt) : 'N/A'}`}
                     </Typography>
                 </Box>

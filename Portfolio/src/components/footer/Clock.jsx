@@ -1,4 +1,5 @@
 import { Typography } from '@mui/material';
+import { bodyFontSizes } from "../../styles/typography";
 import { useState, useEffect } from 'react';
 
 export default function Clock() {
@@ -34,15 +35,7 @@ export default function Clock() {
     }, []);
 
     return (
-        <Typography variant='h6' fontFamily="var(--secondary-font)" sx={{
-            fontSize: {
-                xs: '1rem',
-                sm: '1.2rem',
-                md: '1.5rem',
-                lg: '1.5rem',
-                xl: '1.8rem',
-            },
-        }}>
+        <Typography variant='h6' fontFamily="var(--secondary-font)" sx={{ fontSize: bodyFontSizes }}>
             {time}
         </Typography>
     );

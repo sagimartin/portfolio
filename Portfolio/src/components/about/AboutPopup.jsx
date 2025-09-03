@@ -1,9 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
 import { Button } from '@mui/base';
 import { Box, Typography } from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close';
 import { useTranslation } from 'react-i18next';
+import { aboutHeaderFontSizes, readmeTextFontSizes, iconFontSizes } from "../../styles/typography";
 
+import CloseIcon from '@mui/icons-material/Close';
 import './AboutPopup.css';
 
 const getRandomPosition = () => ({
@@ -66,34 +67,10 @@ export default function AboutPopup({ memes, closePopup }) {
         // README Popup
         <Box className="readme">
           <Box className="popup-header">
-            <Typography style={{
-              fontFamily: 'var(--secondary-font)', fontSize: {
-                xs: '1.5rem',
-                sm: '1.7rem',
-                md: '1.7rem',
-                lg: '2.5rem',
-                xl: '3rem',
-              },
-            }}>{t("readme_title")}</Typography>
-            <CloseIcon className="project-popup-close-button" onClick={handleCloseReadme} sx={{
-              fontSize: {
-                xs: '1.5rem',
-                sm: '1.7rem',
-                md: '1.7rem',
-                lg: '2rem',
-                xl: '2rem',
-              }, cursor: "pointer"
-            }} />
+            <Typography sx={{ fontFamily: 'var(--secondary-font)', fontSize: aboutHeaderFontSizes }}>{t("readme_title")}</Typography>
+            <CloseIcon className="project-popup-close-button" onClick={handleCloseReadme} sx={{ fontSize: iconFontSizes, cursor: "pointer" }} />
           </Box>
-          <Typography style={{
-            fontFamily: 'var(--secondary-font)', fontSize: {
-              xs: '1.5rem',
-              sm: '1.7rem',
-              md: '1.7rem',
-              lg: '2.5rem',
-              xl: '3.5rem',
-            },
-          }} className='readme-text'>
+          <Typography sx={{ fontFamily: 'var(--secondary-font)', fontSize: readmeTextFontSizes }} className='readme-text'>
             {t("readme_text")}<span ref={cursorRef} style={{ visibility: 'hidden' }}>|</span>
           </Typography>
         </Box>
@@ -106,27 +83,11 @@ export default function AboutPopup({ memes, closePopup }) {
           style={{ position: 'absolute', top: positions[index].y, left: positions[index].x }}
         >
           <Box className="popup-header">
-            <Typography style={{
-              fontFamily: 'var(--secondary-font)', fontSize: {
-                xs: '1.5rem',
-                sm: '1.7rem',
-                md: '1.7rem',
-                lg: '2.5rem',
-                xl: '3rem',
-              },
-            }}>
+            <Typography sx={{ fontFamily: 'var(--secondary-font)', fontSize: aboutHeaderFontSizes }}>
               {t(meme.title)}
             </Typography>
 
-            <CloseIcon className="project-popup-close-button" onClick={() => handleClosePopup(index)} sx={{
-              fontSize: {
-                xs: '1.5rem',
-                sm: '1.7rem',
-                md: '1.7rem',
-                lg: '2rem',
-                xl: '2rem',
-              }, cursor: "pointer"
-            }} />
+            <CloseIcon className="project-popup-close-button" onClick={() => handleClosePopup(index)} sx={{ fontSize: iconFontSizes, cursor: "pointer" }} />
           </Box>
 
           <Box className="popup-image-container">
