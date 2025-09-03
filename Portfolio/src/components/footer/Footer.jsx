@@ -5,6 +5,7 @@ import sm from "/assets/icons/sm.svg";
 export default function Footer() {
   return (
     <Box
+      className="footer-container"
       sx={{
         width: "100%",
         backgroundColor: "#c0c0c0",
