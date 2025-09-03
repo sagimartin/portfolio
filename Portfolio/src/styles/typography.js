@@ -4,9 +4,9 @@
 export const aboutHeaderFontSizes = {
   lg: '2.5rem',
   md: '1.7rem',
-  sm: '1.7rem',
+  sm: '1.25rem',
   xl: '3rem',
-  xs: '1.5rem',
+  xs: '1.1rem',
 };
 
 export const bodyFontSizes = {
@@ -58,9 +58,9 @@ export const iconFontSizes = {
 export const readmeTextFontSizes = {
   lg: '2.5rem',
   md: '1.7rem',
-  sm: '1.7rem',
+  sm: '1.1rem',
   xl: '3.5rem',
-  xs: '1.5rem',
+  xs: '0.95rem',
 };
 
 export const sectionTitleFontSizes = {
