@@ -7,11 +7,12 @@ export default function Footer() {
     <Box
       className="footer-container"
       sx={{
-        width: "100vw",
+        width: "100%",
         backgroundColor: "#c0c0c0",
         borderTop: "3px solid darkgray",
         padding: "0 .5rem",
         display: "flex",
+        flexWrap: "nowrap",
         alignItems: "center",
         cursor: "default",
       }}
@@ -23,8 +24,6 @@ export default function Footer() {
           style={{ width: "3rem", display: "flex", alignItems: "center" }}
         />
       </Box>
-
-      <Box sx={{ flexGrow: 1 }} />
 
       <Infobar />
     </Box>
