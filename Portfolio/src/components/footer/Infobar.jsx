@@ -10,6 +10,7 @@ export default function Infobar() {
     <Box
       className="infobar-container"
       sx={{
+        maxWidth: "55vw",
         color: "white",
         border: "3px inset #fff",
         margin: ".5rem ",
