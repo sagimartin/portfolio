@@ -16,6 +16,7 @@ export default function Infobar() {
         margin: ".5rem ",
         padding: ".25rem .5rem",
         display: "inline-flex",
+        justifyContent: "center",
         alignItems: "center",
         gap: ".5rem",
         whiteSpace: "nowrap",
