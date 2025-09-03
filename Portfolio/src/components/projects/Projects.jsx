@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react';
 import { Box, Typography, Modal } from "@mui/material";
 import { useTranslation } from 'react-i18next';
+import { headerFontSizes, iconFontSizes, tileFontSizes } from "../../styles/typography";
 import CloseIcon from '@mui/icons-material/Close';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ProjectPopup from './ProjectPopup';
@@ -41,13 +42,7 @@ export default function Projects({ onClose }) {
             {/* Header */}
             <Box className={`projects-header ${view === 'shopify' ? 'shopify' : ''}`}>
                 <Typography variant="h4" fontFamily="var(--secondary-font)" fontWeight="600" className="projects-title" sx={{
-                    fontSize: {
-                        xs: '1.5rem',
-                        sm: '2rem',
-                        md: '3rem',
-                        lg: '3rem',
-                        xl: '3.2rem',
-                    },
+                    fontSize: headerFontSizes,
                 }}>
                     {headerTitle}
                 </Typography>
@@ -57,25 +52,14 @@ export default function Projects({ onClose }) {
                             className="projects-back-button"
                             onClick={() => setView('all')}
                             sx={{
-                                fontSize: {
-                                    xs: '2rem',
-                                    sm: '2.5rem',
-                                    md: '4rem',
-                                    lg: '4rem',
-                                    xl: '4rem',
-                                },
+                                fontSize: iconFontSizes,
                                 mr: '0.5rem',
                             }}
                         />
                     )}
                     <CloseIcon className="project-popup-close-button" onClick={onClose} sx={{
-                        fontSize: {
-                            xs: '2rem',
-                            sm: '2.5rem',
-                            md: '4rem',
-                            lg: '4rem',
-                            xl: '4rem',
-                        }, cursor: "pointer"
+                        fontSize: iconFontSizes,
+                        cursor: "pointer"
                     }} />
                 </Box>
             </Box>
@@ -90,13 +74,7 @@ export default function Projects({ onClose }) {
                     >
                         <img src={folder} alt="folder icon" className="folder-icon" />
                         <Typography variant="h4" fontFamily="var(--secondary-font)" fontWeight="600" className="project-name" sx={{
-                            fontSize: {
-                                xs: '1rem',
-                                sm: '1.2rem',
-                                md: '1.7rem',
-                                lg: '2rem',
-                                xl: '2.2rem',
-                            },
+                            fontSize: tileFontSizes,
                         }}>
                             Shopify
                         </Typography>
@@ -111,13 +89,7 @@ export default function Projects({ onClose }) {
                     >
                         <img src={folder} alt="folder icon" className="folder-icon" />
                         <Typography variant="h4" fontFamily="var(--secondary-font)" fontWeight="600" className="project-name" sx={{
-                            fontSize: {
-                                xs: '1rem',
-                                sm: '1.2rem',
-                                md: '1.7rem',
-                                lg: '2rem',
-                                xl: '2.2rem',
-                            },
+                            fontSize: tileFontSizes,
                         }}>
                             {project.name}
                         </Typography>

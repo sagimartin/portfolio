@@ -1,6 +1,7 @@
 import { Box, Typography, Chip, Paper } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { useTranslation } from 'react-i18next';
+import { headerFontSizes, iconFontSizes, bodyFontSizes, chipSmallFontSizes } from "../../styles/typography";
 import Divider from '@mui/material/Divider';
 import CloseIcon from '@mui/icons-material/Close';
 import ProjectDescription from "./ProjectDescription";
@@ -36,24 +37,13 @@ const ProjectPopup = ({ project, onClose }) => {
             {/* Header */}
             <Box className="project-popup-header">
                 <Typography variant="h4" fontFamily="var(--secondary-font)" fontWeight="600" sx={{
-                    fontSize: {
-                        xs: '1.5rem',
-                        sm: '2rem',
-                        md: '3rem',
-                        lg: '3rem',
-                        xl: '3.2rem',
-                    },
+                    fontSize: headerFontSizes,
                 }}>
                     {project.name}
                 </Typography>
                 <CloseIcon className="project-popup-close-button" onClick={onClose} sx={{
-                    fontSize: {
-                        xs: '2rem',
-                        sm: '2.5rem',
-                        md: '4rem',
-                        lg: '4rem',
-                        xl: '4rem',
-                    }, cursor: "pointer"
+                    fontSize: iconFontSizes,
+                    cursor: "pointer"
                 }} />
             </Box>
             <Divider className="project-popup-divider" sx={{ margin: "1rem 0", border: "3px solid black" }} />
@@ -63,13 +53,7 @@ const ProjectPopup = ({ project, onClose }) => {
                 <img src={project.image} alt={project.name} className="project-popup-image" />
                 {/* Project description */}
                 <Typography variant="body1" fontFamily="var(--secondary-font)" textAlign="justify" sx={{
-                    maxWidth: "95%", margin: '0 auto', fontSize: {
-                        xs: '1rem',
-                        sm: '1rem',
-                        md: '1.5rem',
-                        lg: '1.5rem',
-                        xl: '2rem',
-                    },
+                    maxWidth: "95%", margin: '0 auto', fontSize: bodyFontSizes,
                 }}>
                     <ProjectDescription description={t(project.description)} />
                 </Typography>
@@ -89,13 +73,7 @@ const ProjectPopup = ({ project, onClose }) => {
                                         fontFamily: "var(--secondary-font)",
                                         fontWeight: "600",
                                         color: categoryColors[category] === 'var(--black-color)' || categoryColors[category] === 'var(--purple-color)' || categoryColors[category] === 'var(--strong-blue-color)' || categoryColors[category] === 'var(--blue-color)' ? 'white' : 'black',
-                                        fontSize: {
-                                            xs: '.8rem',
-                                            sm: '1rem',
-                                            md: '1rem',
-                                            lg: '1.2rem',
-                                            xl: '1.2rem',
-                                        },
+                                        fontSize: chipSmallFontSizes,
                                     }}
                                 />
                             </ListItem>

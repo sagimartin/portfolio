@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Box, Typography, createTheme, responsiveFontSizes, Modal } from "@mui/material";
+import { tileFontSizes } from "../styles/typography";
 import Footer from "./footer/Footer";
 
 import AboutPopup from "./about/AboutPopup";
@@ -73,15 +74,7 @@ export default function DesktopUI() {
                                 fontFamily="var(--secondary-font)"
                                 fontWeight="600"
                                 theme={theme}
-                                sx={{
-                                    fontSize: {
-                                        xs: '1rem',
-                                        sm: '1.2rem',
-                                        md: '1.7rem',
-                                        lg: '2rem',
-                                        xl: '2.2rem',
-                                    },
-                                }}
+                                sx={{ fontSize: tileFontSizes }}
                             >
                                 {t('mail')}
                             </Typography>
@@ -95,15 +88,7 @@ export default function DesktopUI() {
                             fontFamily="var(--secondary-font)"
                             fontWeight="600"
                             theme={theme}
-                            sx={{
-                                fontSize: {
-                                    xs: '1rem',
-                                    sm: '1.2rem',
-                                    md: '1.7rem',
-                                    lg: '2rem',
-                                    xl: '2.2rem',
-                                },
-                            }}
+                            sx={{ fontSize: tileFontSizes }}
                         >
                             {t('projects')}
                         </Typography>
@@ -116,15 +101,7 @@ export default function DesktopUI() {
                             fontFamily="var(--secondary-font)"
                             fontWeight="600"
                             theme={theme}
-                            sx={{
-                                fontSize: {
-                                    xs: '1rem',
-                                    sm: '1.2rem',
-                                    md: '1.7rem',
-                                    lg: '2rem',
-                                    xl: '2.2rem',
-                                },
-                            }}
+                            sx={{ fontSize: tileFontSizes }}
                         >
                             {t('skills')}
                         </Typography>
@@ -138,15 +115,7 @@ export default function DesktopUI() {
                                 fontFamily="var(--secondary-font)"
                                 fontWeight="600"
                                 theme={theme}
-                                sx={{
-                                    fontSize: {
-                                        xs: '1rem',
-                                        sm: '1.2rem',
-                                        md: '1.7rem',
-                                        lg: '2rem',
-                                        xl: '2.2rem',
-                                    },
-                                }}
+                                sx={{ fontSize: tileFontSizes }}
                             >
                                 LinkedIn
                             </Typography>
@@ -161,15 +130,7 @@ export default function DesktopUI() {
                                 fontFamily="var(--secondary-font)"
                                 fontWeight="600"
                                 theme={theme}
-                                sx={{
-                                    fontSize: {
-                                        xs: '1rem',
-                                        sm: '1.2rem',
-                                        md: '1.7rem',
-                                        lg: '2rem',
-                                        xl: '2.2rem',
-                                    },
-                                }}
+                                sx={{ fontSize: tileFontSizes }}
                             >
                                 GitHub
                             </Typography>
@@ -184,15 +145,7 @@ export default function DesktopUI() {
                                 fontFamily="var(--secondary-font)"
                                 fontWeight="600"
                                 theme={theme}
-                                sx={{
-                                    fontSize: {
-                                        xs: '1rem',
-                                        sm: '1.2rem',
-                                        md: '1.7rem',
-                                        lg: '2rem',
-                                        xl: '2.2rem',
-                                    },
-                                }}
+                                sx={{ fontSize: tileFontSizes }}
                             >
                             {t('cv')}
                             </Typography>
@@ -206,15 +159,7 @@ export default function DesktopUI() {
                             fontFamily="var(--secondary-font)"
                             fontWeight="600"
                             theme={theme}
-                            sx={{
-                                fontSize: {
-                                    xs: '1rem',
-                                    sm: '1.2rem',
-                                    md: '1.7rem',
-                                    lg: '2rem',
-                                    xl: '2.2rem',
-                                },
-                            }}
+                            sx={{ fontSize: tileFontSizes }}
                         >
                             {t('about')}
                         </Typography>

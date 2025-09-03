@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Box, Typography, Chip } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import CloseIcon from '@mui/icons-material/Close';
 import { useTranslation } from 'react-i18next';
+import { headerFontSizes, iconFontSizes, sectionTitleFontSizes, chipLargeFontSizes } from "../../styles/typography";
+import CloseIcon from '@mui/icons-material/Close';
 
 import categories from "../../data/skills.json";
 
@@ -22,26 +23,13 @@ export default function Skills({ onClose }) {
                 <Typography className="skills-title"
                     variant="h4"
                     fontFamily="var(--secondary-font)"
-                    fontWeight="600" sx={{
-                        fontSize: {
-                            xs: '1.5rem',
-                            sm: '2rem',
-                            md: '3rem',
-                            lg: '3rem',
-                            xl: '3.2rem',
-                        },
-                    }}
+                    fontWeight="600" sx={{ fontSize: headerFontSizes }}
                 >
                     {t("skills_title")}
                 </Typography>
                 <CloseIcon className="project-popup-close-button" onClick={onClose} sx={{
-                    fontSize: {
-                        xs: '2rem',
-                        sm: '2.5rem',
-                        md: '4rem',
-                        lg: '4rem',
-                        xl: '4rem',
-                    }, cursor: "pointer"
+                    fontSize: iconFontSizes,
+                    cursor: "pointer"
                 }} />
             </Box>
             <Box className="skills-list">
@@ -55,13 +43,7 @@ export default function Skills({ onClose }) {
                                 "&:hover": {
                                     color: "black",
                                 },
-                                fontSize: {
-                                    xs: '1.2rem',
-                                    sm: '1.5rem',
-                                    md: '2rem',
-                                    lg: '2.2rem',
-                                    xl: '2.2rem',
-                                }
+                                fontSize: sectionTitleFontSizes,
                             }}
                         >
                             {t(categoryKey)}
@@ -76,13 +58,7 @@ export default function Skills({ onClose }) {
                                             border: "3px solid black",
                                             fontFamily: "var(--secondary-font)",
                                             fontWeight: "600",
-                                            fontSize: {
-                                                xs: '1rem',
-                                                sm: '1.2rem',
-                                                md: '1.6rem',
-                                                lg: '1.8rem',
-                                                xl: '1.8rem',
-                                            },
+                                            fontSize: chipLargeFontSizes,
                                             '@media (min-width: 1040px)': {
                                                 padding: '1rem',
                                             },
